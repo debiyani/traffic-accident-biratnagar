@@ -1,0 +1,914 @@
+Date,Month,Ward,Location,Road_Type,No_of_vehicles_involved,Minor_Injury,Severe_Injury,Fatal/Death,Time_Range,Cause,Month_Num,Nepali_Season,Season,Weather_Clear,Weather_Cold,Weather_Cool,Weather_Dry,Weather_Dusty,Weather_Foggy,Weather_Frosty,Weather_Hot,Weather_Humid,Weather_Mild,Weather_Overcast,Weather_Pleasant,Weather_Rainy,Weather_Thunderstorm,Weather_Warm,Weather_Windy,Severity,Total_Injuries,Casualties
+2081-04-02 00:00:00,Shrawan,4,oil nigam,highway,2,1,0,0,06:00-12:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-04-02 00:00:00,Shrawan,12,roadcess chowk,highway,2,4,0,0,06:00-12:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,4,4
+2081-04-02 00:00:00,Shrawan,4,rajbanshi chowk,highway,2,0,1,0,12:00-18:00,driver's fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,medium,1,1
+2081-04-02 00:00:00,Shrawan,13,rani,inner paved road,1,29,0,1,12:00-18:00,pedestrian’s fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,high,29,30
+2081-04-03 00:00:00,Shrawan,18,rani,inner paved road,1,1,0,0,18:00-00:00,drunk and drive,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-04-05 00:00:00,Shrawan,19,pushpalal chowk,inner paved road,2,1,0,0,12:00-18:00,pedestrian’s fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-04-05 00:00:00,Shrawan,7,danphe chowk,inner paved road,1,2,0,0,18:00-00:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2081-04-06 00:00:00,Shrawan,8,bishwakarma chowk,inner paved road,1,0,0,0,12:00-18:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,0,0
+2081-04-06 00:00:00,Shrawan,1,neta chowk,inner paved road,1,1,0,0,18:00-00:00,weather condition,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-04-07 00:00:00,Shrawan,4,ikrahi,inner paved road,1,1,0,0,12:00-18:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-04-09 00:00:00,Shrawan,9,bus park,highway,2,1,1,0,18:00-00:00,traffic rule violation,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,medium,2,2
+2081-04-09 00:00:00,Shrawan,15,bhatta chowk,inner paved road,1,1,0,0,18:00-00:00,drunk and drive,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-04-09 00:00:00,Shrawan,16,rani,inner paved road,1,1,0,0,18:00-00:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-04-10 00:00:00,Shrawan,3,kanchanbari,highway,2,1,0,0,00:00-06:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-04-11 00:00:00,Shrawan,5,bargachhi,highway,2,1,0,0,06:00-12:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-04-12 00:00:00,Shrawan,13,rani,inner paved road,2,3,0,0,18:00-00:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,3,3
+2081-04-13 00:00:00,Shrawan,12,rani,inner paved road,2,1,0,0,00:00-06:00,pedestrian’s fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-04-15 00:00:00,Shrawan,4,kanchanbari,highway,2,3,0,0,18:00-00:00,drunk and drive,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,3,3
+2081-04-15 00:00:00,Shrawan,4,airport road,highway,2,2,0,0,18:00-00:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2081-04-16 00:00:00,Shrawan,1,triveni marg,inner paved road,2,1,0,0,06:00-12:00,traffic rule violation,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-04-17 00:00:00,Shrawan,19,pushpalal chowk,inner paved road,2,4,0,0,12:00-18:00,driver's fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,4,4
+2081-04-17 00:00:00,Shrawan,4,pipal chowk,highway,1,1,0,0,12:00-18:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-04-17 00:00:00,Shrawan,15,rani,inner paved road,2,3,0,0,12:00-18:00,traffic rule violation,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,3,3
+2081-04-17 00:00:00,Shrawan,19,pushpalal chowk,inner paved road,1,1,0,0,18:00-00:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-04-17 00:00:00,Shrawan,18,rani,inner paved road,1,1,0,0,18:00-00:00,overtake,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-04-18 00:00:00,Shrawan,3,oil nigam,inner paved road,2,1,0,0,18:00-00:00,traffic rule violation,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-04-19 00:00:00,Shrawan,4,oil nigam,inner paved road,2,1,1,0,18:00-00:00,traffic rule violation,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,medium,2,2
+2081-04-19 00:00:00,Shrawan,5,birat nursing home,inner paved road,2,2,0,0,18:00-00:00,driver's fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2081-04-20 00:00:00,Shrawan,9,traffic chowk,inner paved road,2,1,0,0,18:00-00:00,traffic rule violation,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-04-20 00:00:00,Shrawan,14,rani,highway,1,0,1,0,18:00-00:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,medium,1,1
+2081-04-21 00:00:00,Shrawan,14,rani,highway,2,1,0,0,12:00-18:00,driver's fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-04-22 00:00:00,Shrawan,10,roadcess chowk,highway,2,2,0,0,18:00-00:00,traffic rule violation,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2081-04-23 00:00:00,Shrawan,5,pipal chowk,highway,1,2,0,0,00:00-06:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2081-04-23 00:00:00,Shrawan,14,rani,inner paved road,2,1,0,0,12:00-18:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-04-23 00:00:00,Shrawan,4,oil nigam,highway,2,3,0,0,12:00-18:00,driver's fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,3,3
+2081-04-23 00:00:00,Shrawan,10,sombare chowk,inner paved road,2,2,0,0,12:00-18:00,traffic rule violation,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2081-04-24 00:00:00,Shrawan,4,oil nigam,highway,2,7,0,0,06:00-12:00,driver's fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,7,7
+2081-04-25 00:00:00,Shrawan,15,bhatta chowk,inner paved road,2,1,0,0,18:00-00:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-04-29 00:00:00,Shrawan,3,airport road,highway,1,0,1,0,18:00-00:00,crossroad,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,medium,1,1
+2081-04-30 00:00:00,Shrawan,3,oil nigam,highway,2,1,0,0,18:00-00:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-04-30 00:00:00,Shrawan,3,pipal chowk,highway,2,0,0,1,18:00-00:00,drunk and drive,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,high,0,1
+2081-04-31,Shrawan,15,panitanki,highway,2,2,0,0,12:00-18:00,driver's fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2081-04-31,Shrawan,4,pipal chowk,highway,2,1,0,0,12:00-18:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-05-01 00:00:00,Bhadra,3,pushpalal chowk,inner paved road,1,1,0,0,12:00-18:00,passenger’s fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-05-03 00:00:00,Bhadra,5,kochakhal,inner paved road,1,1,0,0,18:00-00:00,traffic rule violation,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-05-04 00:00:00,Bhadra,6,kesaliya,inner paved road,1,1,0,0,06:00-12:00,traffic rule violation,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-05-04 00:00:00,Bhadra,4,rato pull,inner paved road,2,1,1,1,06:00-12:00,speeding,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,high,2,3
+2081-05-06 00:00:00,Bhadra,18,icp chowk,inner paved road,2,4,0,0,12:00-18:00,driver's fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,4,4
+2081-05-06 00:00:00,Bhadra,14,rani,inner paved road,1,1,0,0,18:00-00:00,driver's fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-05-07 00:00:00,Bhadra,13,rani,highway,2,4,0,0,12:00-18:00,traffic rule violation,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,4,4
+2081-05-07 00:00:00,Bhadra,6,kesaliya,inner paved road,1,1,0,0,18:00-00:00,speeding,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-05-08 00:00:00,Bhadra,18,rani,inner paved road,1,1,0,0,12:00-18:00,weather condition,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-05-10 00:00:00,Bhadra,9,shani mandir,highway,2,2,0,0,06:00-12:00,speeding,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2081-05-10 00:00:00,Bhadra,12,mahendra morang campus,inner paved road,1,1,0,0,12:00-18:00,pedestrian’s fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-05-10 00:00:00,Bhadra,12,rani,highway,2,2,0,0,18:00-00:00,speeding,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2081-05-10 00:00:00,Bhadra,12,rani,inner paved road,2,1,1,0,18:00-00:00,speeding,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,medium,2,2
+2081-05-11 00:00:00,Bhadra,18,rani,inner paved road,1,1,0,0,18:00-00:00,speeding,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-05-13 00:00:00,Bhadra,14,rani,inner paved road,2,1,0,0,12:00-18:00,speeding,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-05-13 00:00:00,Bhadra,13,rajbanshi chowk,highway,2,1,0,0,12:00-18:00,speeding,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-05-14 00:00:00,Bhadra,14,hanuman mandir,highway,2,6,0,0,06:00-12:00,speeding,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,6,6
+2081-05-15 00:00:00,Bhadra,13,rani,inner paved road,1,0,1,0,18:00-00:00,speeding,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,medium,1,1
+2081-05-15 00:00:00,Bhadra,11,hatkhola,highway,1,1,0,0,18:00-00:00,drunk and drive,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-05-16 00:00:00,Bhadra,15,hanuman mandir,highway,2,2,0,0,18:00-00:00,speeding,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2081-05-16 00:00:00,Bhadra,13,rani,inner paved road,2,1,0,0,18:00-00:00,speeding,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-05-17 00:00:00,Bhadra,12,roadcess chowk,highway,2,1,0,0,06:00-12:00,driver's fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-05-17 00:00:00,Bhadra,13,rani,inner paved road,1,2,0,0,12:00-18:00,traffic rule violation,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2081-05-17 00:00:00,Bhadra,2,thulo mill,inner paved road,1,1,0,0,18:00-00:00,speeding,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-05-17 00:00:00,Bhadra,2,tinpaini,inner paved road,3,1,0,0,06:00-12:00,driver's fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-05-18 00:00:00,Bhadra,13,rani,highway,2,3,0,0,06:00-12:00,traffic rule violation,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,3,3
+2081-05-18 00:00:00,Bhadra,3,oil nigam,highway,2,1,0,0,18:00-00:00,speeding,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-05-18 00:00:00,Bhadra,3,dhat,inner paved road,1,0,0,1,00:00-06:00,speeding,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,high,0,1
+2081-05-19 00:00:00,Bhadra,9,mahendra chowk,highway,1,0,1,0,06:00-12:00,speeding,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,medium,1,1
+2081-05-20 00:00:00,Bhadra,4,oil nigam,highway,1,1,1,0,12:00-18:00,speeding,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,medium,2,2
+2081-05-22 00:00:00,Bhadra,13,rani,inner paved road,2,2,0,0,12:00-18:00,driver's fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2081-05-22 00:00:00,Bhadra,15,hanuman mandir,highway,2,4,0,0,12:00-18:00,speeding,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,4,4
+2081-05-23 00:00:00,Bhadra,4,kharji chowk,highway,1,1,0,0,18:00-00:00,speeding,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-05-24 00:00:00,Bhadra,9,shani mandir,inner paved road,1,1,0,0,12:00-18:00,speeding,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-05-24 00:00:00,Bhadra,13,rani,highway,1,4,0,0,18:00-00:00,traffic rule violation,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,4,4
+2081-05-24 00:00:00,Bhadra,4,oil nigam,inner paved road,2,1,0,0,18:00-00:00,speeding,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-05-27 00:00:00,Bhadra,4,ward office,inner paved road,1,2,0,0,18:00-00:00,driver's fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2081-05-29 00:00:00,Bhadra,3,ddc,highway,1,1,0,0,06:00-12:00,driver's fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-05-29 00:00:00,Bhadra,4,oil nigam,highway,2,1,0,0,12:00-18:00,driver's fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2081-05-30 00:00:00,Bhadra,14,hanuman mandir,highway,2,0,1,1,18:00-00:00,speeding,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,high,1,2
+2081-05-31 00:00:00,Bhadra,10,jahada road,inner paved road,2,1,1,0,12:00-18:00,driver's fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,medium,2,2
+2081-06-01 00:00:00,Ashwin,13,rani,inner paved road,2,1,0,0,06:00-12:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-06-01 00:00:00,Ashwin,3,kharji chowk,highway,2,3,0,0,18:00-00:00,pedestrian’s fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,3,3
+2081-06-01 00:00:00,Ashwin,13,rani,highway,4,6,0,0,18:00-00:00,crossroad,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,6,6
+2081-06-03 00:00:00,Ashwin,2,pushpalal chowk,inner paved road,2,1,0,0,06:00-12:00,traffic rule violation,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-06-03 00:00:00,Ashwin,7,hatkhola,inner paved road,1,1,0,0,18:00-00:00,speeding,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-06-04 00:00:00,Ashwin,15,hanuman mandir,highway,2,2,0,0,06:00-12:00,pedestrian’s fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2081-06-06 00:00:00,Ashwin,13,rani,highway,2,1,0,0,18:00-00:00,speeding,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-06-07 00:00:00,Ashwin,15,rani,highway,3,2,0,0,12:00-18:00,drunk and drive,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2081-06-07 00:00:00,Ashwin,9,ghoghapul,inner paved road,2,2,0,0,12:00-18:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2081-06-08 00:00:00,Ashwin,14,rani,inner paved road,1,0,0,1,06:00-12:00,speeding,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,high,0,1
+2081-06-08 00:00:00,Ashwin,2,tinpaini,inner paved road,2,1,0,0,12:00-18:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-06-08 00:00:00,Ashwin,10,dharmaman road,inner paved road,2,2,0,0,18:00-00:00,speeding,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2081-06-08 00:00:00,Ashwin,12,rani,inner paved road,1,1,0,0,18:00-00:00,speeding,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-06-11 00:00:00,Ashwin,10,college road,inner paved road,1,1,0,0,18:00-00:00,speeding,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-06-14 00:00:00,Ashwin,15,electricity office,highway,2,2,0,0,06:00-12:00,traffic rule violation,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2081-06-15 00:00:00,Ashwin,19,pushpalal chowk,inner paved road,2,1,0,0,12:00-18:00,speeding,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-06-15 00:00:00,Ashwin,4,ikrahi,inner paved road,2,1,0,0,12:00-18:00,speeding,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-06-16 00:00:00,Ashwin,8,shani mandir,highway,2,1,0,0,12:00-18:00,traffic rule violation,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-06-16 00:00:00,Ashwin,4,ddc,highway,1,1,0,0,18:00-00:00,drunk and drive,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-06-17 00:00:00,Ashwin,18,icp chowk,inner paved road,2,0,0,1,18:00-00:00,speeding,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,high,0,1
+2081-06-18 00:00:00,Ashwin,3,pipal chowk,highway,2,1,0,0,18:00-00:00,vehicle condition,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-06-20 00:00:00,Ashwin,4,airport road,inner paved road,1,1,0,0,06:00-12:00,pedestrian’s fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-06-21 00:00:00,Ashwin,14,ntc office,highway,2,2,0,0,12:00-18:00,speeding,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2081-06-22 00:00:00,Ashwin,4,bargachhi,highway,1,4,0,0,18:00-00:00,speeding,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,4,4
+2081-06-23 00:00:00,Ashwin,2,munalpath,highway,2,1,0,0,12:00-18:00,traffic rule violation,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-06-23 00:00:00,Ashwin,4,kharji chowk,highway,2,1,0,0,06:00-12:00,speeding,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-06-25 00:00:00,Ashwin,4,pipal chowk,highway,2,1,1,0,18:00-00:00,speeding,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,medium,2,2
+2081-06-26 00:00:00,Ashwin,13,rani,highway,2,1,0,0,12:00-18:00,traffic rule violation,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-06-27 00:00:00,Ashwin,5,pipal chowk,highway,1,2,0,0,18:00-00:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2081-06-30 00:00:00,Ashwin,3,pokhariya,inner paved road,1,1,0,0,18:00-00:00,speeding,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-07-03 00:00:00,Kartik,9,shani mandir,highway,2,2,0,0,06:00-12:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2081-07-10 00:00:00,Kartik,4,kanchanbari,highway,2,1,0,0,18:00-00:00,drunk and drive,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-07-11 00:00:00,Kartik,4,pipal chowk,highway,3,2,0,0,12:00-18:00,overtake,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2081-07-11 00:00:00,Kartik,13,rani,inner paved road,2,1,0,0,18:00-00:00,speeding,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-07-12 00:00:00,Kartik,16,rani,inner paved road,2,1,0,0,06:00-12:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-07-13 00:00:00,Kartik,14,rani,inner paved road,2,1,0,0,06:00-12:00,speeding,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-07-13 00:00:00,Kartik,14,rani,highway,2,1,0,0,06:00-12:00,speeding,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-07-13 00:00:00,Kartik,13,rani,inner paved road,2,1,0,0,12:00-18:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-07-13 00:00:00,Kartik,17,rani,inner paved road,1,2,0,0,12:00-18:00,speeding,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2081-07-13 00:00:00,Kartik,13,rani,inner paved road,2,2,0,0,12:00-18:00,speeding,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2081-07-15 00:00:00,Kartik,4,oil nigam,highway,2,4,0,0,12:00-18:00,traffic rule violation,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,4,4
+2081-07-15 00:00:00,Kartik,3,pipal chowk,highway,1,0,3,0,18:00-00:00,speeding,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,medium,3,3
+2081-07-15 00:00:00,Kartik,10,tintoliya,inner paved road,2,3,0,0,00:00-06:00,speeding,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,3,3
+2081-07-16 00:00:00,Kartik,15,rani,highway,1,1,0,0,18:00-00:00,crossroad,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-07-16 00:00:00,Kartik,4,oil nigam,highway,2,2,0,0,18:00-00:00,overtake,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2081-07-18 00:00:00,Kartik,4,oil nigam,highway,2,1,0,0,12:00-18:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-07-18 00:00:00,Kartik,12,bakhari,inner paved road,1,1,0,0,18:00-00:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-07-19 00:00:00,Kartik,3,oil nigam,highway,1,2,0,0,12:00-18:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2081-07-19 00:00:00,Kartik,14,rani,inner paved road,1,1,0,0,12:00-18:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-07-21 00:00:00,Kartik,3,bargachhi,highway,2,1,0,0,06:00-12:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-07-22 00:00:00,Kartik,14,rani,highway,2,2,0,0,12:00-18:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2081-07-22 00:00:00,Kartik,15,rani,highway,1,2,0,0,18:00-00:00,speeding,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2081-07-23 00:00:00,Kartik,15,rani,inner paved road,1,1,0,0,00:00-06:00,speeding,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-07-24 00:00:00,Kartik,13,rani,inner paved road,2,3,0,0,06:00-12:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,3,3
+2081-07-24 00:00:00,Kartik,7,shani mandir,highway,2,1,0,0,12:00-18:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-07-25 00:00:00,Kartik,7,hatkhola,inner paved road,1,1,0,0,18:00-00:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-07-26 00:00:00,Kartik,4,kanchanbari,highway,2,2,0,0,06:00-12:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2081-07-26 00:00:00,Kartik,14,rani,highway,1,1,0,0,06:00-12:00,vehicle condition,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-07-27 00:00:00,Kartik,17,rani,inner paved road,2,1,0,0,12:00-18:00,overtake,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-07-28 00:00:00,Kartik,13,rani,inner paved road,2,2,0,0,18:00-00:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2081-07-28 00:00:00,Kartik,14,hanuman mandir,highway,1,1,0,0,18:00-00:00,speeding,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-07-29 00:00:00,Kartik,13,rani,inner paved road,1,1,0,0,12:00-18:00,pedestrian’s fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-07-29 00:00:00,Kartik,5,prithvi chowk,inner paved road,2,2,0,0,18:00-00:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2081-07-30 00:00:00,Kartik,18,rani,inner paved road,1,1,0,0,06:00-12:00,road condition,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-07-30 00:00:00,Kartik,15,rani,highway,2,1,0,0,12:00-18:00,overtake,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2081-08-02 00:00:00,Mangsir,14,rani,inner paved road,1,1,0,0,12:00-18:00,speeding,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-08-03 00:00:00,Mangsir,15,rani,inner paved road,1,1,0,0,12:00-18:00,drunk and drive,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-08-05 00:00:00,Mangsir,16,rani,inner paved road,2,1,0,0,06:00-12:00,pedestrian’s fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-08-06 00:00:00,Mangsir,13,rani,inner paved road,2,1,0,0,12:00-18:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-08-07 00:00:00,Mangsir,3,oil nigam,highway,1,1,0,0,18:00-00:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-08-07 00:00:00,Mangsir,19,pushpalal chowk,inner paved road,1,2,0,0,18:00-00:00,speeding,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2081-08-08 00:00:00,Mangsir,6,dto,inner paved road,2,1,0,0,06:00-12:00,traffic rule violation,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-08-08 00:00:00,Mangsir,4,oil nigam,highway,1,5,0,0,12:00-18:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,5,5
+2081-08-08 00:00:00,Mangsir,14,rani,inner paved road,1,2,0,0,18:00-00:00,traffic rule violation,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2081-08-09 00:00:00,Mangsir,16,rani,inner paved road,1,1,0,0,12:00-18:00,speeding,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-08-09 00:00:00,Mangsir,16,rani,inner paved road,1,2,0,0,18:00-00:00,speeding,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2081-08-10 00:00:00,Mangsir,13,rani,inner paved road,2,1,0,0,12:00-18:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-08-10 00:00:00,Mangsir,19,pushpalal chowk,highway,1,1,0,0,18:00-00:00,speeding,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-08-12 00:00:00,Mangsir,4,kanchanbari,highway,2,1,0,0,12:00-18:00,traffic rule violation,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-08-14 00:00:00,Mangsir,14,rani,inner paved road,1,1,0,0,12:00-18:00,traffic rule violation,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-08-14 00:00:00,Mangsir,4,oil nigam,highway,2,2,0,0,18:00-00:00,speeding,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2081-08-15 00:00:00,Mangsir,12,dto,highway,1,1,0,0,12:00-18:00,traffic rule violation,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-08-15 00:00:00,Mangsir,6,dto,inner paved road,1,1,0,0,18:00-00:00,speeding,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-08-16 00:00:00,Mangsir,16,pushpalal chowk,inner paved road,2,2,0,0,06:00-12:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2081-08-16 00:00:00,Mangsir,3,oil nigam,highway,2,2,0,0,06:00-12:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2081-08-17 00:00:00,Mangsir,16,rani,inner paved road,1,1,0,0,12:00-18:00,speeding,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-08-17 00:00:00,Mangsir,18,rani,inner paved road,1,1,0,0,12:00-18:00,speeding,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-08-18 00:00:00,Mangsir,19,pushpalal chowk,inner paved road,1,1,0,0,18:00-00:00,speeding,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2018-08-18 00:00:00,Mangsir,14,rani,highway,1,2,0,0,00:00-06:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2081-08-18 00:00:00,Mangsir,7,hatkhola,inner paved road,2,1,0,0,18:00-00:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-08-19 00:00:00,Mangsir,16,rani,inner paved road,2,2,0,0,12:00-18:00,speeding,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2081-08-19 00:00:00,Mangsir,14,rani,highway,1,3,0,0,12:00-18:00,speeding,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,3,3
+2081-08-21 00:00:00,Mangsir,1,pushpalal chowk,inner paved road,2,1,0,0,12:00-18:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-08-23 00:00:00,Mangsir,14,rani,highway,2,1,0,0,12:00-18:00,speeding,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-08-23 00:00:00,Mangsir,7,hatkhola,inner paved road,1,1,0,0,12:00-18:00,pedestrian’s fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-08-27 00:00:00,Mangsir,3,oil nigam,highway,2,3,0,0,06:00-12:00,traffic rule violation,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,3,3
+2081-08-29 00:00:00,Mangsir,16,rani,inner paved road,1,2,0,0,18:00-00:00,pedestrian’s fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2081-08-29 00:00:00,Mangsir,10,dto,inner paved road,1,1,0,0,12:00-18:00,speeding,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-08-30 00:00:00,Mangsir,13,rani,highway,1,1,0,0,12:00-18:00,speeding,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-09-01 00:00:00,Poush,4,oil nigam,inner paved road,2,1,0,0,12:00-18:00,speeding,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-09-02 00:00:00,Poush,3,oil nigam,highway,2,1,0,0,06:00-12:00,traffic rule violation,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-09-02 00:00:00,Poush,4,oil nigam,highway,2,1,0,0,12:00-18:00,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-09-02 00:00:00,Poush,6,dto,inner paved road,1,2,0,0,18:00-00:00,pedestrian’s fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2081-09-03 00:00:00,Poush,14,rani,highway,2,1,0,0,12:00-18:00,drunk and drive,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-09-04 00:00:00,Poush,4,oil nigam,inner paved road,1,3,0,0,12:00-18:00,pedestrian’s fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,3,3
+2081-09-05 00:00:00,Poush,8,dto,inner paved road,2,1,0,0,06:00-12:00,drunk and drive,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-09-05 00:00:00,Poush,1,pushpalal chowk,inner paved road,1,2,0,0,18:00-00:00,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2081-09-05 00:00:00,Poush,9,dto,inner paved road,2,2,0,0,18:00-00:00,speeding,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2081-09-05 00:00:00,Poush,8,hatkhola,inner paved road,2,2,0,0,18:00-00:00,drunk and drive,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2081-09-06 00:00:00,Poush,14,rani,highway,2,1,0,0,12:00-18:00,drunk and drive,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-09-07 00:00:00,Poush,4,oil nigam,highway,1,1,0,0,18:00-00:00,pedestrian’s fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-09-08 00:00:00,Poush,12,bus park,inner paved road,1,1,0,0,12:00-18:00,traffic rule violation,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-09-08 00:00:00,Poush,3,hatkhola,inner paved road,1,1,0,0,18:00-00:00,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-09-10 00:00:00,Poush,19,pushpalal chowk,inner paved road,1,1,0,0,12:00-19:00,vehicle condition,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-09-12 00:00:00,Poush,3,bargachhi,highway,1,2,0,0,12:00-18:00,traffic rule violation,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2081-09-12 00:00:00,Poush,14,rani,highway,2,2,0,0,12:00-18:00,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2081-09-12 00:00:00,Poush,1,pushpalal chowk,inner paved road,2,1,0,0,12:00-18:00,traffic rule violation,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-09-12 00:00:00,Poush,14,rani,highway,1,1,0,0,00:00-06:00,pedestrian’s fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-09-12 00:00:00,Poush,12,bus park,inner paved road,1,1,0,0,00:00-06:00,speeding,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-09-14 00:00:00,Poush,6,dto,inner paved road,2,2,0,0,00:00-06:00,traffic rule violation,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2081-09-16 00:00:00,Poush,4,oil nigam,highway,2,2,0,0,12:00-18:00,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2081-09-16 00:00:00,Poush,4,oil nigam,highway,1,2,0,0,12:00-18:00,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2081-09-16 00:00:00,Poush,3,oil nigam,inner paved road,2,2,0,0,00:00-06:00,speeding,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2081-09-16 00:00:00,Poush,2,dto,highway,1,1,0,0,00:00-06:00,drunk and drive,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-09-17 00:00:00,Poush,6,dto,inner paved road,2,2,0,0,12:00-18:00,traffic rule violation,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2081-09-17 00:00:00,Poush,18,rani,inner paved road,2,1,0,0,18:00-00:00,drunk and drive,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-09-17 00:00:00,Poush,11,rani,inner paved road,2,1,0,0,18:00-00:00,speeding,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-09-18 00:00:00,Poush,17,rani,inner paved road,1,2,0,0,06:00-12:00,drunk and drive,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2081-09-18 00:00:00,Poush,1,rani,inner paved road,1,2,0,0,12:00-18:00,speeding,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2081-09-18 00:00:00,Poush,13,rani,highway,2,1,0,0,18:00-00:00,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-09-19 00:00:00,Poush,14,rani,highway,2,1,0,0,12:00-18:00,traffic rule violation,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-09-19 00:00:00,Poush,14,rani,inner paved road,2,3,0,0,12:00-18:00,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,3,3
+2081-09-20 00:00:00,Poush,12,bus park,highway,2,1,0,0,12:00-18:00,speeding,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-09-20 00:00:00,Poush,4,oil nigam,highway,2,2,0,0,12:00-18:00,pedestrian’s fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2081-09-20 00:00:00,Poush,2,birat nursing home,highway,2,1,0,0,18:00-00:00,pedestrian’s fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-09-21 00:00:00,Poush,16,rani,inner paved road,1,1,0,0,12:00-18:00,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-09-21 00:00:00,Poush,19,pushpalal chowk,inner paved road,1,2,0,0,18:00-00:00,speeding,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2081-09-22 00:00:00,Poush,9,bata road,inner paved road,2,1,0,0,12:00-18:00,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-09-24 00:00:00,Poush,3,oil nigam,highway,1,3,0,0,18:00-00:00,speeding,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,3,3
+2081-09-25 00:00:00,Poush,14,rani,highway,1,1,0,0,18:00-00:00,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-09-25 00:00:00,Poush,13,rani,inner paved road,2,2,0,0,18:00-00:00,pedestrian’s fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2081-09-25 00:00:00,Poush,4,oil nigam,inner paved road,1,1,0,0,18:00-00:00,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-09-26 00:00:00,Poush,7,hatkhola,inner paved road,1,1,0,0,18:00-00:00,speeding,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-09-26 00:00:00,Poush,13,rani,inner paved road,1,0,0,0,18:00-00:00,speeding,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,0,0
+2081-09-26 00:00:00,Poush,4,oil nigam,highway,1,3,0,0,00:00-06:00,drunk and drive,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,3,3
+2081-09-29 00:00:00,Poush,1,rani,inner paved road,1,1,0,0,12:00-18:00,traffic rule violation,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-09-29 00:00:00,Poush,14,rani,highway,2,1,0,0,12:00-18:00,pedestrian’s fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-09-29 00:00:00,Poush,16,rani,inner paved road,1,1,0,0,18:00-00:00,overtake,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2081-10-02 00:00:00,Magh,3,kanchanbari,highway,2,2,0,0,18:00-00:00,traffic rule violation,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2081-10-03 00:00:00,Magh,10,dto,inner paved road,2,1,0,0,06:00-12:00,overload,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2081-10-03 00:00:00,Magh,9,dto,highway,1,1,0,0,12:00-18:00,pedestrian’s fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2081-10-04 00:00:00,Magh,14,rani,highway,2,1,0,0,06:00-12:00,weather condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2081-10-05 00:00:00,Magh,18,rani,inner paved road,1,3,0,0,12:00-18:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,3,3
+2081-10-06 00:00:00,Magh,11,dto,inner paved road,2,5,0,0,06:00-12:00,overload,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,5,5
+2081-10-06 00:00:00,Magh,4,oil nigam,highway,2,1,0,0,18:00-00:00,pedestrian’s fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2081-10-06 00:00:00,Magh,13,rani,highway,4,1,0,0,18:00-00:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2081-10-07 00:00:00,Magh,14,rani,highway,1,1,0,0,12:00-18:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2081-10-08 00:00:00,Magh,15,rani,highway,2,4,0,0,12:00-18:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,4,4
+2081-10-10 00:00:00,Magh,1,pushpalal chowk,inner paved road,2,1,0,0,18:00-00:00,overload,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2081-10-10 00:00:00,Magh,8,hatkhola,inner paved road,1,2,0,0,18:00-00:00,driver's fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2081-10-12 00:00:00,Magh,5,dto,inner paved road,2,2,0,0,12:00-18:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2081-10-14 00:00:00,Magh,14,rani,highway,2,3,0,0,12:00-18:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,3,3
+2081-10-14 00:00:00,Magh,13,rani,inner paved road,2,1,0,0,12:00-18:00,traffic rule violation,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2081-10-14 00:00:00,Magh,15,rani,inner paved road,2,1,0,0,12:00-18:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2081-10-15 00:00:00,Magh,14,rani,highway,3,1,0,0,12:00-18:00,traffic rule violation,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2081-10-16 00:00:00,Magh,6,rani,highway,2,1,0,0,12:00-18:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2081-10-17 00:00:00,Magh,3,oil nigam,inner paved road,2,1,0,0,06:00-12:00,driver's fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2081-10-18 00:00:00,Magh,4,oil nigam,highway,1,2,0,0,06:00-12:00,overload,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2081-10-18 00:00:00,Magh,4,oil nigam,highway,2,1,0,0,12:00-18:00,pedestrian’s fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2081-10-19 00:00:00,Magh,16,rani,inner paved road,2,2,0,0,18:00-00:00,traffic rule violation,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2081-10-19 00:00:00,Magh,14,rani,highway,2,2,0,0,18:00-00:00,traffic rule violation,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2081-10-20 00:00:00,Magh,6,dto,highway,2,1,0,0,06:00-12:00,driver's fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2081-10-20 00:00:00,Magh,16,rani,inner paved road,1,1,0,0,12:00-18:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2081-10-20 00:00:00,Magh,12,dto,highway,2,2,0,0,12:00-18:00,traffic rule violation,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2081-10-21 00:00:00,Magh,9,dto,inner paved road,1,1,0,0,12:00-18:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2081-10-21 00:00:00,Magh,14,rani,highway,1,1,0,0,18:00-00:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2081-10-22 00:00:00,Magh,4,oil nigam,inner paved road,2,3,0,0,06:00-12:00,crossroad,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,3,3
+2081-10-26 00:00:00,Magh,10,dto,highway,1,2,0,0,12:00-18:00,traffic rule violation,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2081-10-29 00:00:00,Magh,8,dto,inner paved road,2,2,0,0,12:00-18:00,traffic rule violation,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2081-10-30 00:00:00,Magh,4,kanchanbari,highway,1,1,0,0,12:00-18:00,pedestrian’s fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2081-11-01 00:00:00,Falgun,4,oil nigam,highway,1,1,0,0,12:00-18:00,overload,11,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2081-11-02 00:00:00,Falgun,8,dto,inner paved road,1,3,0,0,18:00-00:00,overload,11,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,3,3
+2081-11-03 00:00:00,Falgun,2,pushpalal chowk,inner paved road,2,2,0,0,12:00-18:00,vehicle condition,11,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2081-11-04 00:00:00,Falgun,7,dto,inner paved road,1,2,0,0,12:00-18:00,vehicle condition,11,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2081-11-04 00:00:00,Falgun,14,rani,inner paved road,1,1,0,0,12:00-18:00,pedestrian’s fault,11,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2081-11-05 00:00:00,Falgun,1,pushpalal chowk,inner paved road,1,1,0,0,06:00-12:00,overload,11,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2081-11-05 00:00:00,Falgun,10,sombare,highway,1,3,0,0,06:00-12:00,traffic rule violation,11,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,3,3
+2081-11-05 00:00:00,Falgun,13,rani,highway,1,1,0,0,12:00-18:00,traffic rule violation,11,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2081-11-07 00:00:00,Falgun,5,jamungachi,inner paved road,1,1,0,0,18:00-00:00,traffic rule violation,11,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2081-11-09 00:00:00,Falgun,13,rani,highway,1,1,0,0,18:00-00:00,pedestrian’s fault,11,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2081-11-10 00:00:00,Falgun,8,hatkhola,inner paved road,2,4,0,0,12:00-18:00,traffic rule violation,11,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,4,4
+2081-11-10 00:00:00,Falgun,13,dto,inner paved road,2,1,0,0,06:00-12:00,vehicle condition,11,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2081-11-10 00:00:00,Falgun,3,bhatta chowk,inner paved road,1,1,0,0,18:00-00:00,overload,11,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2081-11-11 00:00:00,Falgun,17,rani,inner paved road,1,2,0,0,06:00-12:00,pedestrian’s fault,11,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2081-11-11 00:00:00,Falgun,14,rani,highway,1,1,0,0,06:00-12:00,overload,11,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2081-11-11 00:00:00,Falgun,7,hatkhola,inner paved road,2,0,0,0,18:00-00:00,pedestrian’s fault,11,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,0,0
+2081-11-12 00:00:00,Falgun,6,kesaliya road,inner paved road,1,1,0,0,12:00-18:00,vehicle condition,11,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2081-11-12 00:00:00,Falgun,13,rani,highway,2,2,0,0,18:00-00:00,vehicle condition,11,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2081-11-14 00:00:00,Falgun,13,rani,inner paved road,2,1,0,0,06:00-12:00,pedestrian’s fault,11,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2081-11-15 00:00:00,Falgun,14,rani,inner paved road,2,2,0,0,18:00-00:00,overload,11,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2081-11-15 00:00:00,Falgun,3,rajbanshi chowk,highway,2,1,0,0,18:00-00:00,pedestrian’s fault,11,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2081-11-15 00:00:00,Falgun,4,dto,inner paved road,2,2,0,0,18:00-00:00,overload,11,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2081-11-16 00:00:00,Falgun,14,rani,inner paved road,2,2,0,0,12:00-18:00,traffic rule violation,11,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2081-11-17 00:00:00,Falgun,10,dto,inner paved road,1,2,0,0,12:00-18:00,overload,11,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2081-11-19 00:00:00,Falgun,2,pushpalal chowk,inner paved road,2,1,0,0,18:00-00:00,vehicle condition,11,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2081-11-20 00:00:00,Falgun,14,rani,highway,2,2,0,0,12:00-18:00,pedestrian’s fault,11,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2081-11-21 00:00:00,Falgun,12,roadcess chowk,highway,2,3,0,0,12:00-18:00,vehicle condition,11,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,3,3
+2081-11-22 00:00:00,Falgun,3,oil nigam,highway,1,0,0,0,18:00-00:00,other causes,11,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,0,0
+2081-11-28 00:00:00,Falgun,3,oil nigam,highway,1,1,0,0,12:00-18:00,pedestrian’s fault,11,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2081-11-28 00:00:00,Falgun,11,gudri,inner paved road,2,0,0,0,18:00-00:00,driver's fault,11,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,0,0
+2081-12-01 00:00:00,Chaitra,4,sombare,inner paved road,1,2,0,0,06:00-12:00,traffic rule violation,12,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,2,2
+2081-12-01 00:00:00,Chaitra,8,hatkhola,inner paved road,1,2,0,0,18:00-00:00,driver's fault,12,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,2,2
+2081-12-03 00:00:00,Chaitra,9,thakurbani road,inner paved road,1,0,0,0,06:00-12:00,traffic rule violation,12,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,0,0
+2081-12-04 00:00:00,Chaitra,2,munalpath,highway,2,1,0,0,12:00-18:00,traffic rule violation,12,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2081-12-06 00:00:00,Chaitra,13,degree campus,highway,1,0,0,0,18:00-00:00,pedestrian’s fault,12,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,0,0
+2081-12-07 00:00:00,Chaitra,16,daraiya,inner paved road,1,2,0,0,12:00-18:00,speeding,12,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,2,2
+2081-12-09 00:00:00,Chaitra,16,rani,inner paved road,1,2,0,0,12:00-18:00,vehicle condition,12,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,2,2
+2081-12-10 00:00:00,Chaitra,13,rani,inner paved road,2,3,0,0,12:00-18:00,pedestrian’s fault,12,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,3,3
+2081-12-11 00:00:00,Chaitra,14,rani,highway,2,1,0,0,06:00-12:00,overload,12,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2081-12-14 00:00:00,Chaitra,3,rajbanshi chowk,inner paved road,2,1,0,0,12:00-18:00,driver's fault,12,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2081-12-14 00:00:00,Chaitra,3,hatkhola,inner paved road,1,1,0,0,18:00-00:00,vehicle condition,12,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2081-12-14 00:00:00,Chaitra,1,hatkhola,inner paved road,2,1,0,0,18:00-00:00,vehicle condition,12,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2081-12-15 00:00:00,Chaitra,2,birat nursing home,highway,1,3,0,0,12:00-18:00,vehicle condition,12,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,3,3
+2081-12-15 00:00:00,Chaitra,13,rani,inner paved road,1,1,0,0,12:00-18:00,overload,12,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2081-12-17 00:00:00,Chaitra,13,rani,inner paved road,1,3,0,0,06:00-12:00,pedestrian’s fault,12,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,3,3
+2081-12-17 00:00:00,Chaitra,4,dto,highway,2,1,0,0,18:00-00:00,road condition,12,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2081-12-18 00:00:00,Chaitra,5,dto,inner paved road,2,1,0,0,18:00-00:00,driver's fault,12,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2081-12-19 00:00:00,Chaitra,13,rani,inner paved road,1,2,0,0,06:00-12:00,pedestrian’s fault,12,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,2,2
+2081-12-19 00:00:00,Chaitra,3,oil nigam,highway,1,1,0,0,18:00-00:00,pedestrian’s fault,12,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2081-12-21 00:00:00,Chaitra,3,hatkhola,inner paved road,1,1,0,0,18:00-00:00,road condition,12,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2081-12-25 00:00:00,Chaitra,1,pushpalal chowk,inner paved road,1,1,0,0,12:00-18:00,driver's fault,12,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2081-12-25 00:00:00,Chaitra,3,oil nigam,highway,2,1,0,0,18:00-00:00,pedestrian’s fault,12,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2081-12-30 00:00:00,Chaitra,14,rani,highway,2,5,0,0,12:00-18:00,overload,12,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,5,5
+2082-01-01 00:00:00,Baisakh,1,dhat,highway,1,1,0,0,06:00-12:00,overload,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2082-01-01 00:00:00,Baisakh,4,pipal chowk,highway,2,1,0,0,12:00-18:00,driver's fault,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2082-01-01 00:00:00,Baisakh,19,pushpalal chowk,inner paved road,1,1,0,0,18:00-00:00,pedestrian’s fault,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2082-01-02 00:00:00,Baisakh,4,dto,inner paved road,2,2,0,0,06:00-12:00,driver's fault,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,2,2
+2082-01-02 00:00:00,Baisakh,14,rani,highway,1,0,0,0,12:00-18:00,driver's fault,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,0,0
+2082-01-03 00:00:00,Baisakh,14,rani,highway,1,1,0,0,06:00-12:00,overload,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2082-01-04 00:00:00,Baisakh,13,rani,inner paved road,1,2,0,0,06:00-12:00,overload,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,2,2
+2082-01-04 00:00:00,Baisakh,2,tanki,highway,2,2,0,0,12:00-18:00,vehicle condition,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,2,2
+2082-01-05 00:00:00,Baisakh,1,shivam petrol pump,highway,1,3,0,0,12:00-18:00,vehicle condition,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,3,3
+2082-01-05 00:00:00,Baisakh,3,ausadhi bibhag,highway,1,1,0,0,18:00-00:00,overload,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2082-01-05 00:00:00,Baisakh,3,kanchanbari,highway,2,3,0,0,18:00-00:00,driver's fault,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,3,3
+2082-01-05 00:00:00,Baisakh,7,hospital chowk,inner paved road,1,1,0,0,18:00-00:00,overload,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2082-01-05 00:00:00,Baisakh,14,railway track,inner paved road,1,1,0,0,00:00-06:00,driver's fault,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2082-01-06 00:00:00,Baisakh,15,rani,highway,2,2,0,0,12:00-18:00,overload,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,2,2
+2082-01-07 00:00:00,Baisakh,13,rani,inner paved road,2,3,0,0,06:00-12:00,driver's fault,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,3,3
+2082-01-07 00:00:00,Baisakh,4,airport road,inner paved road,2,5,0,0,06:00-12:00,vehicle condition,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,5,5
+2082-01-07 00:00:00,Baisakh,6,bfm,inner paved road,1,1,0,0,12:00-18:00,overload,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2082-01-08 00:00:00,Baisakh,13,rani,inner paved road,1,1,0,0,06:00-12:00,pedestrian’s fault,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2082-01-08 00:00:00,Baisakh,15,rani,highway,1,1,0,0,12:00-18:00,pedestrian’s fault,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2082-01-08 00:00:00,Baisakh,13,rani,inner paved road,1,2,0,0,12:00-18:00,driver's fault,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,2,2
+2082-01-08 00:00:00,Baisakh,10,roadcess chowk,highway,1,4,0,0,18:00-00:00,overload,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,4,4
+2082-01-09 00:00:00,Baisakh,4,ddc,highway,2,3,0,0,06:00-12:00,overload,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,3,3
+2082-01-09 00:00:00,Baisakh,16,rani,inner paved road,1,1,0,0,12:00-18:00,overload,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2082-01-10 00:00:00,Baisakh,6,dto,inner paved road,2,3,0,0,18:00-00:00,overload,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,3,3
+2082-01-10 00:00:00,Baisakh,4,bargachhi,highway,1,1,0,0,12:00-18:00,vehicle condition,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2082-01-10 00:00:00,Baisakh,2,dto,inner paved road,2,2,0,0,18:00-00:00,overload,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,2,2
+2082-01-11 00:00:00,Baisakh,4,kanchanbari,highway,2,1,0,0,18:00-00:00,overload,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2082-01-12 00:00:00,Baisakh,5,ikrahi,inner paved road,2,0,0,1,06:00-12:00,driver's fault,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,high,0,1
+2082-01-12 00:00:00,Baisakh,4,ddc,highway,2,2,0,0,18:00-00:00,driver's fault,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,2,2
+2082-01-13 00:00:00,Baisakh,7,green cross hospital,inner paved road,1,3,0,0,00:00-06:00,driver's fault,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,3,3
+2082-01-15 00:00:00,Baisakh,4,ab petrol pump,highway,1,1,0,0,06:00-12:00,driver's fault,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2082-01-15 00:00:00,Baisakh,4,nobel line,inner paved road,1,1,0,0,12:00-18:00,pedestrian’s fault,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2082-01-15 00:00:00,Baisakh,1,arati strip,highway,1,1,0,0,18:00-00:00,driver's fault,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2082-01-16 00:00:00,Baisakh,17,rani,inner paved road,1,2,0,0,12:00-18:00,overload,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,2,2
+2082-01-17 00:00:00,Baisakh,6,nepal bajar,highway,1,1,0,0,06:00-12:00,pedestrian’s fault,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2082-01-18 00:00:00,Baisakh,14,degree campus,highway,1,2,0,0,12:00-18:00,overload,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,2,2
+2082-01-18 00:00:00,Baisakh,17,rani,inner paved road,1,3,0,0,18:00-00:00,driver's fault,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,3,3
+2082-01-19 00:00:00,Baisakh,6,dto,inner paved road,2,1,0,0,12:00-18:00,driver's fault,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2082-01-19 00:00:00,Baisakh,15,rani,inner paved road,2,1,0,0,12:00-18:00,vehicle condition,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2082-01-21 00:00:00,Baisakh,3,dto,highway,2,1,0,0,18:00-00:00,overload,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2082-01-21 00:00:00,Baisakh,3,pipal chowk,highway,1,2,0,0,06:00-12:00,vehicle condition,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,2,2
+2082-01-22 00:00:00,Baisakh,14,rani,highway,1,1,0,0,12:00-18:00,driver's fault,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2082-01-23 00:00:00,Baisakh,13,rani,inner paved road,2,1,0,0,12:00-18:00,overload,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2082-01-23 00:00:00,Baisakh,16,rani,inner paved road,1,1,0,0,12:00-18:00,overload,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2082-01-28 00:00:00,Baisakh,14,rani,highway,2,1,0,0,06:00-12:00,overload,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2082-01-28 00:00:00,Baisakh,12,roadcess chowk,highway,2,1,0,0,12:00-18:00,driver's fault,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2082-01-31 00:00:00,Baisakh,16,rani,inner paved road,1,1,0,0,06:00-12:00,vehicle condition,1,Basanta,Spring,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,low,1,1
+2082-02-01 00:00:00,Jestha,15,rani,inner paved road,2,1,0,0,12:00-18:00,vehicle condition,2,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-02-01 00:00:00,Jestha,4,kharji,highway,2,2,0,0,12:00-18:00,overload,2,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,2,2
+2082-02-03 00:00:00,Jestha,3,oil nigam,highway,1,0,0,1,18:00-00:00,vehicle condition,2,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,high,0,1
+2082-02-04 00:00:00,Jestha,14,rani,inner paved road,1,2,0,0,12:00-18:00,driver's fault,2,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,2,2
+2082-02-07 00:00:00,Jestha,15,rani,inner paved road,2,2,0,0,06:00-12:00,overload,2,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,2,2
+2082-02-09 00:00:00,Jestha,14,rani,highway,2,2,0,0,00:00-06:00,overload,2,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,2,2
+2082-02-09 00:00:00,Jestha,4,rani,inner paved road,1,1,0,0,12:00-18:00,driver's fault,2,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-02-12 00:00:00,Jestha,13,rani,inner paved road,1,1,0,0,18:00-00:00,pedestrian’s fault,2,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-02-12 00:00:00,Jestha,1,rani,inner paved road,2,1,0,0,12:00-18:00,driver's fault,2,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-02-18 00:00:00,Jestha,14,rani,highway,1,2,0,0,12:00-18:00,vehicle condition,2,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,2,2
+2082-02-18 00:00:00,Jestha,15,rani,highway,1,2,0,0,12:00-18:00,other causes,2,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,2,2
+2082-02-18 00:00:00,Jestha,15,rani,inner paved road,2,3,0,0,18:00-00:00,driver's fault,2,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,3,3
+2082-02-20 00:00:00,Jestha,4,kanchanbari,highway,2,1,0,0,06:00-12:00,vehicle condition,2,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-02-20 00:00:00,Jestha,4,dto,highway,1,3,0,0,06:00-12:00,vehicle condition,2,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,3,3
+2082-02-20 00:00:00,Jestha,2,tinpaini,inner paved road,3,2,0,0,12:00-18:00,pedestrian’s fault,2,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,2,2
+2082-02-21 00:00:00,Jestha,4,dto,inner paved road,2,0,1,0,12:00-18:00,driver's fault,2,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,medium,1,1
+2082-02-21 00:00:00,Jestha,13,rani,highway,2,2,0,0,12:00-18:00,vehicle condition,2,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,2,2
+2082-02-23 00:00:00,Jestha,17,rani,inner paved road,1,1,0,0,12:00-18:00,pedestrian’s fault,2,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-02-23 00:00:00,Jestha,3,bargachhi,inner paved road,2,1,0,0,12:00-18:00,driver's fault,2,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-02-25 00:00:00,Jestha,19,pushpalal chowk,inner paved road,2,3,0,0,06:00-12:00,driver's fault,2,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,3,3
+2082-02-25 00:00:00,Jestha,14,rani,highway,2,2,0,0,12:00-18:00,driver's fault,2,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,2,2
+2082-02-25 00:00:00,Jestha,3,tirupati petrol pump,highway,2,1,0,1,18:00-00:00,driver's fault,2,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,high,1,2
+2082-02-29,Jestha,4,tirupati petrol pump,highway,2,6,0,0,12:00-18:00,driver's fault,2,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,6,6
+2082-02-29,Jestha,4,hamro hospital,highway,3,0,0,0,12:00-18:00,vehicle condition,2,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,0,0
+2082-02-30,Jestha,4,rajbanshi chowk,highway,2,1,0,0,18:00-00:00,vehicle condition,2,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-02-30,Jestha,13,rani,inner paved road,2,1,0,0,18:00-00:00,driver's fault,2,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-02-31,Jestha,16,rani,inner paved road,2,1,0,0,06:00-12:00,pedestrian’s fault,2,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-02-31,Jestha,11,pichra,inner paved road,1,1,0,0,12:00-18:00,vehicle condition,2,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-02-31,Jestha,7,hospital chowk,inner paved road,1,1,0,0,18:00-00:00,road condition,2,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-03-01 00:00:00,Ashadh,13,rani,inner paved road,2,0,0,0,12:00-18:00,driver's fault,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,0,0
+2082-03-02 00:00:00,Ashadh,13,rani,highway,2,1,0,0,12:00-18:00,pedestrian’s fault,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-03-03 00:00:00,Ashadh,15,rani,highway,2,1,0,0,12:00-18:00,vehicle condition,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-03-03 00:00:00,Ashadh,13,rani,highway,1,1,1,0,18:00-00:00,pedestrian’s fault,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,medium,2,2
+2082-03-03 00:00:00,Ashadh,4,dto,inner paved road,1,1,0,0,18:00-00:00,pedestrian’s fault,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-03-03 00:00:00,Ashadh,4,ikrahi,inner paved road,1,2,0,0,18:00-00:00,driver's fault,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,2,2
+2082-03-03 00:00:00,Ashadh,19,pushpalal chowk,inner paved road,2,3,0,0,18:00-00:00,vehicle condition,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,3,3
+2082-03-04 00:00:00,Ashadh,3,pushpalal chowk,inner paved road,2,0,0,1,12:00-18:00,driver's fault,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,high,0,1
+2082-03-04 00:00:00,Ashadh,19,dream garden,inner paved road,2,1,0,0,12:00-18:00,driver's fault,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-03-05 00:00:00,Ashadh,14,rani,inner paved road,1,1,0,0,18:00-00:00,driver's fault,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-03-06 00:00:00,Ashadh,4,tata showroom,highway,2,0,0,0,12:00-18:00,vehicle condition,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,0,0
+2082-03-06 00:00:00,Ashadh,19,pushpalal chowk,inner paved road,2,1,0,0,18:00-00:00,vehicle condition,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-03-06 00:00:00,Ashadh,4,dto,inner paved road,1,1,0,0,18:00-00:00,vehicle condition,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-03-06 00:00:00,Ashadh,3,rajbanshi chowk,inner paved road,1,1,0,0,18:00-00:00,,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-03-07 00:00:00,Ashadh,13,rani,highway,2,1,0,0,06:00-12:00,vehicle condition,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-03-07 00:00:00,Ashadh,11,roadcess chowk,inner paved road,2,2,0,0,12:00-18:00,driver's fault,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,2,2
+2082-03-08 00:00:00,Ashadh,15,rani,highway,1,3,0,0,06:00-12:00,vehicle condition,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,3,3
+2082-03-08 00:00:00,Ashadh,19,pushpalal chowk,inner paved road,2,1,0,0,18:00-00:00,other causes,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-03-09 00:00:00,Ashadh,15,rani,highway,2,2,0,0,12:00-18:00,vehicle condition,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,2,2
+2082-03-09 00:00:00,Ashadh,14,rani,inner paved road,1,1,0,0,12:00-18:00,vehicle condition,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-03-10 00:00:00,Ashadh,3,bargachhi,highway,2,1,0,0,00:00-06:00,pedestrian’s fault,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-03-11 00:00:00,Ashadh,15,rani,inner paved road,1,1,0,0,18:00-00:00,,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-03-11 00:00:00,Ashadh,4,dto,inner paved road,1,1,0,0,18:00-00:00,driver's fault,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-03-13 00:00:00,Ashadh,4,pipal chowk,highway,2,1,0,0,18:00-00:00,driver's fault,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-03-14 00:00:00,Ashadh,4,kanchanbari,inner paved road,1,1,0,0,18:00-00:00,overload,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-03-14 00:00:00,Ashadh,14,rani,highway,1,1,0,0,18:00-00:00,driver's fault,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-03-15 00:00:00,Ashadh,4,bargachhi,highway,2,4,0,0,12:00-18:00,driver's fault,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,4,4
+2082-03-15 00:00:00,Ashadh,13,rani,inner paved road,3,2,0,0,18:00-00:00,overload,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,2,2
+2082-03-17 00:00:00,Ashadh,4,airport road,highway,2,0,1,0,12:00-18:00,driver's fault,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,medium,1,1
+2082-03-17 00:00:00,Ashadh,1,rani,inner paved road,1,1,0,0,18:00-00:00,pedestrian’s fault,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-03-17 00:00:00,Ashadh,3,dto,highway,1,2,0,0,18:00-00:00,driver's fault,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,2,2
+2082-03-17 00:00:00,Ashadh,4,dto,highway,1,2,0,0,18:00-00:00,driver's fault,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,2,2
+2082-03-18 00:00:00,Ashadh,15,rani,inner paved road,2,2,0,0,06:00-12:00,vehicle condition,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,2,2
+2082-03-18 00:00:00,Ashadh,3,ausadhi bibhag,highway,3,2,0,0,06:00-12:00,vehicle condition,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,2,2
+2082-03-18 00:00:00,Ashadh,9,sansari mai,inner paved road,1,0,0,0,18:00-00:00,vehicle condition,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,0,0
+2082-03-19 00:00:00,Ashadh,11,bus park,inner paved road,1,1,0,0,18:00-00:00,vehicle condition,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-03-20 00:00:00,Ashadh,4,dto,inner paved road,2,1,0,0,06:00-12:00,driver's fault,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-03-20 00:00:00,Ashadh,15,rani,inner paved road,1,2,0,0,12:00-18:00,vehicle condition,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,2,2
+2082-03-20 00:00:00,Ashadh,13,degree campus,highway,2,1,0,0,18:00-00:00,vehicle condition,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-03-22 00:00:00,Ashadh,3,ddc,highway,1,2,1,0,06:00-12:00,pedestrian’s fault,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,medium,3,3
+2082-03-22 00:00:00,Ashadh,3,oil nigam,highway,1,0,0,1,00:00-06:00,driver's fault,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,high,0,1
+2082-02-24 00:00:00,Ashadh,4,pipal chowk,highway,2,0,0,0,12:00-18:00,vehicle condition,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,0,0
+2082-03-24 00:00:00,Ashadh,14,rani,inner paved road,2,2,0,0,18:00-00:00,driver's fault,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,2,2
+2082-02-26 00:00:00,Ashadh,18,rani,inner paved road,2,1,0,0,18:00-00:00,pedestrian’s fault,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-03-26 00:00:00,Ashadh,7,jaljala chowk,inner paved road,2,2,0,0,18:00-00:00,driver's fault,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,2,2
+2082-03-27 00:00:00,Ashadh,14,rani,inner paved road,2,3,0,0,18:00-00:00,driver's fault,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,3,3
+2082-03-27 00:00:00,Ashadh,12,roadcess chowk,highway,2,1,0,0,18:00-00:00,driver's fault,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-03-27 00:00:00,Ashadh,4,gograha chowk,highway,2,4,0,0,18:00-00:00,vehicle condition,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,4,4
+2082-03-28 00:00:00,Ashadh,19,ghinaghat,inner paved road,1,1,0,0,12:00-18:00,vehicle condition,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-03-29 00:00:00,Ashadh,13,rani,inner paved road,1,1,0,0,06:00-12:00,pedestrian’s fault,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-03-29 00:00:00,Ashadh,12,roadcess chowk,inner paved road,1,1,0,0,00:00-06:00,driver's fault,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-03-30 00:00:00,Ashadh,14,petrol pump,highway,2,1,0,0,12:00-18:00,vehicle condition,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,1,1
+2082-03-30 00:00:00,Ashadh,2,munalpath,highway,2,2,1,0,12:00-18:00,driver's fault,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,medium,3,3
+2082-03-31 00:00:00,Ashadh,19,pushpalal chowk,inner paved road,2,2,0,0,18:00-00:00,driver's fault,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,low,2,2
+2082-03-32,Ashadh,7,hatkhola,inner paved road,2,2,1,0,12:00-18:00,vehicle condition,3,Grishma,Summer,0,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,medium,3,3
+2082-04-01 00:00:00,Shrawan,13,degree campus,highway,2,0,0,0,06:00-12:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,0,0
+2082-04-02 00:00:00,Shrawan,12,dto,inner paved road,2,1,0,0,18:00-00:00,driver's fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-04-03 00:00:00,Shrawan,14,rani,highway,2,1,0,0,12:00-18:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-04-03 00:00:00,Shrawan,6,bhaudaha,inner paved road,1,1,0,0,18:00-00:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-04-05 00:00:00,Shrawan,3,oil nigam,highway,1,1,0,0,06:00-12:00,driver's fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-04-07 00:00:00,Shrawan,14,hamro hospital,highway,1,0,1,0,06:00-12:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,medium,1,1
+2082-04-07 00:00:00,Shrawan,1,bhatta chowk,inner paved road,2,0,1,0,06:00-12:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,medium,1,1
+2082-04-07 00:00:00,Shrawan,13,talim kendra,inner paved road,2,2,0,0,12:00-18:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2082-04-07 00:00:00,Shrawan,14,rani,highway,2,1,0,0,12:00-18:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-04-08 00:00:00,Shrawan,9,dhobiyari,inner paved road,2,1,0,0,12:00-18:00,driver's fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-04-08 00:00:00,Shrawan,4,bargachhi,highway,2,3,0,0,12:00-18:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,3,3
+2082-04-08 00:00:00,Shrawan,13,telecom,highway,2,2,0,0,18:00-00:00,driver's fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2082-04-08 00:00:00,Shrawan,5,kesaliya,inner paved road,1,2,0,0,18:00-00:00,other causes,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2082-04-09 00:00:00,Shrawan,13,sainik tole,inner paved road,1,2,0,0,12:00-18:00,driver's fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2082-04-10 00:00:00,Shrawan,13,degree campus,highway,2,1,0,0,18:00-00:00,vehicle condition,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-04-10 00:00:00,Shrawan,8,hatkhola,inner paved road,2,3,0,0,18:00-00:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,3,3
+2082-04-11 00:00:00,Shrawan,14,rani,highway,2,2,0,0,06:00-12:00,overload,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2082-04-11 00:00:00,Shrawan,8,thangachii,inner paved road,2,1,0,0,18:00-00:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-04-12 00:00:00,Shrawan,3,oil nigam,inner paved road,2,1,0,0,06:00-12:00,driver's fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-04-12 00:00:00,Shrawan,3,jublebi mod,inner paved road,1,1,0,0,12:00-18:00,driver's fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-04-12 00:00:00,Shrawan,13,rani,inner paved road,1,1,0,0,12:00-18:00,driver's fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-04-12 00:00:00,Shrawan,8,hatkhola,inner paved road,2,2,0,0,18:00-00:00,driver's fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2082-04-13 00:00:00,Shrawan,2,pushpalal chowk,inner paved road,1,2,0,0,12:00-18:00,driver's fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2082-04-13 00:00:00,Shrawan,15,rani,inner paved road,2,1,0,0,12:00-18:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-04-13 00:00:00,Shrawan,7,hatkhola,inner paved road,2,2,0,0,12:00-18:00,pedestrian’s fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2082-04-13 00:00:00,Shrawan,1,tinpaini,inner paved road,1,1,0,0,18:00-00:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-04-13 00:00:00,Shrawan,15,rani,inner paved road,2,1,0,0,12:00-18:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-04-13 00:00:00,Shrawan,7,hatkhola,inner paved road,2,1,0,0,12:00-18:00,traffic rule violation,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-04-13 00:00:00,Shrawan,1,tinpaini,inner paved road,1,1,0,0,18:00-00:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-04-14 00:00:00,Shrawan,3,hatkhola,inner paved road,1,3,0,0,12:00-18:00,driver's fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,3,3
+2082-04-14 00:00:00,Shrawan,14,rani,inner paved road,2,1,0,0,12:00-18:00,driver's fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-04-15 00:00:00,Shrawan,1,thulo mill,inner paved road,2,2,0,0,06:00-12:00,pedestrian’s fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2082-04-15 00:00:00,Shrawan,9,bus park,highway,2,2,0,0,12:00-18:00,driver's fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2082-04-16 00:00:00,Shrawan,15,rani,inner paved road,1,0,0,0,18:00-00:00,driver's fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,0,0
+2082-04-16 00:00:00,Shrawan,14,rani,highway,1,1,0,0,06:00-12:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-04-16 00:00:00,Shrawan,1,rani,inner unpaved road,1,1,0,0,18:00-00:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-04-16 00:00:00,Shrawan,17,rani,inner paved road,1,0,0,0,18:00-00:00,pedestrian’s fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,0,0
+2082-04-17 00:00:00,Shrawan,3,oil nigam,highway,1,2,0,0,18:00-00:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2082-04-17 00:00:00,Shrawan,4,dto,highway,1,1,0,0,18:00-00:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-04-17 00:00:00,Shrawan,13,rani,inner paved road,2,1,0,0,18:00-00:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-04-17 00:00:00,Shrawan,11,dto,inner paved road,1,1,0,0,00:00-06:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-04-18 00:00:00,Shrawan,4,pushpalal chowk,inner paved road,2,1,0,0,06:00-12:00,driver's fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-04-18 00:00:00,Shrawan,2,hatkhola,inner paved road,1,0,0,0,12:00-18:00,pedestrian’s fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,0,0
+2082-04-18 00:00:00,Shrawan,14,rani,highway,2,5,0,0,12:00-18:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,5,5
+2082-04-18 00:00:00,Shrawan,14,rani,highway,1,1,0,0,00:00-06:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-04-18 00:00:00,Shrawan,6,dto,inner paved road,1,2,0,0,00:00-06:00,driver's fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2082-04-19 00:00:00,Shrawan,3,bargachhi,highway,1,1,1,0,06:00-12:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,medium,2,2
+2082-04-19 00:00:00,Shrawan,12,dto,inner paved road,2,0,0,0,12:00-18:00,driver's fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,0,0
+2082-04-20 00:00:00,Shrawan,7,hatkhola,inner paved road,2,1,0,0,06:00-12:00,pedestrian’s fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-04-22 00:00:00,Shrawan,3,hatkhola,inner unpaved road,2,1,0,0,18:00-00:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-04-23 00:00:00,Shrawan,3,kanchanbari,highway,1,6,0,0,12:00-18:00,driver's fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,6,6
+2082-04-23 00:00:00,Shrawan,14,rani,inner paved road,1,4,0,0,18:00-00:00,driver's fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,4,4
+2082-04-24 00:00:00,Shrawan,4,dto,inner paved road,1,2,0,0,06:00-12:00,driver's fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2082-04-24 00:00:00,Shrawan,15,rani,inner paved road,1,1,0,0,12:00-18:00,driver's fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-04-24 00:00:00,Shrawan,13,rani,inner paved road,2,0,0,0,12:00-18:00,driver's fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,0,0
+2082-04-24 00:00:00,Shrawan,9,dto,highway,2,2,0,0,12:00-18:00,driver's fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2082-04-24 00:00:00,Shrawan,12,dto,inner paved road,2,2,0,0,12:00-18:00,driver's fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2082-04-25 00:00:00,Shrawan,9,jaljala chowk,inner paved road,1,0,0,0,12:00-18:00,pedestrian’s fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,0,0
+2082-04-26 00:00:00,Shrawan,14,rani,highway,2,1,0,0,06:00-12:00,overtake,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-04-27 00:00:00,Shrawan,14,rani,highway,1,2,0,0,12:00-18:00,other causes,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2082-04-27 00:00:00,Shrawan,4,rajbanshi chowk,highway,1,2,0,0,00:00-06:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2082-04-28 00:00:00,Shrawan,4,pipal chowk,highway,1,4,0,1,12:00-18:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,high,4,5
+2082-04-28 00:00:00,Shrawan,6,dto,highway,2,1,0,0,12:00-18:00,driver's fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-04-28 00:00:00,Shrawan,4,rajbanshi chowk,highway,1,0,0,0,12:00-18:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,0,0
+2082-04-28 00:00:00,Shrawan,15,bhatta chowk,inner paved road,1,3,0,0,12:00-18:00,pedestrian’s fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,3,3
+2082-04-29 00:00:00,Shrawan,14,rani,highway,1,2,0,0,12:00-18:00,driver's fault,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2082-04-28 00:00:00,Shrawan,14,rani,inner paved road,1,1,0,0,00:00-06:00,speeding,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-04-31,Shrawan,14,rani,highway,1,3,0,0,18:00-00:00,other causes,4,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,3,3
+2082-05-01 00:00:00,Bhadra,13,kali mandir,inner paved road,2,0,0,0,06:00-12:00,driver's fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,0,0
+2082-05-01 00:00:00,Bhadra,15,hanuman mandir,highway,2,0,0,0,12:00-18:00,speeding,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,0,0
+2082-05-01 00:00:00,Bhadra,15,rani,highway,1,1,0,0,18:00-00:00,other causes,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-05-02 00:00:00,Bhadra,7,jaljala chowk,inner paved road,2,1,0,0,06:00-12:00,speeding,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-05-02 00:00:00,Bhadra,13,sainik tole,inner paved road,2,0,0,0,06:00-12:00,overtake,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,0,0
+2082-05-02 00:00:00,Bhadra,10,dto,inner paved road,2,1,1,0,06:00-12:00,driver's fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,medium,2,2
+2082-05-02 00:00:00,Bhadra,12,dto,inner paved road,1,1,0,1,18:00-00:00,driver's fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,high,1,2
+2082-05-03 00:00:00,Bhadra,5,ring road,inner paved road,1,1,0,0,12:00-18:00,speeding,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-05-04 00:00:00,Bhadra,15,bhatta chowk,inner paved road,1,1,0,0,12:00-18:00,pedestrian’s fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-05-04 00:00:00,Bhadra,4,ddc,highway,2,0,0,1,18:00-00:00,speeding,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,high,0,1
+2082-05-06 00:00:00,Bhadra,15,rani,inner paved road,1,1,0,0,18:00-00:00,driver's fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-05-06 00:00:00,Bhadra,4,dto,inner paved road,1,1,0,0,18:00-00:00,other causes,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-05-07 00:00:00,Bhadra,4,oil nigam,inner paved road,1,1,0,0,12:00-18:00,speeding,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-05-07 00:00:00,Bhadra,17,rani,inner paved road,1,2,0,0,18:00-00:00,pedestrian’s fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2082-05-08 00:00:00,Bhadra,14,icp chowk,inner paved road,2,3,0,1,12:00-18:00,pedestrian’s fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,high,3,4
+2082-05-08 00:00:00,Bhadra,18,rani,inner paved road,1,1,0,0,18:00-00:00,speeding,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-05-09 00:00:00,Bhadra,14,rani,highway,1,3,0,0,06:00-12:00,driver's fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,3,3
+2082-05-09 00:00:00,Bhadra,12,rani,inner paved road,1,1,0,0,12:00-18:00,driver's fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-05-09 00:00:00,Bhadra,12,rani,inner paved road,2,0,0,0,12:00-18:00,driver's fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,0,0
+2082-05-10 00:00:00,Bhadra,10,hatkhola,inner paved road,1,1,0,0,18:00-00:00,driver's fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-05-11 00:00:00,Bhadra,1,buddha chowk,inner paved road,2,1,0,0,06:00-12:00,pedestrian’s fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-05-11 00:00:00,Bhadra,12,dto,highway,4,1,0,0,12:00-18:00,driver's fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-05-11 00:00:00,Bhadra,11,bus park,highway,1,1,0,0,18:00-00:00,pedestrian’s fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-05-11 00:00:00,Bhadra,13,rani,highway,3,2,0,0,18:00-00:00,driver's fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2082-05-11 00:00:00,Bhadra,4,nobel line,inner paved road,1,1,0,0,00:00-06:00,pedestrian’s fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-05-12 00:00:00,Bhadra,5,ganesh chowk,inner paved road,2,1,0,0,12:00-18:00,driver's fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-05-12 00:00:00,Bhadra,3,ausadhi bibhag,highway,2,1,0,0,12:00-18:00,driver's fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-05-12 00:00:00,Bhadra,3,ausadhi bibhag,highway,2,0,0,0,12:00-18:00,pedestrian’s fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,0,0
+2082-05-12 00:00:00,Bhadra,5,ring road,inner paved road,2,1,0,0,18:00-00:00,drunk and drive,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-05-13 00:00:00,Bhadra,5,hatkhola,inner paved road,1,1,0,0,18:00-00:00,speeding,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-05-13 00:00:00,Bhadra,2,rani,inner paved road,2,2,0,0,18:00-00:00,drunk and drive,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2082-05-13 00:00:00,Bhadra,3,hatkhola,highway,1,1,0,0,18:00-00:00,road condition,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-05-14 00:00:00,Bhadra,6,dto,inner paved road,1,3,0,0,12:00-18:00,overload,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,3,3
+2082-05-15 00:00:00,Bhadra,13,rani,inner paved road,2,2,0,0,12:00-18:00,driver's fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2082-05-15 00:00:00,Bhadra,1,pushpalal chowk,inner paved road,1,1,0,0,12:00-18:00,speeding,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-05-17 00:00:00,Bhadra,3,dto,highway,2,2,0,0,12:00-18:00,driver's fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2082-05-18 00:00:00,Bhadra,3,pushpalal chowk,inner paved road,2,1,0,0,12:00-18:00,driver's fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-05-18 00:00:00,Bhadra,12,dto,inner paved road,1,2,0,0,18:00-00:00,driver's fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2082-05-18 00:00:00,Bhadra,11,bus park,highway,2,0,0,0,18:00-00:00,speeding,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,0,0
+2082-05-18 00:00:00,Bhadra,4,dto,highway,1,2,0,0,18:00-00:00,pedestrian’s fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2082-05-19 00:00:00,Bhadra,12,rani,inner paved road,1,1,0,0,12:00-18:00,driver's fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-05-19 00:00:00,Bhadra,15,rani,inner paved road,2,1,0,0,12:00-18:00,driver's fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-05-19 00:00:00,Bhadra,13,rani,inner paved road,1,1,0,0,12:00-18:00,driver's fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-05-19 00:00:00,Bhadra,18,rani,inner paved road,2,1,0,0,18:00-00:00,vehicle condition,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-05-20 00:00:00,Bhadra,13,rani,inner paved road,2,3,0,0,06:00-12:00,speeding,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,3,3
+2082-05-20 00:00:00,Bhadra,2,munalpath,highway,2,2,0,0,06:00-12:00,driver's fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2082-05-20 00:00:00,Bhadra,14,rani,highway,1,2,1,0,00:00-06:00,drunk and drive,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,medium,3,3
+2082-05-21 00:00:00,Bhadra,4,airport road,inner paved road,2,1,0,0,12:00-18:00,speeding,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-05-21 00:00:00,Bhadra,2,birat nursing home,highway,2,0,0,0,12:00-18:00,drunk and drive,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,0,0
+2082-05-21 00:00:00,Bhadra,12,dto,inner paved road,2,1,0,0,12:00-18:00,overtake,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-05-21 00:00:00,Bhadra,3,dto,inner paved road,1,0,0,0,18:00-00:00,speeding,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,0,0
+2082-05-22 00:00:00,Bhadra,4,kanchanbari,highway,3,2,0,0,12:00-18:00,speeding,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,2,2
+2082-05-22 00:00:00,Bhadra,8,hatkhola,inner paved road,2,1,0,0,12:00-18:00,driver's fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-05-23 00:00:00,Bhadra,2,tinpaini,inner paved road,2,3,0,1,12:00-18:00,driver's fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,high,3,4
+2082-05-26 00:00:00,Bhadra,3,dto,highway,1,3,0,0,18:00-00:00,driver's fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,3,3
+2082-05-29 00:00:00,Bhadra,5,hatkhola,inner paved road,1,3,1,0,12:00-18:00,pedestrian’s fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,medium,4,4
+2082-05-29 00:00:00,Bhadra,3,buddha chowk,inner paved road,2,1,0,0,18:00-00:00,driver's fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-05-30 00:00:00,Bhadra,3,hatkhola,inner paved road,1,1,0,0,12:00-18:00,pedestrian’s fault,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-05-31 00:00:00,Bhadra,2,munalpath,highway,2,1,0,0,06:00-12:00,speeding,5,Barkha,Summer,0,0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,low,1,1
+2082-06-01 00:00:00,Ashwin,2,dto,highway,1,1,0,0,18:00-00:00,speeding,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-06-01 00:00:00,Ashwin,10,tintoliya,inner paved road,2,2,0,0,18:00-00:00,speeding,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2082-06-01 00:00:00,Ashwin,2,hatkhola,inner paved road,1,2,0,0,18:00-00:00,pedestrian’s fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2082-06-03 00:00:00,Ashwin,4,dto,highway,2,0,0,0,00:00-06:00,pedestrian’s fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,0,0
+2082-06-03 00:00:00,Ashwin,4,nobel line,inner paved road,1,1,0,0,06:00-12:00,drunk and drive,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-06-04 00:00:00,Ashwin,11,kesaliya,inner paved road,1,1,0,0,06:00-12:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-06-04 00:00:00,Ashwin,4,airport road,highway,3,1,0,0,06:00-12:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-06-04 00:00:00,Ashwin,4,oil nigam,highway,1,1,0,0,12:00-18:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-06-04 00:00:00,Ashwin,4,ddc,highway,2,1,0,1,18:00-00:00,vehicle condition,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,high,1,2
+2082-06-05 00:00:00,Ashwin,15,rani,inner paved road,2,1,0,0,12:00-18:00,vehicle condition,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-06-05 00:00:00,Ashwin,15,hanuman mandir,highway,1,0,0,0,12:00-18:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,0,0
+2082-06-05 00:00:00,Ashwin,5,dto,highway,1,1,0,0,06:00-12:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-06-06 00:00:00,Ashwin,6,dto,inner paved road,1,1,0,0,12:00-18:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-06-07 00:00:00,Ashwin,4,dto,inner paved road,2,1,0,0,12:00-18:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-06-07 00:00:00,Ashwin,3,durga chowk,inner paved road,1,1,0,0,12:00-18:00,pedestrian’s fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-06-09 00:00:00,Ashwin,16,rani,inner paved road,2,1,0,0,12:00-18:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-06-09 00:00:00,Ashwin,4,airport road,inner paved road,2,1,0,0,18:00-00:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-06-09 00:00:00,Ashwin,10,dto,inner paved road,2,2,0,0,18:00-00:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2082-06-09 00:00:00,Ashwin,11,kesaliya,inner paved road,2,1,0,0,18:00-00:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-06-09 00:00:00,Ashwin,1,pushpalal chowk,inner paved road,1,1,0,0,18:00-00:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-06-11 00:00:00,Ashwin,14,rani,inner paved road,2,1,0,0,12:00-18:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-06-11 00:00:00,Ashwin,15,rani,highway,2,1,0,0,18:00-00:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-06-11 00:00:00,Ashwin,7,central mall,inner paved road,1,1,0,0,18:00-00:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-06-12 00:00:00,Ashwin,14,rani,highway,2,1,0,0,12:00-18:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-06-12 00:00:00,Ashwin,13,roadcess chowk,highway,2,3,0,0,12:00-18:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,3,3
+2082-06-12 00:00:00,Ashwin,10,hospital chowk,inner paved road,1,3,0,0,12:00-18:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,3,3
+2082-06-12 00:00:00,Ashwin,15,rani,inner paved road,1,0,0,0,18:00-00:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,0,0
+2082-06-14 00:00:00,Ashwin,2,hatkhola,inner paved road,2,3,0,0,12:00-18:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,3,3
+2082-06-14 00:00:00,Ashwin,4,hamro hospital,highway,2,1,0,0,12:00-18:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-06-14 00:00:00,Ashwin,13,dto,highway,2,1,0,0,18:00-00:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-06-14 00:00:00,Ashwin,9,bhanu college,inner paved road,2,1,0,0,18:00-00:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-06-15 00:00:00,Ashwin,13,sainik tole,inner paved road,2,2,1,0,18:00-00:00,vehicle condition,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,medium,3,3
+2082-06-15 00:00:00,Ashwin,10,shanti chowk,inner paved road,1,1,0,0,18:00-00:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-06-15 00:00:00,Ashwin,3,hatkhola,inner paved road,1,1,0,0,18:00-00:00,vehicle condition,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-06-16 00:00:00,Ashwin,4,dto,inner paved road,1,3,0,0,18:00-00:00,vehicle condition,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,3,3
+2082-06-16 00:00:00,Ashwin,3,naya bazar,inner paved road,1,1,0,0,18:00-00:00,road condition,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-06-17 00:00:00,Ashwin,4,dto,inner paved road,2,1,0,0,12:00-18:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-06-17 00:00:00,Ashwin,4,naya bazar,inner paved road,1,1,0,0,18:00-00:00,vehicle condition,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-06-18 00:00:00,Ashwin,13,rani,inner paved road,2,0,0,0,18:00-00:00,vehicle condition,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,0,0
+2082-06-20 00:00:00,Ashwin,19,ghinaghat,inner paved road,1,1,0,0,18:00-00:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-06-20 00:00:00,Ashwin,10,ratna hotel,highway,1,1,0,0,18:00-00:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-06-21 00:00:00,Ashwin,14,dibyejyoti,highway,1,0,0,0,12:00-18:00,road condition,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,0,0
+2082-06-22 00:00:00,Ashwin,15,ramjanaki mandir,highway,1,2,0,0,06:00-12:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2082-06-22 00:00:00,Ashwin,1,mahespur,inner paved road,1,0,1,2,00:00-06:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,high,1,3
+2082-06-23 00:00:00,Ashwin,11,rampur,inner paved road,1,2,0,0,06:00-12:00,road condition,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2082-06-23 00:00:00,Ashwin,14,rani,highway,1,2,0,0,12:00-18:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2082-06-23 00:00:00,Ashwin,18,rani,inner paved road,2,2,1,0,18:00-00:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,medium,3,3
+2082-06-24 00:00:00,Ashwin,18,rani,inner paved road,3,2,1,0,18:00-00:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,medium,3,3
+2082-06-25 00:00:00,Ashwin,13,rani,inner paved road,1,1,0,0,18:00-00:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-06-25 00:00:00,Ashwin,14,plastic factory,highway,2,1,0,1,18:00-00:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,high,1,2
+2082-06-27 00:00:00,Ashwin,14,rani,highway,1,3,0,0,06:00-12:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,3,3
+2082-06-27 00:00:00,Ashwin,17,rani,inner paved road,2,1,0,0,18:00-00:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-06-27 00:00:00,Ashwin,7,jaljala chowk,inner paved road,2,1,0,0,18:00-00:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-06-28 00:00:00,Ashwin,4,rajbanshi chowk,highway,2,2,0,0,06:00-12:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2082-06-28 00:00:00,Ashwin,18,rani,highway,2,2,0,0,18:00-00:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2082-06-29 00:00:00,Ashwin,9,bus park,highway,2,1,0,0,12:00-18:00,road condition,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-06-29 00:00:00,Ashwin,4,tirupati petrol pump,highway,1,2,0,0,12:00-18:00,vehicle condition,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2082-06-29 00:00:00,Ashwin,10,swagatam hotel,highway,2,1,0,0,00:00-06:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-06-30 00:00:00,Ashwin,7,athiti sadan,inner paved road,2,1,0,0,06:00-12:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-06-30 00:00:00,Ashwin,4,oil nigam,highway,2,0,0,0,12:00-18:00,vehicle condition,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,0,0
+2082-06-31,Ashwin,4,oil nigam,highway,1,5,0,0,12:00-18:00,driver's fault,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,5,5
+2082-06-31,Ashwin,18,rani,inner paved road,2,1,0,0,12:00-18:00,vehicle condition,6,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-07-01 00:00:00,Kartik,2,pushpalal chowk,inner paved road,2,2,0,0,18:00-00:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2082-07-01 00:00:00,Kartik,4,gograha chowk,highway,1,0,0,0,18:00-00:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,0,0
+2082-07-01 00:00:00,Kartik,2,dto,inner paved road,1,1,0,0,18:00-00:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-07-02 00:00:00,Kartik,15,hanuman mandir,highway,2,1,0,0,06:00-12:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-07-02 00:00:00,Kartik,6,shiv mandir,inner paved road,1,3,0,0,06:00-12:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,3,3
+2082-07-02 00:00:00,Kartik,6,rampur,inner paved road,1,1,0,0,18:00-00:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-07-02 00:00:00,Kartik,4,jamungachi,inner paved road,2,3,0,0,18:00-00:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,3,3
+2082-07-02 00:00:00,Kartik,6,rajbanshi tole,inner paved road,1,0,1,0,18:00-00:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,medium,1,1
+2082-07-03 00:00:00,Kartik,4,hatkhola,inner paved road,1,1,0,0,18:00-00:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-07-03 00:00:00,Kartik,4,ddc,highway,2,0,0,0,18:00-00:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,0,0
+2082-07-03 00:00:00,Kartik,5,bank road,inner paved road,1,3,0,0,12:00-18:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,3,3
+2082-07-03 00:00:00,Kartik,10,pulchowk,inner paved road,1,2,0,0,18:00-00:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2082-07-03 00:00:00,Kartik,8,dto,inner paved road,2,2,0,0,18:00-00:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2082-07-04 00:00:00,Kartik,3,hatkhola,inner paved road,1,1,1,0,06:00-12:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,medium,2,2
+2082-07-04 00:00:00,Kartik,2,hatkhola,inner paved road,1,2,0,0,18:00-00:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2082-07-04 00:00:00,Kartik,14,rani,inner paved road,1,2,0,0,18:00-00:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2082-07-05 00:00:00,Kartik,17,rani,inner paved road,3,0,0,0,18:00-00:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,0,0
+2082-07-05 00:00:00,Kartik,4,pipal chowk,inner paved road,1,1,0,0,18:00-00:00,road condition,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-07-05 00:00:00,Kartik,15,ram janaki chowk,inner paved road,1,1,0,0,00:00-06:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-07-06 00:00:00,Kartik,11,big hotel,highway,1,1,0,0,18:00-00:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-07-06 00:00:00,Kartik,15,bank road,inner paved road,1,1,0,1,12:00-18:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,high,1,2
+2082-07-06 00:00:00,Kartik,15,rani,highway,2,1,3,0,18:00-00:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,medium,4,4
+2082-07-07 00:00:00,Kartik,15,rani,inner paved road,2,1,0,0,18:00-00:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-07-07 00:00:00,Kartik,3,hatkhola,highway,1,1,0,0,12:00-18:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-07-08 00:00:00,Kartik,13,sainik tole,highway,1,1,0,0,12:00-18:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-07-08 00:00:00,Kartik,6,pokhariya,inner paved road,2,2,0,0,12:00-18:00,road condition,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2082-07-09 00:00:00,Kartik,9,panchali tole,inner paved road,1,2,1,0,00:00-06:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,medium,3,3
+2082-07-09 00:00:00,Kartik,13,rani,inner paved road,1,2,0,0,12:00-18:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2082-07-10 00:00:00,Kartik,7,sani mandir,highway,2,1,0,0,12:00-18:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-07-11 00:00:00,Kartik,5,hatkhola,highway,1,1,0,0,12:00-18:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-07-11 00:00:00,Kartik,6,dto,highway,2,1,0,0,06:00-12:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-07-12 00:00:00,Kartik,1,pushpalal chowk,inner paved road,2,2,0,0,18:00-00:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2082-07-12 00:00:00,Kartik,12,sainik tole,inner paved road,2,2,0,0,06:00-12:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2082-07-12 00:00:00,Kartik,12,dto,inner paved road,1,1,0,0,06:00-12:00,road condition,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-07-12 00:00:00,Kartik,15,dudhfarm,highway,2,1,0,0,12:00-18:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-07-12 00:00:00,Kartik,12,dto,inner paved road,1,3,0,0,06:00-12:00,road condition,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,3,3
+2082-07-12 00:00:00,Kartik,19,pushpalal chowk,inner paved road,1,1,0,0,12:00-18:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-07-12 00:00:00,Kartik,3,ausadhi bibhag,highway,2,2,1,0,12:00-18:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,medium,3,3
+2082-07-12 00:00:00,Kartik,18,rani,inner paved road,1,2,0,0,18:00-00:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2082-07-13 00:00:00,Kartik,9,traffic chowk,inner paved road,1,2,0,0,18:00-00:00,vehicle condition,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2082-07-13 00:00:00,Kartik,7,dto,inner paved road,2,0,0,0,18:00-00:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,0,0
+2082-07-14 00:00:00,Kartik,3,rajbanshi chowk,highway,2,1,0,0,06:00-12:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-07-14 00:00:00,Kartik,13,rani,inner paved road,1,3,0,0,18:00-00:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,3,3
+2082-07-16 00:00:00,Kartik,10,dto,inner paved road,2,1,0,0,06:00-12:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-07-17 00:00:00,Kartik,6,dto,inner paved road,2,2,0,0,06:00-12:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2082-07-17 00:00:00,Kartik,1,hatkhola,inner paved road,1,1,0,0,12:00-18:00,vehicle condition,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-07-17 00:00:00,Kartik,7,golcha mod,inner paved road,2,1,0,0,18:00-00:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-07-18 00:00:00,Kartik,3,kharji,highway,1,1,1,0,12:00-18:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,medium,2,2
+2082-07-20 00:00:00,Kartik,3,ddc,highway,2,3,0,0,12:00-18:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,3,3
+2082-07-20 00:00:00,Kartik,2,hanuman mandir,inner paved road,2,1,2,0,12:00-18:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,medium,3,3
+2082-07-20 00:00:00,Kartik,6,ncl office,highway,1,1,0,0,18:00-00:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-07-21 00:00:00,Kartik,18,icp chowk,inner paved road,1,2,0,0,06:00-12:00,vehicle condition,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2082-07-21 00:00:00,Kartik,4,pipal chowk,highway,2,2,0,0,12:00-18:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2082-07-21 00:00:00,Kartik,5,dto,inner paved road,2,2,0,0,12:00-18:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2082-07-21 00:00:00,Kartik,15,rani,highway,2,2,0,0,18:00-00:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2082-07-21 00:00:00,Kartik,14,rani,inner paved road,2,1,0,0,18:00-00:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-07-22 00:00:00,Kartik,3,ban karyalaya,inner paved road,1,1,0,0,12:00-18:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-07-22 00:00:00,Kartik,14,rani,highway,2,2,0,0,18:00-00:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2082-07-23 00:00:00,Kartik,16,rani,inner paved road,1,2,0,0,06:00-12:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2082-07-23 00:00:00,Kartik,9,traffic chowk,inner paved road,2,1,0,0,18:00-00:00,vehicle condition,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-07-23 00:00:00,Kartik,3,buddha chowk,inner paved road,1,2,0,0,18:00-00:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2082-07-24 00:00:00,Kartik,13,rani,inner paved road,1,1,0,0,12:00-18:00,vehicle condition,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-07-25 00:00:00,Kartik,2,tinpaini,inner paved road,2,1,0,0,12:00-18:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-07-25 00:00:00,Kartik,3,bargachhi,highway,2,4,0,1,12:00-18:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,high,4,5
+2082-07-25 00:00:00,Kartik,5,dps school,inner paved road,1,1,0,0,18:00-00:00,road condition,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-07-26 00:00:00,Kartik,9,kali mandir,inner paved road,1,1,0,1,06:00-12:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,high,1,2
+2082-07-26 00:00:00,Kartik,13,koshi project,inner paved road,2,1,0,0,12:00-18:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-07-26 00:00:00,Kartik,1,purwanchal university,inner paved road,2,4,0,0,18:00-00:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,4,4
+2082-07-27 00:00:00,Kartik,3,dto,inner paved road,2,0,0,0,12:00-18:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,0,0
+2082-07-28 00:00:00,Kartik,15,rani,inner paved road,1,1,0,0,12:00-18:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-07-28 00:00:00,Kartik,4,hatkhola,inner paved road,2,3,0,0,12:00-18:00,road condition,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,3,3
+2082-07-28 00:00:00,Kartik,3,oil nigam,highway,1,1,0,0,18:00-00:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-07-29 00:00:00,Kartik,14,rani,highway,2,1,0,0,12:00-18:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-07-29 00:00:00,Kartik,13,rani,inner paved road,2,2,0,0,12:00-18:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,2,2
+2082-07-30 00:00:00,Kartik,15,rani,highway,1,1,0,0,12:00-18:00,driver's fault,7,Sharad,Autumn,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,low,1,1
+2082-08-01 00:00:00,Mangsir,3,kharji,highway,2,1,0,0,06:00-12:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-08-01 00:00:00,Mangsir,13,rani,highway,2,1,0,0,06:00-12:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-08-01 00:00:00,Mangsir,13,rice mill,highway,2,4,1,0,12:00-18:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,medium,5,5
+2082-08-01 00:00:00,Mangsir,13,rani,highway,1,1,0,0,18:00-00:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-08-02 00:00:00,Mangsir,13,sasthm college,highway,2,2,0,0,12:00-18:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2082-08-04 00:00:00,Mangsir,4,ddc,inner paved road,2,1,0,0,12:00-18:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-08-04 00:00:00,Mangsir,4,ddc,inner paved road,2,2,0,0,12:00-18:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2082-08-05 00:00:00,Mangsir,3,airport road,inner paved road,2,1,0,0,06:00-12:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-08-05 00:00:00,Mangsir,4,saptakoshi,inner paved road,1,2,0,0,12:00-18:00,vehicle condition,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2082-08-05 00:00:00,Mangsir,7,dto,inner paved road,2,1,0,0,18:00-00:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-08-05 00:00:00,Mangsir,3,naya bazar,inner paved road,1,2,0,0,18:00-00:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2082-08-06 00:00:00,Mangsir,10,aqua park,inner paved road,2,2,0,0,12:00-18:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2082-08-06 00:00:00,Mangsir,13,rani eye hospital,inner paved road,2,2,0,0,18:00-00:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2082-08-07 00:00:00,Mangsir,3,kanchanbari,highway,2,2,0,0,12:00-18:00,vehicle condition,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2082-08-07 00:00:00,Mangsir,3,oil nigam,highway,1,1,0,0,18:00-00:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-08-07 00:00:00,Mangsir,4,naya bazar,inner paved road,2,2,0,0,18:00-00:00,road condition,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2082-08-07 00:00:00,Mangsir,6,dto,inner paved road,1,1,0,0,18:00-00:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-08-08 00:00:00,Mangsir,3,pokhariya school,inner paved road,2,2,0,0,06:00-12:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2082-08-08 00:00:00,Mangsir,3,rajbanshi chowk,highway,2,1,0,0,12:00-18:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-08-08 00:00:00,Mangsir,15,pipal chowk,inner paved road,2,1,0,0,18:00-00:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-08-09 00:00:00,Mangsir,2,birat nursing home,highway,2,1,0,0,12:00-18:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-08-09 00:00:00,Mangsir,8,hatkhola,inner paved road,1,1,1,0,18:00-00:00,road condition,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,medium,2,2
+2082-08-10 00:00:00,Mangsir,4,kharji,inner paved road,2,2,0,0,06:00-12:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2082-08-10 00:00:00,Mangsir,2,rani,inner paved road,1,2,0,0,12:00-18:00,vehicle condition,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2082-08-10 00:00:00,Mangsir,13,sainik tole,inner paved road,2,0,0,0,12:00-18:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,0,0
+2082-08-10 00:00:00,Mangsir,3,oil nigam,highway,2,1,0,0,18:00-00:00,vehicle condition,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-08-11 00:00:00,Mangsir,7,athiti sadan,inner paved road,1,1,0,0,06:00-12:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-08-11 00:00:00,Mangsir,13,rani,highway,2,1,0,0,06:00-12:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-08-11 00:00:00,Mangsir,16,rani,inner paved road,2,1,0,0,18:00-00:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-08-12 00:00:00,Mangsir,13,jute mill,inner paved road,2,2,0,0,06:00-12:00,vehicle condition,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2082-08-12 00:00:00,Mangsir,1,rani,inner paved road,2,0,0,0,18:00-00:00,vehicle condition,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,0,0
+2082-08-12 00:00:00,Mangsir,4,hatkhola,inner paved road,1,0,0,0,06:00-12:00,vehicle condition,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,0,0
+2082-08-13 00:00:00,Mangsir,13,gaushala chowk,inner paved road,2,1,0,0,12:00-18:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-08-14 00:00:00,Mangsir,15,bank road,highway,2,1,0,0,18:00-00:00,vehicle condition,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-08-15 00:00:00,Mangsir,13,maiti nepal,inner paved road,2,1,0,0,12:00-18:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-08-16 00:00:00,Mangsir,13,talim kendra,inner paved road,2,1,0,0,06:00-12:00,overtake,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-08-17 00:00:00,Mangsir,13,talim kendra,inner paved road,2,1,0,0,06:00-12:00,pedestrian’s fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-08-17 00:00:00,Mangsir,2,bhirkuti chowk,highway,2,1,0,0,12:00-18:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-08-17 00:00:00,Mangsir,7,danphe chowk,inner paved road,2,2,0,0,12:00-18:00,pedestrian’s fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2082-08-17 00:00:00,Mangsir,3,ddc,highway,2,0,1,0,18:00-00:00,speeding,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,medium,1,1
+2082-08-17 00:00:00,Mangsir,3,bargachhi,highway,1,0,0,1,00:00-06:00,speeding,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,high,0,1
+2082-08-18 00:00:00,Mangsir,4,oil nigam,highway,2,1,0,0,06:00-12:00,pedestrian’s fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-08-18 00:00:00,Mangsir,5,chadani chowk,inner paved road,1,1,0,0,06:00-12:00,pedestrian’s fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-08-19 00:00:00,Mangsir,2,shyam mandir,inner paved road,2,1,0,0,12:00-18:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-08-20 00:00:00,Mangsir,18,lawaghat,inner paved road,1,2,0,0,18:00-00:00,drunk and drive,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2082-08-20 00:00:00,Mangsir,5,munalpath,highway,1,1,0,0,18:00-00:00,passenger’s fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-08-21 00:00:00,Mangsir,3,buddha chowk,inner paved road,2,1,0,0,06:00-12:00,pedestrian’s fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-08-21 00:00:00,Mangsir,3,kanchanbari,highway,2,1,1,0,06:00-12:00,pedestrian’s fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,medium,2,2
+2082-08-22 00:00:00,Mangsir,7,dharmaraj tole,inner paved road,1,2,0,0,18:00-00:00,speeding,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2082-08-22 00:00:00,Mangsir,6,bargachhi,highway,1,1,0,0,18:00-00:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-08-24 00:00:00,Mangsir,19,milan chowk,inner paved road,1,5,0,0,06:00-12:00,speeding,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,5,5
+2082-08-24 00:00:00,Mangsir,3,dhat,highway,2,1,0,0,12:00-18:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-08-25 00:00:00,Mangsir,2,bande hotel,inner paved road,2,1,0,0,12:00-18:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-08-26 00:00:00,Mangsir,4,pipal chowk,highway,2,2,0,0,06:00-12:00,traffic rule violation,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2082-08-26 00:00:00,Mangsir,14,dibyajyoti chowk,inner paved road,2,2,0,0,12:00-18:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2082-08-26 00:00:00,Mangsir,15,bank road,inner paved road,2,2,0,0,18:00-00:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2082-08-27 00:00:00,Mangsir,9,sarswati school,inner paved road,2,2,0,0,06:00-12:00,speeding,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2082-08-27 00:00:00,Mangsir,15,rani eye hospital,highway,2,2,0,0,12:00-18:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2082-08-28 00:00:00,Mangsir,14,icp chowk,highway,2,2,0,0,06:00-12:00,driver's fault,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2082-08-29 00:00:00,Mangsir,18,rani,inner paved road,1,1,0,0,12:00-18:00,drunk and drive,8,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-09-01 00:00:00,Poush,4,kanchanbari,highway,2,2,1,0,12:00-18:00,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,medium,3,3
+2082-09-01 00:00:00,Poush,4,naya bazar,inner paved road,2,2,0,0,18:00-00:00,road condition,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2082-09-02 00:00:00,Poush,11,cm office,inner paved road,2,2,0,0,06:00-12:00,speeding,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2082-09-03 00:00:00,Poush,4,pipal chowk,inner paved road,2,2,0,0,06:00-12:00,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2082-09-04 00:00:00,Poush,11,pichra,inner paved road,1,1,0,0,12:00-18:00,drunk and drive,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-09-04 00:00:00,Poush,3,football chowk,inner paved road,1,1,1,0,18:00-00:00,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,medium,2,2
+2082-09-04 00:00:00,Poush,3,gograha chowk,inner paved road,2,2,0,0,06:00-12:00,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2082-09-04 00:00:00,Poush,19,milan chowk,inner paved road,2,2,0,0,12:00-18:00,speeding,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2082-09-05 00:00:00,Poush,4,airport road,inner paved road,2,2,0,0,18:00-00:00,speeding,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2082-09-07 00:00:00,Poush,7,devkota chowk,inner paved road,1,1,0,0,18:00-00:00,speeding,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-09-07 00:00:00,Poush,4,hatkhola,inner paved road,1,1,0,0,18:00-00:00,drunk and drive,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-09-08 00:00:00,Poush,9,pushpalal chowk,inner paved road,1,1,0,1,06:00-12:00,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,high,1,2
+2082-09-09 00:00:00,Poush,8,hatkhola,inner paved road,2,2,0,0,12:00-18:00,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2082-09-09 00:00:00,Poush,11,janpat tole,inner paved road,2,2,0,0,06:00-12:00,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2082-09-10 00:00:00,Poush,9,ratna hotel,inner paved road,2,2,0,1,18:00-00:00,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,high,2,3
+2082-09-10 00:00:00,Poush,11,krishni vawan,inner paved road,1,1,0,0,12:00-18:00,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-09-11 00:00:00,Poush,4,chadani chowk,inner paved road,2,2,0,1,12:00-18:00,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,high,2,3
+2082-09-11 00:00:00,Poush,4,dto,inner paved road,1,1,0,0,18:00-00:00,speeding,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-09-11 00:00:00,Poush,14,degree campus,inner paved road,1,1,0,0,12:00-18:00,speeding,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-09-12 00:00:00,Poush,4,oil nigam,highway,1,1,0,0,18:00-00:00,drunk and drive,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-09-12 00:00:00,Poush,9,dto,highway,2,2,0,0,06:00-12:00,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2082-09-12 00:00:00,Poush,1,hatkhola,inner paved road,1,1,0,0,12:00-18:00,speeding,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-09-13 00:00:00,Poush,3,oil nigam,inner paved road,2,2,0,0,12:00-18:00,speeding,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2082-09-13 00:00:00,Poush,4,hatkhola,inner paved road,2,2,0,0,18:00-00:00,other causes,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2082-09-13 00:00:00,Poush,11,janpat tole,inner paved road,2,2,1,0,12:00-18:00,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,medium,3,3
+2082-914,Poush,15,bhatta chowk,inner paved road,2,2,1,0,18:00-00:00,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,medium,3,3
+2082-09-14 00:00:00,Poush,15,mills area,inner paved road,1,1,0,0,12:00-18:00,speeding,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-09-15 00:00:00,Poush,14,rani,inner paved road,2,2,0,1,06:00-12:00,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,high,2,3
+2082-09-15 00:00:00,Poush,12,dto,inner paved road,2,2,0,0,12:00-18:00,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2082-09-15 00:00:00,Poush,14,rani,inner paved road,1,1,0,0,00:00-06:00,speeding,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-09-16 00:00:00,Poush,14,icp chowk,highway,1,1,0,0,06:00-12:00,speeding,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-09-17 00:00:00,Poush,8,singhiya khola,highway,1,1,0,0,00:00-06:00,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-09-17 00:00:00,Poush,12,dto,highway,2,2,0,0,12:00-18:00,pedestrian’s fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2082-09-17 00:00:00,Poush,4,airport road,inner paved road,3,3,0,0,12:00-18:00,speeding,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,3,3
+2082-09-18 00:00:00,Poush,3,dhat,inner paved road,1,1,0,1,18:00-00:000,speeding,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,high,1,2
+2082-09-19 00:00:00,Poush,9,panchali,highway,2,3,0,0,06:00-12:00,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,3,3
+2082-09-19 00:00:00,Poush,7,dto,inner paved road,2,1,0,0,12:00-18:00,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-09-19 00:00:00,Poush,4,kochakhola,inner paved road,1,1,0,0,18:00-00:000,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-09-19 00:00:00,Poush,7,hatkhola,inner paved road,2,1,0,0,18:00-00:000,pedestrian’s fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-09-20 00:00:00,Poush,13,degree campus,highway,2,1,0,0,06:00-12:00,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-09-20 00:00:00,Poush,5,prithvi chowk,inner paved road,2,1,0,0,12:00-18:00,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-09-21 00:00:00,Poush,9,pushpalal chowk,inner paved road,2,2,0,0,18:00-00:000,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2082-09-21 00:00:00,Poush,3,wada office,inner paved road,2,1,0,0,18:00-00:000,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2022-09-22 00:00:00,Poush,12,dto,highway,1,1,0,0,06:00-12:00,drunk and drive,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-09-24 00:00:00,Poush,5,pipal chowk,inner paved road,1,1,0,0,18:00-00:000,speeding,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-09-25 00:00:00,Poush,1,rani,inner paved road,1,2,0,0,12:00-18:00,speeding,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2082-09-25 00:00:00,Poush,15,rani,inner paved road,1,1,0,0,12:00-18:00,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-09-25 00:00:00,Poush,13,rani,highway,2,2,0,0,18:00-00:000,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2025-09-27 00:00:00,Poush,4,tirupati,highway,2,0,0,0,12:00-18:00,speeding,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,0,0
+2025-09-27 00:00:00,Poush,2,birateshwor mandir,inner paved road,1,5,0,0,12:00-18:00,overtake,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,5,5
+2025-09-27 00:00:00,Poush,12,mangalbare,inner paved road,2,2,0,0,12:00-18:00,driver's fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,2,2
+2025-09-27 00:00:00,Poush,14,gaushala chowk,highway,1,1,0,0,18:00-00:000,pedestrian’s fault,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2025-09-27 00:00:00,Poush,4,dhat,highway,2,1,0,0,18:00-00:000,vehicle condition,9,Hemanta,Winter,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,low,1,1
+2082-09-28 00:00:00,Magh,14,sainik tole,inner paved road,2,1,0,0,12:00-18:00,pedestrian’s fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-09-28 00:00:00,Magh,15,bhatta chowk,inner paved road,1,1,0,0,12:00-18:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-09-28 00:00:00,Magh,17,rani,inner paved road,1,1,0,0,12:00-18:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-09-29 00:00:00,Magh,3,petrol pump,highway,2,4,0,0,12:00-18:00,pedestrian’s fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,4,4
+2082-09-29 00:00:00,Magh,2,tapadiya hospital,inner paved road,1,2,0,0,12:00-18:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2082-09-30 00:00:00,Magh,9,bhatti mod,highway,1,1,0,0,12:00-18:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-01 00:00:00,Magh,11,new gudri,inner paved road,1,1,0,0,06:00-12:00,pedestrian’s fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-01 00:00:00,Magh,7,hatkhola,inner paved road,2,2,0,0,18:00-00:00,pedestrian’s fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2082-10-01 00:00:00,Magh,4,hatkhola,inner paved road,1,3,0,0,18:00-00:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,3,3
+2082-10-02 00:00:00,Magh,17,rani,inner paved road,1,1,0,0,18:00-00:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-02 00:00:00,Magh,18,budhanagar,inner paved road,2,2,0,0,18:00-00:00,pedestrian’s fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2082-10-02 00:00:00,Magh,4,hamro hospital,highway,2,1,0,0,18:00-00:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-02 00:00:00,Magh,3,wada office,inner paved road,1,1,0,0,00:00-06:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-03 00:00:00,Magh,12,cm office,highway,2,2,0,0,18:00-00:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2082-10-03 00:00:00,Magh,12,dto,inner paved road,2,2,0,0,18:00-00:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2082-10-03 00:00:00,Magh,13,hanuman mandir,inner paved road,2,1,0,0,18:00-00:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-03 00:00:00,Magh,12,adarsh tole,inner paved road,1,1,0,0,18:00-00:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-03 00:00:00,Magh,6,ring road,inner paved road,1,1,0,0,18:00-00:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-05 00:00:00,Magh,19,koshi project,inner paved road,1,2,0,0,12:00-18:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2082-10-06 00:00:00,Magh,13,ring road,inner paved road,2,1,0,0,06:00-12:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-06 00:00:00,Magh,11,dto,inner paved road,1,1,0,0,06:00-12:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-06 00:00:00,Magh,13,swagatam chowk,highway,1,1,0,0,06:00-12:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-06 00:00:00,Magh,3,hatkhola,inner paved road,2,1,0,0,12:00-18:00,pedestrian’s fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-06 00:00:00,Magh,3,saibaba chowk,highway,2,2,0,0,06:00-12:00,road condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2082-10-07 00:00:00,Magh,4,kanchanbari,highway,1,0,0,0,12:00-18:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,0,0
+2082-10-07 00:00:00,Magh,12,rani,highway,1,0,0,0,18:00-00:00,pedestrian’s fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,0,0
+2082-10-08 00:00:00,Magh,4,nobel nahar,inner paved road,1,1,0,0,18:00-00:00,crossroad,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-09 00:00:00,Magh,9,kali mandir,inner paved road,2,1,0,0,06:00-12:00,pedestrian’s fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-09 00:00:00,Magh,14,rani,highway,2,2,0,0,12:00-18:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2082-10-09 00:00:00,Magh,5,prithvi tole,inner paved road,2,1,0,0,18:00-00:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-09 00:00:00,Magh,4,durga mandir,inner paved road,1,0,0,0,18:00-00:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,0,0
+2082-10-10 00:00:00,Magh,9,ghoghapul,inner paved road,1,1,0,0,12:00-18:00,other causes,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-10 00:00:00,Magh,6,bhatbhateni,highway,1,1,0,0,12:00-18:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-11 00:00:00,Magh,5,chadani chowk,inner paved road,1,1,0,0,06:00-12:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-11 00:00:00,Magh,4,yadav tole,inner paved road,1,1,0,0,12:00-18:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-11 00:00:00,Magh,4,rajbanshi chowk,inner paved road,1,1,0,0,12:00-18:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-11 00:00:00,Magh,9,panchamukhi chowk,inner paved road,2,1,0,0,18:00-00:00,pedestrian’s fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-12 00:00:00,Magh,18,icp chowk,inner paved road,2,2,0,0,06:00-12:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2082-10-12 00:00:00,Magh,15,rani,highway,1,4,0,0,18:00-00:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,4,4
+2082-10-13 00:00:00,Magh,3,dto,inner paved road,2,2,0,0,12:00-18:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2082-10-13 00:00:00,Magh,10,dto,inner paved road,2,1,0,0,18:00-00:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-14 00:00:00,Magh,3,hatkhola,inner paved road,1,1,0,0,06:00-12:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-14 00:00:00,Magh,18,rani,inner paved road,2,1,0,0,12:00-18:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-14 00:00:00,Magh,15,rani,highway,2,1,0,0,12:00-18:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-14 00:00:00,Magh,4,dto,highway,3,2,0,0,12:00-18:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2082-10-14 00:00:00,Magh,3,hatkhola,inner paved road,2,2,0,0,18:00-00:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2082-10-14 00:00:00,Magh,4,dto,inner paved road,2,3,0,0,18:00-00:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,3,3
+2082-10-15 00:00:00,Magh,10,dto,inner paved road,2,1,0,0,06:00-12:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-15 00:00:00,Magh,7,bhirkuti chowk,highway,2,1,0,0,12:00-18:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-15 00:00:00,Magh,12,dto,inner paved road,2,2,0,0,18:00-00:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2082-10-16 00:00:00,Magh,6,dto,inner paved road,1,1,0,0,12:00-18:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-16 00:00:00,Magh,10,dto,highway,2,1,0,0,12:00-18:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-17 00:00:00,Magh,4,dto,inner paved road,2,1,0,0,12:00-18:00,vehicle condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-17 00:00:00,Magh,17,rani,inner paved road,1,1,0,0,12:00-18:00,driver's fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-17 00:00:00,Magh,1,rani,inner paved road,1,1,0,0,12:00-18:00,driver's fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-17 00:00:00,Magh,13,rani,inner paved road,2,1,0,0,18:00-00:00,driver's fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-17 00:00:00,Magh,4,ganesh chowk,inner paved road,2,2,0,0,12:00-18:00,driver's fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2082-10-17 00:00:00,Magh,7,dto,inner paved road,2,2,0,0,12:00-18:00,driver's fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2082-10-17 00:00:00,Magh,2,dto,highway,2,1,0,0,18:00-00:00,speeding,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-17 00:00:00,Magh,9,dto,inner paved road,2,2,0,0,18:00-00:00,speeding,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2082-10-17 00:00:00,Magh,4,dto,highway,2,1,0,0,18:00-00:00,speeding,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-18 00:00:00,Magh,11,mahendra morang,inner paved road,2,1,0,0,12:00-18:00,driver's fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-18 00:00:00,Magh,4,dto,highway,1,1,0,0,12:00-18:00,pedestrian’s fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-18 00:00:00,Magh,9,devkota chowk,inner paved road,1,1,0,0,18:00-00:00,driver's fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-18 00:00:00,Magh,4,dto,highway,1,1,0,0,18:00-00:00,speeding,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-19 00:00:00,Magh,15,rani,highway,2,1,0,0,06:00-12:00,driver's fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-19 00:00:00,Magh,4,dto,highway,2,1,0,0,12:00-18:00,speeding,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-19 00:00:00,Magh,9,dto,highway,2,2,0,0,12:00-18:00,driver's fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2082-10-19 00:00:00,Magh,5,dto,inner paved road,2,1,0,0,12:00-18:00,driver's fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-19 00:00:00,Magh,1,dto,inner paved road,2,1,0,0,12:00-18:00,driver's fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-20 00:00:00,Magh,13,rani,inner paved road,3,1,0,0,06:00-12:00,speeding,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-20 00:00:00,Magh,2,rani,inner paved road,1,1,0,0,18:00-00:00,pedestrian’s fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-22 00:00:00,Magh,12,dto,highway,2,1,0,0,06:00-12:00,driver's fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-22 00:00:00,Magh,8,hatkhola,highway,2,1,0,0,06:00-12:00,drunk and drive,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-23 00:00:00,Magh,12,dto,highway,2,1,0,0,12:00-18:00,driver's fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-24 00:00:00,Magh,4,kanchanbari,highway,2,5,0,0,06:00-12:00,other causes,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,5,5
+2082-10-24 00:00:00,Magh,12,roadcess chowk,highway,1,1,0,0,12:00-18:00,driver's fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-24 00:00:00,Magh,3,dto,highway,2,1,0,0,06:00-12:00,other causes,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-25 00:00:00,Magh,2,rani,inner unpaved road,1,2,0,0,06:00-12:00,driver's fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2082-10-25 00:00:00,Magh,4,kharji,highway,2,1,0,0,12:00-18:00,speeding,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-26 00:00:00,Magh,11,dto,highway,1,2,0,0,06:00-12:00,driver's fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2082-10-26 00:00:00,Magh,16,rani,inner paved road,2,1,0,0,06:00-12:00,driver's fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-26 00:00:00,Magh,2,munalpath,highway,2,1,0,0,12:00-18:00,other causes,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-27 00:00:00,Magh,5,dto,inner paved road,2,1,0,0,12:00-18:00,road condition,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-28 00:00:00,Magh,9,dto,inner paved road,2,1,0,0,06:00-12:00,pedestrian’s fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-28 00:00:00,Magh,3,kharji,highway,1,2,0,0,12:00-18:00,driver's fault,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,2,2
+2082-10-28 00:00:00,Magh,2,munalpath,inner paved road,2,1,0,0,18:00-00:00,speeding,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
+2082-10-29 00:00:00,Magh,17,rani,highway,1,1,0,0,18:00-00:00,other causes,10,Shishir,Winter,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0,low,1,1
