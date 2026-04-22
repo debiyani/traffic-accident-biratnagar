@@ -1,0 +1,140 @@
+[1mdiff --git a/notebooks/analysis.ipynb b/notebooks/analysis.ipynb[m
+[1mindex 6d51008..77a714f 100644[m
+[1m--- a/notebooks/analysis.ipynb[m
+[1m+++ b/notebooks/analysis.ipynb[m
+[36m@@ -449,7 +449,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 26,[m
+[32m+[m[32m   "execution_count": null,[m
+    "id": "4e2fa492",[m
+    "metadata": {},[m
+    "outputs": [[m
+[36m@@ -478,10 +478,10 @@[m
+    "source": [[m
+     "fig, axes = plt.subplots(1, 2, figsize=(12, 5))\n",[m
+     "\n",[m
+[31m-    "order = ['low', 'medium', 'high']\n",[m
+[32m+[m[32m    "order = ['low', 'high']\n",[m
+     "\n",[m
+     "# Count plot\n",[m
+[31m-    "sns.countplot(data=df_eda, x='Severity', order=order, palette='RdYlGn_r', ax=axes[0])\n",[m
+[32m+[m[32m    "sns.countplot(data=df_eda, x='Severity', order=order, palette='RdGn_r', ax=axes[0])\n",[m
+     "axes[0].set_title('Accident Severity Distribution')\n",[m
+     "axes[0].set_xlabel('Severity')\n",[m
+     "axes[0].set_ylabel('Count')\n",[m
+[36m@@ -783,7 +783,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 42,[m
+[32m+[m[32m   "execution_count": null,[m
+    "id": "df01e064",[m
+    "metadata": {},[m
+    "outputs": [[m
+[36m@@ -804,7 +804,7 @@[m
+     "time_order = ['00:00-06:00', '06:00-12:00', '12:00-18:00', '18:00-00:00']\n",[m
+     "nepali_season_order = ['Basanta', 'Grishma', 'Barkha', 'Sharad', 'Hemanta', 'Shishir']\n",[m
+     "\n",[m
+[31m-    "# 11a — Accident count per ward\n",[m
+[32m+[m[32m    "#Accident count per ward\n",[m
+     "ward_counts = df_eda['Ward'].value_counts().sort_index()\n",[m
+     "ward_counts.plot(kind='bar', ax=axes[0,0], color='steelblue')\n",[m
+     "axes[0,0].set_title('Total Accidents per Ward')\n",[m
+[36m@@ -812,7 +812,7 @@[m
+     "axes[0,0].set_ylabel('Accident Count')\n",[m
+     "axes[0,0].tick_params(axis='x', rotation=0)\n",[m
+     "\n",[m
+[31m-    "# 11b — Severity distribution per ward\n",[m
+[32m+[m[32m    "#Severity distribution per ward\n",[m
+     "ward_severity = df_eda.groupby(['Ward', 'Severity']).size().unstack(fill_value=0)\n",[m
+     "ward_severity = ward_severity.reindex(columns=['low', 'medium', 'high'], fill_value=0)\n",[m
+     "ward_severity.plot(kind='bar', ax=axes[0,1], color=['green', 'orange', 'red'])\n",[m
+[36m@@ -822,7 +822,7 @@[m
+     "axes[0,1].tick_params(axis='x', rotation=0)\n",[m
+     "axes[0,1].legend(title='Severity')\n",[m
+     "\n",[m
+[31m-    "# 11c — Ward + Time Range\n",[m
+[32m+[m[32m    "#Ward + Time Range\n",[m
+     "ward_time = df_eda.groupby(['Ward', 'Time_Range']).size().unstack(fill_value=0)\n",[m
+     "ward_time = ward_time.reindex(columns=time_order, fill_value=0)\n",[m
+     "ward_time.plot(kind='bar', ax=axes[1,0], colormap='Set2')\n",[m
+[36m@@ -832,7 +832,7 @@[m
+     "axes[1,0].tick_params(axis='x', rotation=0)\n",[m
+     "axes[1,0].legend(title='Time Range', bbox_to_anchor=(1.05, 1))\n",[m
+     "\n",[m
+[31m-    "# 11d — Ward + Nepali Season\n",[m
+[32m+[m[32m    "#Ward + Nepali Season\n",[m
+     "ward_nepali = df_eda.groupby(['Ward', 'Nepali_Season']).size().unstack(fill_value=0)\n",[m
+     "ward_nepali = ward_nepali.reindex(columns=nepali_season_order, fill_value=0)\n",[m
+     "ward_nepali.plot(kind='bar', ax=axes[1,1], colormap='tab10')\n",[m
+[1mdiff --git a/notebooks/feature-engineering.ipynb b/notebooks/feature-engineering.ipynb[m
+[1mindex f219e5e..295ea6b 100644[m
+[1m--- a/notebooks/feature-engineering.ipynb[m
+[1m+++ b/notebooks/feature-engineering.ipynb[m
+[36m@@ -570,7 +570,6 @@[m
+     }[m
+    ],[m
+    "source": [[m
+[31m-    "# Time Range has natural order — encode manually\n",[m
+     "time_order_map = {\n",[m
+     "    '00:00-06:00': 0,\n",[m
+     "    '06:00-12:00': 1,\n",[m
+[36m@@ -1097,7 +1096,55 @@[m
+   {[m
+    "cell_type": "code",[m
+    "execution_count": 13,[m
+[31m-   "id": "23e55804",[m
+[32m+[m[32m   "id": "90256e43",[m
+[32m+[m[32m   "metadata": {},[m
+[32m+[m[32m   "outputs": [[m
+[32m+[m[32m    {[m
+[32m+[m[32m     "name": "stdout",[m
+[32m+[m[32m     "output_type": "stream",[m
+[32m+[m[32m     "text": [[m
+[32m+[m[32m      "<StringArray>\n",[m
+[32m+[m[32m      "['low', 'medium', 'high']\n",[m
+[32m+[m[32m      "Length: 3, dtype: str\n"[m
+[32m+[m[32m     ][m
+[32m+[m[32m    }[m
+[32m+[m[32m   ],[m
+[32m+[m[32m   "source": [[m
+[32m+[m[32m    "print(df['Severity'].unique()) "[m
+[32m+[m[32m   ][m
+[32m+[m[32m  },[m
+[32m+[m[32m  {[m
+[32m+[m[32m   "cell_type": "code",[m
+[32m+[m[32m   "execution_count": 14,[m
+[32m+[m[32m   "id": "3e06d38e",[m
+[32m+[m[32m   "metadata": {},[m
+[32m+[m[32m   "outputs": [[m
+[32m+[m[32m    {[m
+[32m+[m[32m     "name": "stdout",[m
+[32m+[m[32m     "output_type": "stream",[m
+[32m+[m[32m     "text": [[m
+[32m+[m[32m      "Series([], Name: count, dtype: int64)\n",[m
+[32m+[m[32m      "Series([], Name: proportion, dtype: float64)\n"[m
+[32m+[m[32m     ][m
+[32m+[m[32m    }[m
+[32m+[m[32m   ],[m
+[32m+[m[32m   "source": [[m
+[32m+[m[32m    "severity_binary_map = {\n",[m
+[32m+[m[32m    "    'Low':    0,   # minor or no injury → LOW\n",[m
+[32m+[m[32m    "    'Medium': 1,   # severe injury      → HIGH  ← key change\n",[m
+[32m+[m[32m    "    'High':   1,   # fatal/death        → HIGH\n",[m
+[32m+[m[32m    "}\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "df['Severity'] = df['Severity'].map(severity_binary_map)\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "print(df['Severity'].value_counts())\n",[m
+[32m+[m[32m    "print(df['Severity'].value_counts(normalize=True).round(3) * 100)"[m
+[32m+[m[32m   ][m
+[32m+[m[32m  },[m
+[32m+[m[32m  {[m
+[32m+[m[32m   "cell_type": "code",[m
+[32m+[m[32m   "execution_count": 15,[m
+[32m+[m[32m   "id": "0b1e45da",[m
+    "metadata": {},[m
+    "outputs": [[m
+     {[m
