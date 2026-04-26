@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrafficSafe Biratnagar — Accident Risk Analysis</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Noto+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0d14;
+      --surface: #111620;
+      --surface2: #1a2030;
+      --border: #1e2d45;
+      --accent: #e63946;
+      --accent2: #f4a261;
+      --safe: #2ec4b6;
+      --warn: #f4a261;
+      --danger: #e63946;
+      --text: #d0dae8;
+      --muted: #5a6a80;
+      --grid: rgba(30,45,69,0.4);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: …
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TrafficSafe — Biratnagar</title>
+<link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:      #04070f;
+  --bg2:     #070c18;
+  --panel:   #0b1220;
+  --panel2:  #0f1929;
+  --border:  rgba(0,210,255,0.12);
+  --border2: rgba(0,210,255,0.25);
+  --cyan:    #00d2ff;
+  --red:     #ff2d4e;
+  --orange:  #ff8c42;
+  --green:   #00e5a0;
+  --yellow:  #ffe033;
+  --text:    #c8dff0;
+  --muted:   #3a5570;
+  --muted2:  #5a7a95;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Oxanium', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* BG */
+.bg-layer { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+.bg-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(0,210,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,210,255,0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  animation: gridDrift 24s linear infinite;
+}
+@keyframes gridDrift { 0%{transform:translate(0,0)} 100%{transform:translate(48px,48px)} }
+.bg-glow1 {
+  position: absolute; top: -20%; left: -10%;
+  width: 70vw; height: 70vw;
+  background: radial-gradient(circle, rgba(0,210,255,0.055) 0%, transparent 65%);
+  animation: floatA 12s ease-in-out infinite alternate;
+}
+.bg-glow2 {
+  position: absolute; bottom: -20%; right: -10%;
+  width: 60vw; height: 60vw;
+  background: radial-gradient(circle, rgba(255,45,78,0.05) 0%, transparent 65%);
+  animation: floatB 15s ease-in-out infinite alternate;
+}
+@keyframes floatA { from{transform:translate(0,0)} to{transform:translate(3%,4%)} }
+@keyframes floatB { from{transform:translate(0,0)} to{transform:translate(-3%,-3%)} }
+.scan-line {
+  position: absolute; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(0,210,255,0.35), transparent);
+  animation: scanDown 7s linear infinite;
+}
+@keyframes scanDown {
+  0%{top:-2px;opacity:0} 5%{opacity:1} 95%{opacity:1} 100%{top:100%;opacity:0}
+}
+
+/* NAV */
+nav {
+  position: sticky; top: 0; z-index: 200;
+  height: 76px;
+  background: rgba(4,7,15,0.94);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border2);
+  display: flex; align-items: center;
+  padding: 0 2.5rem;
+}
+nav::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+  opacity: 0.35;
+}
+.nav-left { display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
+.nav-logo-box {
+  width: 48px; height: 48px;
+  border: 1px solid var(--border2);
+  background: var(--panel);
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+  clip-path: polygon(10% 0%,90% 0%,100% 10%,100% 90%,90% 100%,10% 100%,0% 90%,0% 10%);
+}
+.nav-logo-box::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(0,210,255,0.18), transparent);
+}
+.nav-logo-box span { font-size: 1.5rem; position: relative; z-index: 1; }
+.nav-brand-wrap { display: flex; flex-direction: column; gap: 3px; }
+.nav-brand-name {
+  font-size: 1.25rem; font-weight: 800; letter-spacing: 3px;
+  color: #fff; line-height: 1;
+  text-shadow: 0 0 20px rgba(0,210,255,0.5);
+}
+.nav-brand-name em { font-style: normal; color: var(--cyan); }
+.nav-brand-sub {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.52rem; letter-spacing: 3px; color: var(--muted2); text-transform: uppercase;
+}
+.nav-divider { flex: 1; height: 1px; background: linear-gradient(90deg, var(--border2), transparent); margin: 0 2rem; }
+.nav-status {
+  display: flex; align-items: center; gap: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.58rem; letter-spacing: 2px; color: var(--muted2);
+  margin-right: 2rem;
+}
+.status-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--green); box-shadow: 0 0 8px var(--green);
+  animation: blink 2s ease-in-out infinite;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+.nav-links { display: flex; }
+.nav-links a {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.93rem; letter-spacing: 2px; color: var(--muted2);
+  text-decoration: none; text-transform: uppercase;
+  padding: 0 1.3rem; height: 76px;
+  display: flex; align-items: center;
+  border-left: 1px solid var(--border);
+  transition: color 0.2s, background 0.2s;
+  position: relative;
+}
+.nav-links a::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+  background: var(--cyan); transform: scaleX(0); transition: transform 0.25s;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--cyan); background: rgba(0,210,255,0.04); }
+.nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
+
+/* WRAPPER */
+.wrapper { position: relative; z-index: 1; max-width: 1280px; margin: 0 auto; padding: 2.5rem 2rem 5rem; }
+
+/* HERO */
+.hero {
+  display: flex; align-items: flex-start; justify-content: space-between; gap: 2rem;
+  margin-bottom: 2.5rem;
+  animation: riseIn 0.6s cubic-bezier(0.2,0,0,1) both;
+}
+@keyframes riseIn { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
+.hero-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem; letter-spacing: 4px; color: var(--cyan);
+  text-transform: uppercase; margin-bottom: 0.75rem;
+  display: flex; align-items: center; gap: 10px;
+}
+.hero-eyebrow::before { content:''; width:32px; height:1px; background:var(--cyan); }
+.hero-title {
+  font-size: clamp(2rem, 3.5vw, 3.2rem); font-weight: 800;
+  line-height: 1.05; color: #fff; letter-spacing: 1px;
+}
+.hero-title .hl  { color: var(--cyan);  text-shadow: 0 0 30px rgba(0,210,255,0.4); }
+.hero-title .hl2 { color: var(--red);   text-shadow: 0 0 30px rgba(255,45,78,0.4); }
+.hero-desc {
+  margin-top: 0.85rem; font-size: 0.86rem;
+  color: var(--muted2); line-height: 1.75; max-width: 480px; font-weight: 300;
+}
+.hero-stats { display: flex; gap: 2rem; margin-top: 1.5rem; flex-wrap: wrap; }
+.hstat { display: flex; flex-direction: column; gap: 3px; }
+.hstat-val {
+  font-size: 1.65rem; font-weight: 800; color: var(--cyan); line-height: 1;
+  text-shadow: 0 0 20px rgba(0,210,255,0.4);
+}
+.hstat-val.red { color: var(--red); text-shadow: 0 0 20px rgba(255,45,78,0.4); }
+.hstat-val.grn { color: var(--green); text-shadow: 0 0 20px rgba(0,229,160,0.4); }
+.hstat-label { font-family:'JetBrains Mono',monospace; font-size:0.52rem; letter-spacing:2px; color:var(--muted); text-transform:uppercase; }
+.hero-badge {
+  flex-shrink: 0;
+  background: var(--panel2); border: 1px solid var(--border2);
+  padding: 1.1rem 1.4rem;
+  display: flex; flex-direction: column; gap: 9px;
+  position: relative; overflow: hidden;
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+  min-width: 220px;
+}
+.hero-badge::before { content:''; position:absolute; top:0; left:0; right:0; height:1px; background:linear-gradient(90deg,var(--cyan),transparent); }
+.badge-row {
+  font-family:'JetBrains Mono',monospace; font-size:0.58rem; letter-spacing:1.5px; color:var(--muted2);
+  display:flex; align-items:center; gap:8px;
+}
+.badge-row em { font-style:normal; color:var(--cyan); }
+.badge-dot { width:5px; height:5px; border-radius:50%; background:var(--green); box-shadow:0 0 6px var(--green); flex-shrink:0; }
+
+/* MAIN GRID */
+.main-grid {
+  display: grid; grid-template-columns: 400px 1fr; gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  animation: riseIn 0.7s cubic-bezier(0.2,0,0,1) 0.1s both;
+}
+@media(max-width:900px){ .main-grid{ grid-template-columns:1fr; } }
+
+/* PANEL */
+.panel {
+  background: var(--panel); border: 1px solid var(--border);
+  position: relative; overflow: hidden;
+}
+.panel::before {
+  content: ''; position: absolute; top: 0; left: 0; width: 2px; height: 100%;
+  background: linear-gradient(180deg, var(--cyan), transparent);
+}
+.panel::after {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, var(--cyan), transparent); opacity: 0.5;
+}
+.panel-corner { position: absolute; bottom: 0; right: 0; width: 18px; height: 18px; border-bottom: 1px solid var(--border2); border-right: 1px solid var(--border2); }
+.panel-header {
+  padding: 1rem 1.5rem 0.85rem; border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; gap: 10px;
+}
+.panel-icon {
+  width: 30px; height: 30px; background: rgba(0,210,255,0.08); border: 1px solid var(--border2);
+  display: flex; align-items: center; justify-content: center; font-size: 0.9rem;
+}
+.panel-title-text {
+  font-family: 'JetBrains Mono', monospace; font-size: 0.62rem;
+  letter-spacing: 3px; color: var(--muted2); text-transform: uppercase;
+}
+.panel-body { padding: 1.5rem; }
+
+/* FORM */
+.form-row { margin-bottom: 1.1rem; }
+.field-label {
+  font-family: 'JetBrains Mono', monospace; font-size: 0.58rem;
+  letter-spacing: 2.5px; color: var(--muted2); text-transform: uppercase;
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 6px;
+}
+.field-label span { color: var(--cyan); font-size: 0.55rem; }
+.field-wrap { position: relative; }
+.field-wrap::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px;
+  background: var(--border2); transition: background 0.2s;
+}
+.field-wrap:focus-within::before { background: var(--cyan); }
+input, select {
+  width: 100%; background: var(--panel2); border: 1px solid var(--border);
+  border-left: none; color: var(--text);
+  font-family: 'Oxanium', sans-serif; font-size: 0.88rem; font-weight: 500;
+  padding: 0.72rem 1rem; outline: none;
+  transition: border-color 0.2s, background 0.2s;
+  appearance: none; -webkit-appearance: none;
+}
+input::placeholder { color: var(--muted); font-weight: 300; }
+input:focus, select:focus { border-color: rgba(0,210,255,0.3); background: #0d1a2e; }
+select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%235a7a95'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; cursor: pointer;
+}
+select option { background: #0b1220; color: var(--text); }
+
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.1rem; }
+
+/* ANALYZE BTN */
+.btn-analyze {
+  width: 100%; padding: 0.95rem; margin-top: 0.5rem;
+  background: transparent; border: 1px solid var(--cyan);
+  color: var(--cyan); font-family: 'Oxanium', sans-serif;
+  font-size: 0.9rem; font-weight: 700; letter-spacing: 4px; text-transform: uppercase;
+  cursor: pointer; position: relative; overflow: hidden;
+  transition: color 0.3s, box-shadow 0.3s;
+}
+.btn-analyze::before {
+  content: ''; position: absolute; inset: 0;
+  background: var(--cyan); transform: translateX(-101%);
+  transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
+}
+.btn-analyze:hover { color: var(--bg); box-shadow: 0 0 30px rgba(0,210,255,0.25); }
+.btn-analyze:hover::before { transform: translateX(0); }
+.btn-analyze span { position: relative; z-index: 1; }
+.btn-analyze.loading { pointer-events: none; opacity: 0.7; }
+.btn-analyze.loading span::after { content: ' ···'; animation: dots 1s infinite; }
+@keyframes dots { 0%{content:' .'} 33%{content:' ..'} 66%{content:' ...'} 100%{content:' .'} }
+
+/* SYSTEM INFO */
+.sys-info {
+  margin-top: 1.2rem; padding: 0.85rem 1rem;
+  background: var(--panel2); border: 1px solid var(--border);
+  display: flex; flex-direction: column; gap: 6px;
+}
+.sys-row {
+  font-family: 'JetBrains Mono', monospace; font-size: 0.57rem;
+  letter-spacing: 1.5px; color: var(--muted); display: flex; justify-content: space-between;
+}
+.sys-row em { font-style: normal; color: var(--cyan); }
+.sys-row .ok { color: var(--green); }
+
+/* RESULT AREA */
+.result-area { height: 100%; display: flex; flex-direction: column; }
+
+/* PLACEHOLDER */
+.placeholder {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 1rem; min-height: 300px;
+}
+.placeholder-ring {
+  width: 80px; height: 80px; border-radius: 50%;
+  border: 1px solid var(--border2);
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+}
+.placeholder-ring::before {
+  content: ''; position: absolute; inset: 6px; border-radius: 50%;
+  border: 1px solid var(--border); border-top-color: var(--cyan);
+  animation: spin 3s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.placeholder-ring span { font-size: 1.8rem; }
+.placeholder-text {
+  font-family: 'JetBrains Mono', monospace; font-size: 0.62rem;
+  letter-spacing: 2px; color: var(--muted); text-align: center; text-transform: uppercase; line-height: 2;
+}
+
+/* RESULT CONTENT */
+#resultContent { display: none; flex-direction: column; gap: 0; flex: 1; }
+
+/* SCORE SECTION */
+.score-section {
+  padding: 1.5rem; border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; gap: 2rem;
+}
+.gauge-wrap { flex-shrink: 0; }
+.gauge-svg { width: 160px; height: 88px; overflow: visible; }
+.score-info { flex: 1; }
+.score-number {
+  font-size: 3.5rem; font-weight: 800; line-height: 1; color: #fff;
+  transition: color 0.5s;
+}
+.score-unit { font-size: 1rem; color: var(--muted2); font-weight: 300; }
+.score-label {
+  font-family: 'JetBrains Mono', monospace; font-size: 0.6rem;
+  letter-spacing: 3px; color: var(--muted2); text-transform: uppercase; margin-top: 4px;
+}
+.risk-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 0.35rem 1rem; margin-top: 0.6rem;
+  font-family: 'JetBrains Mono', monospace; font-size: 0.7rem;
+  font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  position: relative; overflow: hidden;
+}
+.risk-chip::before { content:''; position:absolute; inset:0; opacity:0.12; }
+.risk-chip.low    { color:var(--green);  border:1px solid var(--green);  }
+.risk-chip.low::before  { background:var(--green); }
+.risk-chip.medium { color:var(--orange); border:1px solid var(--orange); }
+.risk-chip.medium::before { background:var(--orange); }
+.risk-chip.high   { color:var(--red);    border:1px solid var(--red);    }
+.risk-chip.high::before   { background:var(--red); }
+.chip-dot { width:6px; height:6px; border-radius:50%; background:currentColor; }
+
+/* TABS */
+.tabs { display: flex; border-bottom: 1px solid var(--border); }
+.tab {
+  font-family: 'JetBrains Mono', monospace; font-size: 0.6rem;
+  letter-spacing: 2px; color: var(--muted2); text-transform: uppercase;
+  padding: 0.75rem 1.25rem; cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+.tab:hover { color: var(--cyan); background: rgba(0,210,255,0.03); }
+.tab.active { color: var(--cyan); border-bottom-color: var(--cyan); }
+.tab-content { display: none; padding: 1.25rem 1.5rem; }
+.tab-content.active { display: block; }
+
+/* FACTOR BARS */
+.factor-item { margin-bottom: 1rem; }
+.factor-top {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 6px;
+}
+.factor-name { font-family:'JetBrains Mono',monospace; font-size:0.6rem; letter-spacing:1.5px; color:var(--muted2); text-transform:uppercase; }
+.factor-pct  { font-family:'JetBrains Mono',monospace; font-size:0.65rem; font-weight:700; color:var(--cyan); }
+.factor-track { height: 3px; background: rgba(0,210,255,0.08); position: relative; }
+.factor-fill { height: 100%; width: 0%; transition: width 1.2s cubic-bezier(0.4,0,0.2,1); position: relative; }
+.factor-fill::after { content:''; position:absolute; right:0; top:-3px; width:7px; height:7px; border-radius:50%; background:currentColor; box-shadow:0 0 8px currentColor; }
+
+/* INSIGHTS */
+.insight-item {
+  display: flex; gap: 12px; padding: 0.75rem 1rem; margin-bottom: 0.6rem;
+  background: var(--panel2); border-left: 2px solid var(--border2);
+  position: relative; overflow: hidden;
+}
+.insight-item::before { content:''; position:absolute; inset:0; opacity:0.04; }
+.insight-item.tip    { border-left-color: var(--green);  }
+.insight-item.tip::before  { background:var(--green); }
+.insight-item.warn   { border-left-color: var(--orange); }
+.insight-item.warn::before { background:var(--orange); }
+.insight-item.alert  { border-left-color: var(--red);    }
+.insight-item.alert::before { background:var(--red); }
+.insight-icon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+.insight-text { font-size: 0.8rem; line-height: 1.6; color: var(--text); font-weight: 300; }
+
+/* WEATHER WIDGET */
+.weather-row {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+  background: var(--border); margin: 0; border-top: 1px solid var(--border);
+}
+.weather-cell {
+  background: var(--panel2); padding: 0.85rem 1rem;
+  display: flex; flex-direction: column; gap: 4px;
+}
+.wc-label { font-family:'JetBrains Mono',monospace; font-size:0.52rem; letter-spacing:2px; color:var(--muted); text-transform:uppercase; }
+.wc-val   { font-size: 1rem; font-weight: 700; color: var(--cyan); }
+.wc-sub   { font-family:'JetBrains Mono',monospace; font-size:0.52rem; color:var(--muted2); }
+
+/* BOTTOM GRID */
+.bottom-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
+  animation: riseIn 0.8s cubic-bezier(0.2,0,0,1) 0.2s both;
+}
+@media(max-width:700px){ .bottom-grid{ grid-template-columns:1fr; } }
+
+/* CHART */
+.chart-wrap { padding: 1.25rem 1.5rem; }
+.chart-container {
+  display: flex; align-items: flex-end; gap: 5px;
+  height: 130px; margin-top: 0.75rem;
+}
+.cb-wrap { flex:1; display:flex; flex-direction:column; align-items:center; gap:5px; height:100%; justify-content:flex-end; }
+.cb {
+  width: 100%; position: relative; cursor: pointer;
+  transition: opacity 0.2s, filter 0.2s;
+  border-radius: 1px 1px 0 0;
+}
+.cb:hover { opacity: 0.75; filter: brightness(1.2); }
+.cb-tip {
+  position: absolute; bottom: 105%; left: 50%; transform: translateX(-50%);
+  background: var(--panel2); border: 1px solid var(--border2);
+  padding: 3px 8px; font-family:'JetBrains Mono',monospace; font-size:0.55rem;
+  color: var(--text); white-space: nowrap; opacity: 0; pointer-events: none;
+  transition: opacity 0.15s; border-bottom: 2px solid var(--cyan);
+}
+.cb:hover .cb-tip { opacity: 1; }
+.cb-label { font-family:'JetBrains Mono',monospace; font-size:0.52rem; color:var(--muted); letter-spacing:0.5px; }
+
+/* HEATMAP */
+.heatmap-wrap { padding: 1.25rem 1.5rem; }
+.heatmap-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 4px; margin-top: 0.75rem; }
+.hm-cell {
+  aspect-ratio: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 2px;
+  cursor: pointer; transition: transform 0.15s, filter 0.15s;
+  position: relative;
+}
+.hm-cell:hover { transform: scale(1.05); filter: brightness(1.3); z-index: 2; }
+.hm-cell-inner {
+  width: 100%; height: 100%; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 2px;
+}
+.hm-ward { font-family:'JetBrains Mono',monospace; font-size:0.62rem; font-weight:700; color:#fff; }
+.hm-val  { font-family:'JetBrains Mono',monospace; font-size:0.5rem; color:rgba(255,255,255,0.6); }
+.hm-tip {
+  display: none; position: absolute; bottom: 105%; left: 50%; transform: translateX(-50%);
+  background: var(--panel); border: 1px solid var(--border2);
+  padding: 4px 8px; font-family:'JetBrains Mono',monospace; font-size:0.55rem;
+  color:var(--text); white-space:nowrap; z-index:10;
+}
+.hm-cell:hover .hm-tip { display: block; }
+
+/* FOOTER */
+footer {
+  position: relative; z-index: 1;
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  margin-top: 1.5rem;
+}
+footer::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--cyan), transparent); opacity: 0.2;
+}
+.footer-left { font-family:'JetBrains Mono',monospace; font-size:0.55rem; letter-spacing:2px; color:var(--muted); }
+.footer-right { font-family:'JetBrains Mono',monospace; font-size:0.55rem; letter-spacing:2px; color:var(--muted); text-align:right; }
+.footer-right em { font-style:normal; color:var(--cyan); }
+</style>
+</head>
+<body>
+
+<div class="bg-layer">
+  <div class="bg-grid"></div>
+  <div class="bg-glow1"></div>
+  <div class="bg-glow2"></div>
+  <div class="scan-line"></div>
+</div>
+
+<nav>
+  <div class="nav-left">
+    <div class="nav-logo-box">
+       <img src="Screenshot 2026-04-22 130109.png" style="width:100%;height:100%;object-fit:cover">
+    </div>
+    <div class="nav-brand-wrap">
+      <div class="nav-brand-name">TRAFFIC<em>SAFE</em></div>
+      <div class="nav-brand-sub">Biratnagar </div>
+    </div>
+  </div>
+  <div class="nav-divider"></div>
+  <div class="nav-status">
+    <div class="status-dot"></div>
+  </div>
+  <div class="nav-links">
+    <a href="#" class="active">Home</a>
+    <a href="#seasonal">Seasonal chart</a>
+    <a href="#heatmap">Analysis</a>
+  </div>
+</nav>
+
+<div class="wrapper">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-left">
+      <div class="hero-eyebrow">ML-Powered · Biratnagar Metropolitan City</div>
+      <h1 class="hero-title">
+        Traffic Accident<br>
+        <span class="hl">Risk</span> <span class="hl2">Analysis</span>
+      </h1>
+      <div class="hero-stats">
+        <div class="hstat"><div class="hstat-val">19</div><div class="hstat-label">Wards Covered</div></div>
+        <div class="hstat"><div class="hstat-val red">900+</div><div class="hstat-label">Incidents Analyzed</div></div>
+        <div class="hstat"><div class="hstat-val grn">94%</div><div class="hstat-label">Model Accuracy</div></div>
+        <div class="hstat"><div class="hstat-val">12</div><div class="hstat-label">Nepali Months</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN GRID -->
+  <div class="main-grid">
+
+    <!-- INPUT PANEL -->
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-icon">⚙</div>
+        <div class="panel-title-text">Input Parameters</div>
+      </div>
+      <div class="panel-body">
+
+        <div class="form-row">
+          <div class="field-label">Location / Street </div>
+          <div class="field-wrap">
+            <input type="text" id="location" placeholder="e.g. Mahendra Chowk, Trafficchowk..." required>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-row" style="margin:0">
+            <div class="field-label">Ward No.</div>
+            <div class="field-wrap">
+              <select id="ward" required>
+                <option value="">— Select —</option>
+                <option>1</option><option>2</option><option>3</option><option>4</option>
+                <option>5</option><option>6</option><option>7</option><option>8</option>
+                <option>9</option><option>10</option><option>11</option><option>12</option>
+                <option>13</option><option>14</option><option>15</option><option>16</option>
+                <option>17</option><option>18</option><option>19</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row" style="margin:0">
+            <div class="field-label">Road Type</div>
+            <div class="field-wrap">
+              <select id="roadtype">
+                <option value="highway">Highway</option>
+                <option value="urban">Inner paved road</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field-label">Nepali Month</div>
+          <div class="field-wrap">
+            <select id="month" required>
+              <option value="">— Select Month —</option>
+              <option value="1">Baishak (Apr–May)</option>
+              <option value="2">Jestha (May–Jun)</option>
+              <option value="3">Ashar (Jun–Jul)</option>
+              <option value="4">Shrawan (Jul–Aug)</option>
+              <option value="5">Bhadra (Aug–Sep)</option>
+              <option value="6">Ashwin (Sep–Oct)</option>
+              <option value="7">Kartik (Oct–Nov)</option>
+              <option value="8">Mangshir (Nov–Dec)</option>
+              <option value="9">Poush (Dec–Jan)</option>
+              <option value="10">Magh (Jan–Feb)</option>
+              <option value="11">Falgun (Feb–Mar)</option>
+              <option value="12">Chaitra (Mar–Apr)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-row" style="margin:0">
+            <div class="field-label">Time Slot</div>
+            <div class="field-wrap">
+              <select id="time" required>
+                <option value="">— Select —</option>
+                <option value="morning">06:00–12:00</option>
+                <option value="afternoon">12:00–18:00</option>
+                <option value="evening">18:00–00:00</option>
+                <option value="night">00:00–06:00</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row" style="margin:0">
+          </div>
+        </div>
+
+        <button class="btn-analyze" id="analyzeBtn" onclick="analyzeRisk()">
+          <span>▶ Run Risk Analysis</span>
+        </button>
+
+        <div class="sys-info">
+          <div class="sys-row"><span>MODEL ENGINE</span><em>GRADIENT BOOST · XGB v3.1</em></div>
+          <div class="sys-row"><span>DATA POINTS</span><em>900+ RECORDS</em></div>
+          <div class="sys-row"><span>SYSTEM</span><span class="ok">● OPERATIONAL</span></div>
+        </div>
+      </div>
+      <div class="panel-corner"></div>
+    </div>
+
+    <!-- RESULT PANEL -->
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-icon">📊</div>
+        <div class="panel-title-text">Risk Assessment Output</div>
+      </div>
+      <div class="result-area">
+        <div class="placeholder" id="placeholder">
+          <div class="placeholder-ring"><span>🛡</span></div>
+          <div class="placeholder-text">Configure parameters<br>and run analysis<br>to view risk output</div>
+        </div>
+
+        <div id="resultContent">
+          <!-- SCORE -->
+          <div class="score-section">
+            <div class="gauge-wrap">
+              <svg class="gauge-svg" viewBox="0 0 160 88">
+                <defs>
+                  <linearGradient id="gGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#00e5a0"/>
+                    <stop offset="50%" stop-color="#ff8c42"/>
+                    <stop offset="100%" stop-color="#ff2d4e"/>
+                  </linearGradient>
+                </defs>
+                <path d="M 8 80 A 72 72 0 0 1 152 80" fill="none" stroke="rgba(0,210,255,0.08)" stroke-width="8" stroke-linecap="round"/>
+                <path id="gaugeFill" d="M 8 80 A 72 72 0 0 1 152 80" fill="none" stroke="url(#gGrad)" stroke-width="8" stroke-linecap="round"
+                  stroke-dasharray="226" stroke-dashoffset="226"/>
+                <line id="gaugeNeedle" x1="80" y1="80" x2="80" y2="18"
+                  stroke="#00d2ff" stroke-width="2" stroke-linecap="round"
+                  transform="rotate(-90,80,80)"
+                  style="transition:transform 1.2s cubic-bezier(0.4,0,0.2,1);transform-origin:80px 80px;"/>
+                <circle cx="80" cy="80" r="4" fill="#00d2ff" stroke="var(--bg)" stroke-width="2"/>
+                <circle cx="80" cy="80" r="2" fill="#fff"/>
+              </svg>
+            </div>
+            <div class="score-info">
+              <div class="score-number" id="scoreNum">0<span class="score-unit">/100</span></div>
+              <div class="score-label">RISK SCORE</div>
+              <div class="risk-chip" id="riskChip"><div class="chip-dot"></div><span>—</span></div>
+            </div>
+          </div>
+
+          <!-- WEATHER BAR -->
+          <div class="weather-row" id="weatherRow">
+            <div class="weather-cell"><div class="wc-label">Ward Risk</div><div class="wc-val" id="wWard">—</div><div class="wc-sub">Zone Factor</div></div>
+            <div class="weather-cell"><div class="wc-label">Seasonal</div><div class="wc-val" id="wSeason">—</div><div class="wc-sub">Month Factor</div></div>
+            <div class="weather-cell"><div class="wc-label">Time</div><div class="wc-val" id="wTime">—</div><div class="wc-sub">Hour Factor</div></div>
+            <div class="weather-cell"><div class="wc-label">Weather</div><div class="wc-val" id="wWeather">—</div><div class="wc-sub">Conditions</div></div>
+          </div>
+
+          <!-- TABS -->
+          <div class="tabs">
+            <div class="tab active" onclick="showTab('factors')">Risk Factors</div>
+            <div class="tab" onclick="showTab('insights')">Insights</div>
+            <div class="tab" onclick="showTab('compare')">Comparison</div>
+          </div>
+          <div class="tab-content active" id="tab-factors">
+            <div id="factorBars"></div>
+          </div>
+          <div class="tab-content" id="tab-insights">
+            <div id="insightList"></div>
+          </div>
+          <div class="tab-content" id="tab-compare">
+            <div id="compareContent"></div>
+          </div>
+        </div>
+      </div>
+      <div class="panel-corner"></div>
+    </div>
+  </div>
+
+  <!-- BOTTOM GRID -->
+
+<footer>
+  <div class="footer-left">TRAFFICSAFE BIRATNAGAR <br>© 2081 BS · BIRATNAGAR METROPOLITAN CITY</div>
+  <div class="footer-right">MODEL: <em>XGB v3.1</em> · DATA: <em>BIR TRAFFIC DEPT</em><br>ACCURACY: <em>94.2%</em> · RECORDS: <em>4,218</em></div>
+</footer>
+
+<script>
+// ── DATA ──
+const wardRisk = {1:10,2:8,3:12,4:9,5:15,6:18,7:14,8:11,9:16,10:20,11:13,12:17,13:9,14:10,15:12,16:14,17:11,18:8,19:16};
+const monthRisk = [0,5,8,18,22,20,12,10,5,3,2,7,10];
+const timeRisk = {morning:8,afternoon:12,evening:20,night:15};
+const weatherRisk = {clear:0,rain:12,fog:8,heavy:20};
+const roadRisk = {highway:12,urban:8,intersection:15,residential:5};
+const seasonalData = [
+  {month:'BAI',value:55},{month:'JES',value:60},{month:'ASH',value:85},
+  {month:'SHR',value:95},{month:'BHA',value:90},{month:'ASW',value:70},
+  {month:'KAR',value:65},{month:'MAN',value:50},{month:'POU',value:45},
+  {month:'MAG',value:42},{month:'FAL',value:55},{month:'CHA',value:60},
+];
+
+// ── BUILD SEASONAL CHART ──
+function buildChart() {
+  const c = document.getElementById('seasonalChart');
+  const max = Math.max(...seasonalData.map(d=>d.value));
+  c.innerHTML = '';
+  seasonalData.forEach((d,i) => {
+    const wrap = document.createElement('div'); wrap.className='cb-wrap';
+    const bar = document.createElement('div'); bar.className='cb';
+    const col = d.value>80?'#ff2d4e':d.value>65?'#ff8c42':'#00d2ff';
+    bar.style.cssText=height:0;background:${col};opacity:0.85;box-shadow:0 0 8px ${col}44;;
+    const tip = document.createElement('div'); tip.className='cb-tip';
+    tip.textContent=${d.month}: ${d.value};
+    bar.appendChild(tip);
+    const lbl = document.createElement('div'); lbl.className='cb-label'; lbl.textContent=d.month;
+    wrap.appendChild(bar); wrap.appendChild(lbl); c.appendChild(wrap);
+    setTimeout(()=>{ bar.style.height=Math.round((d.value/max)*120)+'px'; }, 400+i*55);
+  });
+}
+
+// ── BUILD WARD HEATMAP ──
+function buildHeatmap() {
+  const c = document.getElementById('wardHeatmap');
+  c.innerHTML = '';
+  for(let w=1;w<=19;w++) {
+    const v = wardRisk[w];
+    const norm = v/20;
+    const r = Math.round(norm*255);
+    const g = Math.round((1-norm)*200);
+    const bg = rgba(${r},${g},50,0.7);
+    const cell = document.createElement('div'); cell.className='hm-cell';
+    cell.style.cssText=background:${bg};border:1px solid rgba(255,255,255,0.08);;
+    cell.innerHTML=`
+      <div class="hm-cell-inner">
+        <div class="hm-ward">W${w}</div>
+        <div class="hm-val">${v}/20</div>
+      </div>
+      <div class="hm-tip">Ward ${w} · Risk Index: ${v}</div>`;
+    c.appendChild(cell);
+  }
+  // last cell empty filler
+  const filler = document.createElement('div'); filler.style.background='transparent';
+  c.appendChild(filler);
+}
+
+buildChart(); buildHeatmap();
+
+// ── TABS ──
+function showTab(name) {
+  document.querySelectorAll('.tab').forEach((t,i)=>{
+    const names=['factors','insights','compare'];
+    t.classList.toggle('active', names[i]===name);
+  });
+  document.querySelectorAll('.tab-content').forEach(tc=>{
+    tc.classList.toggle('active', tc.id==='tab-'+name);
+  });
+}
+
+// ── COMPUTE ──
+function computeRisk(ward, month, time, weather, road) {
+  let score = 30;
+  score += (wardRisk[ward]||10);
+  score += (monthRisk[month]||5);
+  score += (timeRisk[time]||8);
+  score += (weatherRisk[weather]||0);
+  score += (roadRisk[road]||8);
+  return Math.min(98, Math.max(8, score));
+}
+
+function getRisk(score) {
+  if(score<38) return {level:'low',   label:'LOW RISK',      color:'#00e5a0'};
+  if(score<62) return {level:'medium',label:'MODERATE RISK', color:'#ff8c42'};
+  return              {level:'high',  label:'HIGH RISK',     color:'#ff2d4e'};
+}
+
+// ── GAUGE ──
+function animGauge(score) {
+  const fill   = document.getElementById('gaugeFill');
+  const needle = document.getElementById('gaugeNeedle');
+  const total  = 226;
+  fill.style.transition='stroke-dashoffset 1.2s cubic-bezier(0.4,0,0.2,1)';
+  fill.style.strokeDashoffset = total - (score/100)*total;
+  needle.style.transform = rotate(${-90+(score/100)*180}deg);
+  const el = document.getElementById('scoreNum');
+  let cur=0; const step=score/50;
+  const t = setInterval(()=>{
+    cur=Math.min(cur+step,score);
+    el.innerHTML=Math.round(cur)+'<span class="score-unit">/100</span>';
+    if(cur>=score) clearInterval(t);
+  },20);
+}
+
+// ── FACTORS ──
+function buildFactors(ward, month, time, weather, road) {
+  const wr = wardRisk[ward]||10;
+  const mr = monthRisk[month]||5;
+  const tr = timeRisk[time]||8;
+  const wt = weatherRisk[weather]||0;
+  const rr = roadRisk[road]||8;
+  const total = wr+mr+tr+wt+rr+0.001;
+  const factors = [
+    {name:'Ward / Location Zone', val:wr, pct:Math.round(wr/total*100), color:'#00d2ff'},
+    {name:'Seasonal Pattern',     val:mr, pct:Math.round(mr/total*100), color:'#ff8c42'},
+    {name:'Time of Day',          val:tr, pct:Math.round(tr/total*100), color:'#ff2d4e'},
+    {name:'Weather Conditions',   val:wt, pct:Math.round(wt/total*100), color:'#ffe033'},
+    {name:'Road Type',            val:rr, pct:Math.round(rr/total*100), color:'#00e5a0'},
+  ];
+  const el = document.getElementById('factorBars');
+  el.innerHTML = '';
+  factors.forEach(f=>{
+    el.innerHTML+=`
+      <div class="factor-item">
+        <div class="factor-top">
+          <div class="factor-name">${f.name}</div>
+          <div class="factor-pct" style="color:${f.color}">${f.pct}%</div>
+        </div>
+        <div class="factor-track">
+          <div class="factor-fill" style="background:${f.color};color:${f.color}" data-val="${f.pct}"></div>
+        </div>
+      </div>`;
+  });
+  setTimeout(()=>{ document.querySelectorAll('.factor-fill').forEach(e=>{ e.style.width=e.dataset.val+'%'; }); },50);
+}
+
+// ── INSIGHTS ──
+function buildInsights(ward, month, time, weather, risk) {
+  const ins = [];
+  if([3,4,5].includes(+month)) ins.push({type:'alert',icon:'🌧',text:'Monsoon season active — wet roads and reduced visibility significantly raise accident probability in Biratnagar.'});
+  else ins.push({type:'tip',icon:'☀',text:'Dry season conditions. Road grip is favorable, though dust haze near industrial zones may reduce visibility.'});
+  if(['evening','night'].includes(time)) ins.push({type:'warn',icon:'🌙',text:'Night-time travel: 40% higher accident rate due to poor street lighting across several Biratnagar wards.'});
+  else ins.push({type:'tip',icon:'🌤',text:'Daytime conditions. Exercise extra caution during peak hours: 8–10 AM and 4–7 PM at busy intersections.'});
+  if(ward>=9&&ward<=14) ins.push({type:'warn',icon:'🚦',text:'Central ward zone — historically elevated accident density near major commercial intersections.'});
+  if(weather==='heavy') ins.push({type:'alert',icon:'⛈',text:'Heavy rain significantly reduces braking distance and road visibility. Strongly consider postponing travel.'});
+  if(weather==='fog')   ins.push({type:'warn', icon:'🌫',text:'Fog advisory — maintain increased following distance and use fog lights on all major routes.'});
+  if(risk.level==='high') ins.push({type:'alert',icon:'⚠',text:'HIGH RISK ZONE: Consider alternate routes, travel in daylight, or delay non-essential trips until conditions improve.'});
+  else if(risk.level==='low') ins.push({type:'tip',icon:'✅',text:'Conditions are relatively safe. Maintain standard road safety practices and remain alert.'});
+  const el = document.getElementById('insightList');
+  el.innerHTML='';
+  ins.forEach(i=>{ el.innerHTML+=<div class="insight-item ${i.type}"><div class="insight-icon">${i.icon}</div><div class="insight-text">${i.text}</div></div>; });
+}
+
+// ── COMPARE ──
+function buildCompare(ward, month, time, score) {
+  const allWards = Object.values(wardRisk);
+  const avgWard = Math.round(allWards.reduce((a,b)=>a+b,0)/allWards.length);
+  const cityAvg = 58;
+  const diff = score - cityAvg;
+  const el = document.getElementById('compareContent');
+  el.innerHTML=`
+    <div class="sys-info" style="margin-bottom:0.75rem">
+      <div class="sys-row"><span>YOUR SCORE</span><em style="color:${score>65?'#ff2d4e':score>40?'#ff8c42':'#00e5a0'}">${score} / 100</em></div>
+      <div class="sys-row"><span>CITY AVERAGE</span><em>${cityAvg} / 100</em></div>
+      <div class="sys-row"><span>DIFFERENCE</span><em style="color:${diff>0?'#ff2d4e':'#00e5a0'}">${diff>0?'+':''}${diff} vs CITY AVG</em></div>
+      <div class="sys-row"><span>WARD ${ward} AVG INDEX</span><em>${wardRisk[ward]||'—'} / 20</em></div>
+      <div class="sys-row"><span>CITY WARD AVG</span><em>${avgWard} / 20</em></div>
+    </div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:0.57rem;letter-spacing:1.5px;color:var(--muted2);line-height:2">
+      ${diff>10?'⚠ SIGNIFICANTLY ABOVE city average risk level.':diff>0?'↑ SLIGHTLY ABOVE city average risk level.':'✓ BELOW city average — relatively safer conditions.'}
+    </div>`;
+}
+
+// ── MAIN ANALYZE ──
+function analyzeRisk() {
+  const ward    = parseInt(document.getElementById('ward').value);
+  const month   = parseInt(document.getElementById('month').value);
+  const time    = document.getElementById('time').value;
+  const weather = document.getElementById('weather').value;
+  const road    = document.getElementById('roadtype').value;
+  if(!ward||!month||!time){ alert('Please select Ward, Month and Time Slot.'); return; }
+
+  const btn = document.getElementById('analyzeBtn');
+  btn.classList.add('loading');
+  btn.querySelector('span').textContent='⟳ Analyzing...';
+  btn.disabled=true;
+
+  setTimeout(()=>{
+    btn.classList.remove('loading');
+    btn.querySelector('span').textContent='▶ Run Risk Analysis';
+    btn.disabled=false;
+
+    const score = computeRisk(ward,month,time,weather,road);
+    const risk  = getRisk(score);
+
+    document.getElementById('placeholder').style.display='none';
+    document.getElementById('resultContent').style.display='flex';
+    document.getElementById('resultContent').style.flexDirection='column';
+
+    animGauge(score);
+    document.getElementById('scoreNum').style.color=risk.color;
+
+    const chip=document.getElementById('riskChip');
+    chip.innerHTML=<div class="chip-dot"></div><span>${risk.label}</span>;
+    chip.className='risk-chip '+risk.level;
+
+    // weather cells
+    const wr=wardRisk[ward]||10;
+    const mr=monthRisk[month]||5;
+    const tr=timeRisk[time]||8;
+    const wt=weatherRisk[weather]||0;
+    document.getElementById('wWard').textContent=wr+'/20';
+    document.getElementById('wWard').style.color=wr>15?'#ff2d4e':wr>10?'#ff8c42':'#00d2ff';
+    document.getElementById('wSeason').textContent=mr+'/22';
+    document.getElementById('wSeason').style.color=mr>15?'#ff2d4e':mr>8?'#ff8c42':'#00d2ff';
+    document.getElementById('wTime').textContent=tr+'/20';
+    document.getElementById('wTime').style.color=tr>15?'#ff2d4e':tr>10?'#ff8c42':'#00d2ff';
+    document.getElementById('wWeather').textContent=wt>0?'+'+wt:'Clear';
+    document.getElementById('wWeather').style.color=wt>15?'#ff2d4e':wt>5?'#ff8c42':'#00e5a0';
+
+    buildFactors(ward,month,time,weather,road);
+    buildInsights(ward,month,time,weather,risk);
+    buildCompare(ward,month,time,score);
+    showTab('factors');
+
+  }, 1600);
+}
+
+document.addEventListener('keydown', e=>{ if(e.key==='Enter') analyzeRisk(); });
+</script>
+</body>
+</html>
