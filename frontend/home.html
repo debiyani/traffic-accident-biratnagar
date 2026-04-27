@@ -594,7 +594,8 @@ footer::before {
             <div class="field-wrap">
               <select id="roadtype">
                 <option value="highway">Highway</option>
-                <option value="urban">Inner paved road</option>
+                <option value="inner paved road">Inner paved road</option>
+                <option value="inner unpaved road">Inner unpaved road</option>
               </select>
             </div>
           </div>
@@ -752,9 +753,9 @@ function buildChart() {
     const wrap = document.createElement('div'); wrap.className='cb-wrap';
     const bar = document.createElement('div'); bar.className='cb';
     const col = d.value>80?'#ff2d4e':d.value>65?'#ff8c42':'#00d2ff';
-    bar.style.cssText=height:0;background:${col};opacity:0.85;box-shadow:0 0 8px ${col}44;;
+    bar.style.cssText=`height:0;background:${col};opacity:0.85;box-shadow:0 0 8px ${col}44;`;
     const tip = document.createElement('div'); tip.className='cb-tip';
-    tip.textContent=${d.month}: ${d.value};
+    tip.textContent=`${d.month}: ${d.value}`;
     bar.appendChild(tip);
     const lbl = document.createElement('div'); lbl.className='cb-label'; lbl.textContent=d.month;
     wrap.appendChild(bar); wrap.appendChild(lbl); c.appendChild(wrap);
@@ -771,9 +772,9 @@ function buildHeatmap() {
     const norm = v/20;
     const r = Math.round(norm*255);
     const g = Math.round((1-norm)*200);
-    const bg = rgba(${r},${g},50,0.7);
+    const bg = `rgba(${r},${g},50,0.7)`;
     const cell = document.createElement('div'); cell.className='hm-cell';
-    cell.style.cssText=background:${bg};border:1px solid rgba(255,255,255,0.08);;
+    cell.style.cssText=`background: ${bg};border:1px solid rgba(255,255,255,0.08);`;
     cell.innerHTML=`
       <div class="hm-cell-inner">
         <div class="hm-ward">W${w}</div>
@@ -824,7 +825,7 @@ function animGauge(score) {
   const total  = 226;
   fill.style.transition='stroke-dashoffset 1.2s cubic-bezier(0.4,0,0.2,1)';
   fill.style.strokeDashoffset = total - (score/100)*total;
-  needle.style.transform = rotate(${-90+(score/100)*180}deg);
+  needle.style.transform = `rotate(${-90+(score/100)*180}deg)`;
   const el = document.getElementById('scoreNum');
   let cur=0; const step=score/50;
   const t = setInterval(()=>{
@@ -880,7 +881,9 @@ function buildInsights(ward, month, time, weather, risk) {
   else if(risk.level==='low') ins.push({type:'tip',icon:'✅',text:'Conditions are relatively safe. Maintain standard road safety practices and remain alert.'});
   const el = document.getElementById('insightList');
   el.innerHTML='';
-  ins.forEach(i=>{ el.innerHTML+=<div class="insight-item ${i.type}"><div class="insight-icon">${i.icon}</div><div class="insight-text">${i.text}</div></div>; });
+  ins.forEach(i=>{
+    el.innerHTML += `<div class="insight-item ${i.type}"><div class="insight-icon">${i.icon}</div><div class="insight-text">${i.text}</div></div>`;
+  });
 }
 
 // ── COMPARE ──
@@ -933,7 +936,7 @@ function analyzeRisk() {
     document.getElementById('scoreNum').style.color=risk.color;
 
     const chip=document.getElementById('riskChip');
-    chip.innerHTML=<div class="chip-dot"></div><span>${risk.label}</span>;
+    chip.innerHTML=`<div class="chip-dot"></div><span>${risk.label}</span>`;
     chip.className='risk-chip '+risk.level;
 
     // weather cells
@@ -960,5 +963,8 @@ function analyzeRisk() {
 
 document.addEventListener('keydown', e=>{ if(e.key==='Enter') analyzeRisk(); });
 </script>
+
+<!-- API Integration: Connects frontend to backend -->
+<script src="api-integration.js"></script>
 </body>
 </html>

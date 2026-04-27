@@ -33,8 +33,15 @@ app.config.from_object(Config)
 try:
     data_loader = DataLoader(app.config['DATA_PATH'])
     analysis = AccidentAnalysis(data_loader.df)
-    ml_predictor = MLPredictor(app.config['MODEL_PATH'], data_loader.df)
-    logger.info("✅ All modules loaded successfully")
+    ml_predictor = None
+    try:
+        ml_predictor = MLPredictor(app.config['MODEL_PATH'], data_loader.df)
+        logger.info("✅ All modules loaded successfully (including ML model)")
+    except Exception as e:
+        # Don't take down the whole API if the pickle/compiled deps don't match.
+        # Most endpoints (options/analyze/risk-assessment) don't require the ML model.
+        logger.error(f"⚠️ ML model failed to load; ML endpoints will be unavailable: {str(e)}")
+        ml_predictor = None
 except Exception as e:
     logger.error(f"❌ Error initializing modules: {str(e)}")
     raise
@@ -196,6 +203,11 @@ def predict_severity():
     }
     """
     try:
+        if ml_predictor is None:
+            return jsonify({
+                'error': 'ML model is not available on this server. Fix model dependencies and restart backend.'
+            }), 503
+
         data = request.get_json()
         
         # Validate required fields
