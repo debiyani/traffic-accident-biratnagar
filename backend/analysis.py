@@ -309,6 +309,69 @@ class AccidentAnalysis:
             }
         }
     
+    def get_ward_location_risk(self, ward, location):
+        """
+        Get overall accident statistics for ward+location (any time, month, road type)
+        Used as fallback when exact scenario has no data
+        
+        Args:
+            ward: int
+            location: str
+        
+        Returns:
+            dict with overall statistics for the ward+location
+        """
+        df_ward_loc = self.df[
+            (self.df['Ward'] == ward) &
+            (self.df['Location'] == location)
+        ]
+        
+        total_accidents = len(df_ward_loc)
+        
+        if total_accidents == 0:
+            return {
+                'total_accidents': 0,
+                'severity_distribution': {'low': 0, 'medium': 0, 'high': 0, 'low_pct': 0, 'medium_pct': 0, 'high_pct': 0},
+                'injury_stats': {'total_minor_injuries': 0, 'total_severe_injuries': 0, 'total_deaths': 0, 'total_casualties': 0, 'average_vehicles_involved': 0},
+                'most_common_time': None,
+                'most_common_month': None
+            }
+        
+        # Severity distribution
+        severity_counts = df_ward_loc['Severity'].value_counts()
+        severity_dist = {
+            'low': int(severity_counts.get('low', 0)),
+            'medium': int(severity_counts.get('medium', 0)),
+            'high': int(severity_counts.get('high', 0)),
+            'low_pct': round((severity_counts.get('low', 0) / total_accidents * 100), 2),
+            'medium_pct': round((severity_counts.get('medium', 0) / total_accidents * 100), 2),
+            'high_pct': round((severity_counts.get('high', 0) / total_accidents * 100), 2),
+        }
+        
+        # Injury statistics
+        injury_stats = {
+            'total_minor_injuries': int(df_ward_loc['Minor_Injury'].sum()),
+            'total_severe_injuries': int(df_ward_loc['Severe_Injury'].sum()),
+            'total_deaths': int(df_ward_loc['Fatal/Death'].sum()),
+            'total_casualties': int(df_ward_loc['Casualties'].sum()),
+            'average_vehicles_involved': round(df_ward_loc['No_of_vehicles_involved'].mean(), 2)
+        }
+        
+        # Most common time and month
+        time_counts = df_ward_loc['Time_Range'].value_counts()
+        month_counts = df_ward_loc['Month_Num'].value_counts()
+        
+        most_common_time = time_counts.index[0] if len(time_counts) > 0 else None
+        most_common_month = int(month_counts.index[0]) if len(month_counts) > 0 else None
+        
+        return {
+            'total_accidents': total_accidents,
+            'severity_distribution': severity_dist,
+            'injury_stats': injury_stats,
+            'most_common_time': most_common_time,
+            'most_common_month': most_common_month
+        }
+    
     def get_time_range_analysis(self, time_range):
         """
         Get comprehensive analysis for a specific time range

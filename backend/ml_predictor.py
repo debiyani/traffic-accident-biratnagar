@@ -320,6 +320,7 @@ class MLPredictor:
                         'risk_level': result['risk_level'],
                         'prediction': result['prediction']
                     }
+                    
             
             return results
             

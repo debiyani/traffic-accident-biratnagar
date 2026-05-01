@@ -38,13 +38,29 @@ try:
         ml_predictor = MLPredictor(app.config['MODEL_PATH'], data_loader.df)
         logger.info("✅ All modules loaded successfully (including ML model)")
     except Exception as e:
-        # Don't take down the whole API if the pickle/compiled deps don't match.
-        # Most endpoints (options/analyze/risk-assessment) don't require the ML model.
         logger.error(f"⚠️ ML model failed to load; ML endpoints will be unavailable: {str(e)}")
         ml_predictor = None
 except Exception as e:
     logger.error(f"❌ Error initializing modules: {str(e)}")
     raise
+
+
+# ─────────────────────────────────────────────────────────────────
+# HELPERS
+# ─────────────────────────────────────────────────────────────────
+
+NEPALI_MONTH_NAMES = {
+    1: 'Baishak', 2: 'Jestha', 3: 'Ashar', 4: 'Shrawan',
+    5: 'Bhadra', 6: 'Ashwin', 7: 'Kartik', 8: 'Mangshir',
+    9: 'Poush', 10: 'Magh', 11: 'Falgun', 12: 'Chaitra'
+}
+
+TIME_RANGE_LABELS = {
+    '00:00-06:00': 'Late Night',
+    '06:00-12:00': 'Morning',
+    '12:00-18:00': 'Afternoon',
+    '18:00-00:00': 'Evening/Night'
+}
 
 
 # ─────────────────────────────────────────────────────────────────
@@ -85,83 +101,44 @@ def get_options():
 def analyze_accident_rate():
     """
     Analyze accident rate for specific criteria
-    
-    Request body:
-    {
-        "time_range": "06:00-12:00",
-        "ward": 14,
-        "location": "rani",
-        "month": 4,
-        "road_type": "highway"  (optional)
-    }
-    
-    Returns:
-    {
-        "with_road_type": {...},
-        "without_road_type": {...},
-        "has_data": true/false,
-        "alternative_times": {...},
-        "seasonal_breakdown": {...}
-    }
     """
     try:
         data = request.get_json()
-        
-        # Validate required fields
+
         required_fields = ['time_range', 'ward', 'location', 'month']
         for field in required_fields:
             if field not in data:
                 return jsonify({'error': f'Missing required field: {field}'}), 400
-        
+
         time_range = data.get('time_range')
         ward = data.get('ward')
         location = data.get('location')
         month = data.get('month')
         road_type = data.get('road_type')
-        
-        # Get analysis with road type
+
         with_road_type = analysis.get_accident_rate(
-            time_range=time_range,
-            ward=ward,
-            location=location,
-            month=month,
-            road_type=road_type
+            time_range=time_range, ward=ward, location=location,
+            month=month, road_type=road_type
         )
-        
-        # Get analysis without road type
         without_road_type = analysis.get_accident_rate(
-            time_range=time_range,
-            ward=ward,
-            location=location,
-            month=month,
-            road_type=None
+            time_range=time_range, ward=ward, location=location,
+            month=month, road_type=None
         )
-        
-        # Check if we have data for this specific combination
+
         has_data = with_road_type['total_accidents'] > 0 if road_type else without_road_type['total_accidents'] > 0
-        
-        # If no data, get alternative times for this ward+location
+
         alternative_times = {}
         if not has_data:
             alternative_times = analysis.get_accident_rate_other_times(
-                ward=ward,
-                location=location,
-                month=month
+                ward=ward, location=location, month=month
             )
-        
-        # Get seasonal breakdown for this ward+location
-        seasonal_breakdown = analysis.get_seasonal_breakdown(
-            ward=ward,
-            location=location
-        )
-        
+
+        seasonal_breakdown = analysis.get_seasonal_breakdown(ward=ward, location=location)
+
         response = {
             'query': {
-                'time_range': time_range,
-                'ward': ward,
-                'location': location,
-                'month': month,
-                'road_type': road_type
+                'time_range': time_range, 'ward': ward,
+                'location': location, 'month': month, 'road_type': road_type
             },
             'with_road_type': with_road_type,
             'without_road_type': without_road_type,
@@ -169,11 +146,178 @@ def analyze_accident_rate():
             'alternative_times': alternative_times,
             'seasonal_breakdown': seasonal_breakdown
         }
-        
         return jsonify(response), 200
-        
+
     except Exception as e:
         logger.error(f"Error in analyze_accident_rate: {str(e)}")
+        return jsonify({'error': str(e)}), 500
+
+
+@app.route('/api/analyze-severity', methods=['POST'])
+def analyze_severity():
+    """
+    EDA-based severity breakdown analysis.
+
+    Request body:
+    {
+        "ward": 14,
+        "location": "rani",
+        "month": 5,
+        "time_range": "18:00-00:00",
+        "road_type": "highway",
+        "nepali_season": "Barkha"   (optional, used only for display)
+    }
+
+    Returns structured severity breakdown with:
+    - exact-scenario data (ward + location + month + time + road_type)
+    - broader monthly data  (ward + location + month, any time)
+    - full location data    (ward + location, all months)
+    - ML model probability  (if available)
+    - conclusion / prediction
+    """
+    try:
+        data = request.get_json()
+
+        required_fields = ['ward', 'location', 'month', 'time_range', 'road_type']
+        for field in required_fields:
+            if field not in data:
+                return jsonify({'error': f'Missing required field: {field}'}), 400
+
+        ward = int(data['ward'])
+        location = str(data['location']).strip().lower()
+        month = int(data['month'])
+        time_range = str(data['time_range'])
+        road_type = str(data['road_type']).strip().lower()
+        nepali_season = data.get('nepali_season', '')
+
+        df = data_loader.df  # cleaned DataFrame
+
+        # ── helper: merge medium+high → HIGH ──────────────────
+        def severity_merge(s):
+            return 'HIGH' if s in ('high', 'medium') else 'LOW'
+
+        def compute_breakdown(subset):
+            total = len(subset)
+            if total == 0:
+                return {'total': 0, 'low': 0, 'high': 0,
+                        'low_pct': 0.0, 'high_pct': 0.0}
+            merged = subset['Severity'].apply(severity_merge)
+            high = int((merged == 'HIGH').sum())
+            low  = int((merged == 'LOW').sum())
+            return {
+                'total': total,
+                'low': low, 'high': high,
+                'low_pct': round(low / total * 100, 1),
+                'high_pct': round(high / total * 100, 1)
+            }
+
+        # ── Filter subsets ────────────────────────────────────
+        mask_exact = (
+            (df['Ward'] == ward) &
+            (df['Location'].str.lower() == location) &
+            (df['Month_Num'] == month) &
+            (df['Time_Range'] == time_range) &
+            (df['Road_Type'].str.lower() == road_type)
+        )
+        mask_month = (
+            (df['Ward'] == ward) &
+            (df['Location'].str.lower() == location) &
+            (df['Month_Num'] == month)
+        )
+        mask_location = (
+            (df['Ward'] == ward) &
+            (df['Location'].str.lower() == location)
+        )
+
+        exact_df    = df[mask_exact]
+        month_df    = df[mask_month]
+        location_df = df[mask_location]
+
+        exact_bd    = compute_breakdown(exact_df)
+        month_bd    = compute_breakdown(month_df)
+        location_bd = compute_breakdown(location_df)
+
+        has_exact_data = exact_bd['total'] > 0
+
+        # ── ML prediction ─────────────────────────────────────
+        ml_result = None
+        if ml_predictor is not None:
+            # map time_range string → encoded int used by model
+            tr_map = ml_predictor.time_range_map
+            rt_map = ml_predictor.road_type_map
+            season_map = ml_predictor.nepali_season_map
+
+            # get nepali season from month if not provided
+            encoded_season = ml_predictor._get_nepali_season(month)
+            season_code = season_map.get(encoded_season, 0)
+            time_code   = tr_map.get(time_range, 0)
+            road_code   = rt_map.get(road_type, 0)
+
+            ml_raw = ml_predictor.predict_severity(
+                time_range=time_range,
+                ward=ward,
+                location=location,
+                month=month,
+                road_type=road_type,
+                n_vehicles=2
+            )
+            if 'success' in ml_raw and ml_raw['success']:
+                ml_result = {
+                    'prob_high': round(ml_raw['probability_high'] * 100, 2),
+                    'prob_low':  round(ml_raw['probability_low']  * 100, 2),
+                    'risk_level': ml_raw['risk_level'],
+                    'prediction': ml_raw['prediction']
+                }
+
+        # ── Conclusion ────────────────────────────────────────
+        # Use month-level data for conclusion (most informative when exact is empty)
+        ref_bd = exact_bd if has_exact_data else month_bd
+        if ref_bd['total'] > 0:
+            if ref_bd['high_pct'] > 50:
+                conclusion_type = 'high'
+                conclusion_text = f"More HIGH severity accidents occur in {ward} {location}"
+            else:
+                conclusion_type = 'low'
+                conclusion_text = f"More LOW severity accidents occur in {ward} {location}"
+        else:
+            # fall back to ML
+            if ml_result:
+                conclusion_type = ml_result['prediction']
+                conclusion_text = f"Based on model prediction: {ml_result['risk_level']} severity likely"
+            else:
+                conclusion_type = 'unknown'
+                conclusion_text = "Insufficient data for conclusion"
+
+        month_name = NEPALI_MONTH_NAMES.get(month, str(month))
+        time_label = TIME_RANGE_LABELS.get(time_range, time_range)
+
+        response = {
+            'success': True,
+            'query': {
+                'ward': ward,
+                'location': location,
+                'month': month,
+                'month_name': month_name,
+                'time_range': time_range,
+                'time_label': time_label,
+                'road_type': road_type,
+                'nepali_season': nepali_season,
+                'ward_location': f"{ward} {location}"
+            },
+            'has_exact_data': has_exact_data,
+            'exact': exact_bd,
+            'monthly': month_bd,
+            'location': location_bd,
+            'ml': ml_result,
+            'conclusion': {
+                'type': conclusion_type,
+                'text': conclusion_text
+            }
+        }
+        return jsonify(response), 200
+
+    except Exception as e:
+        logger.error(f"Error in analyze_severity: {str(e)}")
         return jsonify({'error': str(e)}), 500
 
 
@@ -181,42 +325,20 @@ def analyze_accident_rate():
 def predict_severity():
     """
     Predict severity level for accident given conditions
-    
-    Request body:
-    {
-        "time_range": "06:00-12:00",
-        "ward": 14,
-        "location": "rani",
-        "month": 4,
-        "road_type": "highway",
-        "n_vehicles": 2
-    }
-    
-    Returns:
-    {
-        "prediction": "high/low",
-        "probability_high": 0.75,
-        "probability_low": 0.25,
-        "risk_score": 0.85,
-        "risk_level": "HIGH",
-        "recommendation": "..."
-    }
     """
     try:
         if ml_predictor is None:
             return jsonify({
-                'error': 'ML model is not available on this server. Fix model dependencies and restart backend.'
+                'error': 'ML model is not available on this server.'
             }), 503
 
         data = request.get_json()
-        
-        # Validate required fields
+
         required_fields = ['time_range', 'ward', 'location', 'month', 'road_type']
         for field in required_fields:
             if field not in data:
                 return jsonify({'error': f'Missing required field: {field}'}), 400
-        
-        # Get prediction from ML module
+
         prediction = ml_predictor.predict_severity(
             time_range=data.get('time_range'),
             ward=data.get('ward'),
@@ -225,9 +347,8 @@ def predict_severity():
             road_type=data.get('road_type'),
             n_vehicles=data.get('n_vehicles', 2)
         )
-        
         return jsonify(prediction), 200
-        
+
     except Exception as e:
         logger.error(f"Error in predict_severity: {str(e)}")
         return jsonify({'error': str(e)}), 500
@@ -235,10 +356,6 @@ def predict_severity():
 
 @app.route('/api/ward-analysis/<int:ward>', methods=['GET'])
 def get_ward_analysis(ward):
-    """
-    Get detailed analysis for a specific ward
-    Returns accident statistics, top locations, seasonal patterns, etc.
-    """
     try:
         ward_data = analysis.get_ward_analysis(ward)
         return jsonify(ward_data), 200
@@ -249,9 +366,6 @@ def get_ward_analysis(ward):
 
 @app.route('/api/location-analysis/<location>', methods=['GET'])
 def get_location_analysis(location):
-    """
-    Get detailed analysis for a specific location
-    """
     try:
         location_data = analysis.get_location_analysis(location)
         return jsonify(location_data), 200
@@ -264,182 +378,111 @@ def get_location_analysis(location):
 def get_risk_assessment():
     """
     Comprehensive risk assessment endpoint for frontend
-    
-    Request body:
-    {
-        "ward": 14,
-        "location": "rani",
-        "month": 4,
-        "time_range": "06:00-12:00",  or time_slot: "morning"/"afternoon"/"evening"/"night"
-        "road_type": "highway"
-    }
-    
-    Returns:
-    {
-        "score": 75,
-        "risk_level": "HIGH",
-        "risk_label": "HIGH RISK",
-        "factors": {
-            "ward_risk": 15,
-            "seasonal_risk": 18,
-            "time_risk": 12,
-            "weather_risk": 0,
-            "road_risk": 8
-        },
-        "total_accidents": 15,
-        "severity_distribution": {...},
-        "insights": [...],
-        "comparison": {...},
-        "query": {...}
-    }
     """
     try:
         data = request.get_json()
-        
-        # Map time slot to time range if needed
+
         time_slot_map = {
             'morning': '06:00-12:00',
             'afternoon': '12:00-18:00',
             'evening': '18:00-00:00',
             'night': '00:00-06:00'
         }
-        
+
         time_range = data.get('time_range')
         if not time_range and 'time_slot' in data:
             time_range = time_slot_map.get(data.get('time_slot'), '06:00-12:00')
-        
+
         ward = data.get('ward')
         location = data.get('location')
         month = data.get('month')
         road_type = data.get('road_type', 'highway')
-        
-        # Validate required fields
+
         if not all([ward, location, month, time_range]):
             return jsonify({'error': 'Missing required fields: ward, location, month, time_range/time_slot'}), 400
-        
-        # Convert to proper types
+
         ward = int(ward)
         month = int(month)
-        
-        # Get accident analysis data
+
         accident_data = analysis.get_accident_rate(
-            time_range=time_range,
-            ward=ward,
-            location=location,
-            month=month,
-            road_type=road_type
+            time_range=time_range, ward=ward, location=location,
+            month=month, road_type=road_type
         )
+
+        # Check if we have exact data; if not, get fallback (ward+location only)
+        has_exact_data = accident_data.get('total_accidents', 0) > 0
+        fallback_data = None
         
-        # Calculate risk factors using actual data from DataLoader
-        ward_location_str = f"{ward} {location}"
-        
-        # Get risk values from pre-computed maps
-        ward_risk = analysis.ward_location_risk.get(ward_location_str, 0)
-        
-        # Calculate factors (normalized to 0-20 scale)
-        total_accidents = accident_data.get('total_accidents', 0)
-        severity_high_pct = accident_data.get('severity_distribution', {}).get('high_pct', 0)
-        
-        # Compute score based on actual data
-        score = int(30 + (ward_risk * 50) + (severity_high_pct * 0.5))
-        score = max(5, min(98, score))  # Clamp between 5-98
-        
-        # Determine risk level
-        if score < 38:
-            risk_level = 'low'
-            risk_label = 'LOW RISK'
-            risk_color = '#00e5a0'
-        elif score < 62:
-            risk_level = 'medium'
-            risk_label = 'MODERATE RISK'
-            risk_color = '#ff8c42'
+        if not has_exact_data:
+            fallback_data = analysis.get_ward_location_risk(ward, location)
+            # Use fallback data for calculations if exact is empty
+            display_data = fallback_data
         else:
-            risk_level = 'high'
-            risk_label = 'HIGH RISK'
-            risk_color = '#ff2d4e'
-        
-        # Build factors breakdown
+            display_data = accident_data
+
+        ward_location_str = f"{ward} {location}"
+        ward_risk = analysis.ward_location_risk.get(ward_location_str, 0)
+
+        total_accidents = display_data.get('total_accidents', 0)
+        severity_high_pct = display_data.get('severity_distribution', {}).get('high_pct', 0)
+
+        score = int(30 + (ward_risk * 50) + (severity_high_pct * 0.5))
+        score = max(5, min(98, score))
+
+        if score < 38:
+            risk_level = 'low'; risk_label = 'LOW RISK'; risk_color = '#00e5a0'
+        elif score < 62:
+            risk_level = 'medium'; risk_label = 'MODERATE RISK'; risk_color = '#ff8c42'
+        else:
+            risk_level = 'high'; risk_label = 'HIGH RISK'; risk_color = '#ff2d4e'
+
         factors_data = [
             {'name': 'Ward / Location Zone', 'value': int(ward_risk * 20), 'max': 20},
-            {'name': 'Time of Day', 'value': 8, 'max': 20},
-            {'name': 'Seasonal Pattern', 'value': min(22, severity_high_pct * 2), 'max': 22},
-            {'name': 'Road Type', 'value': 8 if road_type == 'highway' else 5, 'max': 15},
+            {'name': 'Time of Day',          'value': 8,  'max': 20},
+            {'name': 'Seasonal Pattern',     'value': min(22, severity_high_pct * 2), 'max': 22},
+            {'name': 'Road Type',            'value': 8 if road_type == 'highway' else 5, 'max': 15},
         ]
-        
         total_factor = sum(f['value'] for f in factors_data)
-        factors_percent = {f['name']: round((f['value'] / (total_factor + 0.001)) * 100) for f in factors_data}
-        
-        # Build insights
+        factors_percent = {f['name']: round((f['value'] / (total_factor + 0.001)) * 100)
+                           for f in factors_data}
+
         insights = []
-        
-        # Time-based insights
         if time_range in ['18:00-00:00', '00:00-06:00']:
-            insights.append({
-                'type': 'warn',
-                'icon': '🌙',
-                'text': 'Night-time travel: Accident risk increases due to poor street lighting and reduced visibility.'
-            })
+            insights.append({'type': 'warn', 'icon': '🌙',
+                'text': 'Night-time travel: Accident risk increases due to poor street lighting and reduced visibility.'})
         else:
-            insights.append({
-                'type': 'tip',
-                'icon': '🌤',
-                'text': 'Daytime conditions. Exercise caution during peak traffic hours (8-10 AM, 4-7 PM).'
-            })
-        
-        # Seasonal insights
+            insights.append({'type': 'tip', 'icon': '🌤',
+                'text': 'Daytime conditions. Exercise caution during peak traffic hours (8-10 AM, 4-7 PM).'})
+
         if month in [3, 4, 5]:
-            insights.append({
-                'type': 'alert',
-                'icon': '🌧',
-                'text': f'Monsoon season active. Wet roads and reduced visibility increase accident probability.'
-            })
+            insights.append({'type': 'alert', 'icon': '🌧',
+                'text': 'Monsoon season active. Wet roads and reduced visibility increase accident probability.'})
         elif month in [10, 11]:
-            insights.append({
-                'type': 'warn',
-                'icon': '🌫',
-                'text': 'Autumn season - possible fog and haze. Reduce speed on major routes.'
-            })
+            insights.append({'type': 'warn', 'icon': '🌫',
+                'text': 'Autumn season - possible fog and haze. Reduce speed on major routes.'})
         else:
-            insights.append({
-                'type': 'tip',
-                'icon': '☀',
-                'text': 'Dry season. Road conditions are favorable.'
-            })
-        
-        # Risk level insights
+            insights.append({'type': 'tip', 'icon': '☀',
+                'text': 'Dry season. Road conditions are favorable.'})
+
         if risk_level == 'high':
-            insights.append({
-                'type': 'alert',
-                'icon': '⚠',
-                'text': f'HIGH RISK in {location} Ward {ward}. Consider alternate routes or delay travel if possible.'
-            })
+            insights.append({'type': 'alert', 'icon': '⚠',
+                'text': f'HIGH RISK in {location} Ward {ward}. Consider alternate routes or delay travel if possible.'})
         elif risk_level == 'low':
-            insights.append({
-                'type': 'tip',
-                'icon': '✅',
-                'text': 'Conditions relatively safe. Maintain standard road safety practices.'
-            })
-        
-        # Accident count insight
+            insights.append({'type': 'tip', 'icon': '✅',
+                'text': 'Conditions relatively safe. Maintain standard road safety practices.'})
+
         if total_accidents > 5:
-            insights.append({
-                'type': 'warn',
-                'icon': '📊',
-                'text': f'High incident frequency: {total_accidents} recorded accidents in this combination.'
-            })
-        
-        # Build comparison
+            insights.append({'type': 'warn', 'icon': '📊',
+                'text': f'High incident frequency: {total_accidents} recorded accidents in this combination.'})
+
         city_avg_score = 58
         diff = score - city_avg_score
-        
         comparison = {
-            'your_score': score,
-            'city_average': city_avg_score,
-            'difference': diff,
+            'your_score': score, 'city_average': city_avg_score, 'difference': diff,
             'above_average': diff > 0,
             'comparison_text': f"{'⚠ SIGNIFICANTLY ABOVE' if diff > 10 else '↑ SLIGHTLY ABOVE' if diff > 0 else '✓ BELOW'} city average risk level."
         }
-        
+
         response = {
             'success': True,
             'score': score,
@@ -448,21 +491,22 @@ def get_risk_assessment():
             'risk_color': risk_color,
             'factors': factors_percent,
             'factor_values': {f['name']: f['value'] for f in factors_data},
+            'has_exact_data': has_exact_data,
+            'is_fallback': not has_exact_data,
             'total_accidents': total_accidents,
-            'severity_distribution': accident_data.get('severity_distribution', {}),
+            'severity_distribution': display_data.get('severity_distribution', {}),
+            'fallback_message': 'No accidents found in this exact scenario. Showing overall risk for this ward+location.' if not has_exact_data else None,
+            'fallback_data': fallback_data if not has_exact_data else None,
             'insights': insights,
             'comparison': comparison,
             'query': {
-                'ward': ward,
-                'location': location,
-                'month': month,
-                'time_range': time_range,
-                'road_type': road_type
+                'ward': ward, 'location': location,
+                'month': month, 'time_range': time_range, 'road_type': road_type
             }
         }
-        
-        return jsonify(response), 200
-        
+        return jsonify(convert_numpy(response)), 200
+
+
     except Exception as e:
         logger.error(f"Error in get_risk_assessment: {str(e)}")
         return jsonify({'error': str(e), 'details': str(e)}), 500
@@ -470,9 +514,6 @@ def get_risk_assessment():
 
 @app.route('/api/time-range-analysis/<time_range>', methods=['GET'])
 def get_time_range_analysis(time_range):
-    """
-    Get detailed analysis for a specific time range
-    """
     try:
         time_data = analysis.get_time_range_analysis(time_range)
         return jsonify(time_data), 200
@@ -498,3 +539,19 @@ if __name__ == '__main__':
         port=app.config['PORT'],
         threaded=True
     )
+    
+import numpy as np
+
+def convert_numpy(obj):
+    if isinstance(obj, dict):
+        return {k: convert_numpy(v) for k, v in obj.items()}
+    elif isinstance(obj, list):
+        return [convert_numpy(i) for i in obj]
+    elif isinstance(obj, (np.integer)):
+        return int(obj)
+    elif isinstance(obj, (np.floating)):
+        return float(obj)
+    elif isinstance(obj, (np.bool_)):
+        return bool(obj)
+    else:
+        return obj
