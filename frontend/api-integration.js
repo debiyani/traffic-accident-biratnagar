@@ -1,7 +1,7 @@
 /**
  * Frontend-Backend Integration for TrafficSafe Biratnagar
- * Connects home.html UI to the Python Flask backend API
- * This file overrides the analyzeRisk function to use real backend data
+ * Refactored to use structured accident severity analysis
+ * Calls /api/analyze-severity endpoint for EDA + ML-based severity insights
  */
 
 // Backend API Base URL - adjust if your backend is on a different host/port
@@ -16,8 +16,8 @@ const TIME_SLOT_MAP = {
 };
 
 /**
- * Main analyze function - overrides the original in home.html
- * Calls backend /api/risk-assessment endpoint
+ * Main analyze function - Refactored for structured severity analysis
+ * Calls backend /api/analyze-severity endpoint
  */
 async function analyzeRisk() {
   const ward = document.getElementById("ward").value;
@@ -40,25 +40,25 @@ async function analyzeRisk() {
   btn.disabled = true;
 
   try {
-    // Normalize inputs - strip whitespace and lowercase for comparison with backend
+    // Normalize inputs
     const normalizedLocation = location.toLowerCase().trim();
     const normalizedRoadType = roadType.toLowerCase().trim();
+    const timeRange = TIME_SLOT_MAP[timeSlot] || "06:00-12:00";
 
-    // Prepare request body
+    // Prepare request body for /api/analyze-severity
     const requestBody = {
       ward: parseInt(ward),
       location: normalizedLocation,
       month: parseInt(month),
-      time_slot: timeSlot,
+      time_range: timeRange,
       road_type: normalizedRoadType,
     };
 
-    // Show loading state
     const placeholder = document.getElementById("placeholder");
     const resultContent = document.getElementById("resultContent");
 
     // Call backend API
-    const response = await fetch(`${API_BASE_URL}/risk-assessment`, {
+    const response = await fetch(`${API_BASE_URL}/analyze-severity`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -77,14 +77,12 @@ async function analyzeRisk() {
       throw new Error(data.error || "Unknown error from backend");
     }
 
-    console.log("✅ Risk Assessment Success:", data);
-    console.log("Risk Score:", data.score);
-    console.log("Total Accidents Found:", data.total_accidents);
-    console.log("Location Query:", data.query);
+    console.log("✅ Severity Analysis Success:", data);
+    console.log("Analysis Type:", data.analysis_type);
+    console.log("Has Exact Data:", data.has_exact_data);
 
     // Process and display results
     setTimeout(() => {
-      // Hide loading state
       btn.classList.remove("loading");
       btn.querySelector("span").textContent = "▶ Run Risk Analysis";
       btn.disabled = false;
@@ -93,175 +91,132 @@ async function analyzeRisk() {
       placeholder.style.display = "none";
       resultContent.style.display = "flex";
 
-      // Animate gauge
-      animGauge(data.score);
-
-      // Update score display
-      const scoreNum = document.getElementById("scoreNum");
-      scoreNum.style.color = data.risk_color;
-
-      // Update risk chip
-      const chip = document.getElementById("riskChip");
-      chip.innerHTML = `<div class="chip-dot"></div><span>${data.risk_label}</span>`;
-      chip.className = `risk-chip ${data.risk_level}`;
-
-      // Update weather cells with actual data
-      const factorValues = data.factor_values || {};
-
-      document.getElementById("wWard").textContent =
-        `${factorValues["Ward / Location Zone"] || 0}/20`;
-      document.getElementById("wWard").style.color = getColorForValue(
-        factorValues["Ward / Location Zone"] || 0,
-        20,
-      );
-
-      document.getElementById("wSeason").textContent =
-        `${factorValues["Seasonal Pattern"] || 0}/22`;
-      document.getElementById("wSeason").style.color = getColorForValue(
-        factorValues["Seasonal Pattern"] || 0,
-        22,
-      );
-
-      document.getElementById("wTime").textContent =
-        `${factorValues["Time of Day"] || 0}/20`;
-      document.getElementById("wTime").style.color = getColorForValue(
-        factorValues["Time of Day"] || 0,
-        20,
-      );
-
-      document.getElementById("wWeather").textContent = "Standard";
-      document.getElementById("wWeather").style.color = "#00d2ff";
-
-      // Build factor bars from backend data
-      buildFactorsFromBackend(data);
-
-      // Build insights from backend data
-      buildInsightsFromBackend(data);
-
-      // Build comparison from backend data
-      buildCompareFromBackend(data);
-
-      // Show factors tab by default
-      showTab("factors");
-    }, 1200);
+      // Display severity analysis
+      displaySeverityAnalysis(data);
+    }, 800);
   } catch (error) {
-    // Error handling
     btn.classList.remove("loading");
     btn.querySelector("span").textContent = "▶ Run Risk Analysis";
     btn.disabled = false;
 
     console.error("❌ Analysis Error:", error);
-    console.error("Request was sent:", requestBody);
     alert(
-      `Error: ${error.message}\n\nMake sure:\n1. Backend is running (python run_server.py)\n2. Backend is on http://localhost:5000\n3. Location exists in database (e.g., 'rani', 'oil nigam', 'traffic chowk')\n4. Road type is valid (highway, inner paved road, inner unpaved road)\n\nCheck browser console for details.`,
+      `Error: ${error.message}\n\nMake sure:\n1. Backend is running (python run_server.py)\n2. Backend is on http://localhost:5000\n3. Location exists in database\n4. Road type is valid\n\nCheck browser console for details.`,
     );
   }
 }
 
 /**
- * Get color based on value and max
+ * Display structured severity analysis results
  */
-function getColorForValue(value, max) {
-  const percent = value / max;
-  if (percent > 0.75) return "#ff2d4e"; // red
-  if (percent > 0.5) return "#ff8c42"; // orange
-  return "#00d2ff"; // cyan
-}
-
-/**
- * Build factor bars from backend data
- */
-function buildFactorsFromBackend(data) {
-  const factorPercents = data.factors || {};
-  const factorValues = data.factor_values || {};
-
-  const factors = [
-    { name: "Ward / Location Zone", color: "#00d2ff" },
-    { name: "Seasonal Pattern", color: "#ff8c42" },
-    { name: "Time of Day", color: "#ff2d4e" },
-    { name: "Road Type", color: "#00e5a0" },
-  ];
-
-  const el = document.getElementById("factorBars");
-  el.innerHTML = "";
-
-  factors.forEach((f) => {
-    const pct = factorPercents[f.name] || 0;
-    const val = factorValues[f.name] || 0;
-
-    el.innerHTML += `
-            <div class="factor-item">
-                <div class="factor-top">
-                    <div class="factor-name">${f.name}</div>
-                    <div class="factor-pct" style="color:${f.color}">${pct}%</div>
-                </div>
-                <div class="factor-track">
-                    <div class="factor-fill" style="background:${f.color};color:${f.color}" data-val="${pct}"></div>
-                </div>
-            </div>`;
-  });
-
-  // Animate bars
-  setTimeout(() => {
-    document.querySelectorAll(".factor-fill").forEach((e) => {
-      e.style.width = e.dataset.val + "%";
-    });
-  }, 50);
-}
-
-/**
- * Build insights from backend data
- */
-function buildInsightsFromBackend(data) {
-  const insights = data.insights || [];
-  const el = document.getElementById("insightList");
-  el.innerHTML = "";
-
-  insights.forEach((insight) => {
-    el.innerHTML += `
-            <div class="insight-item ${insight.type}">
-                <div class="insight-icon">${insight.icon}</div>
-                <div class="insight-text">${insight.text}</div>
-            </div>`;
-  });
-}
-
-/**
- * Build comparison from backend data
- */
-function buildCompareFromBackend(data) {
-  const comp = data.comparison || {};
+function displaySeverityAnalysis(data) {
   const query = data.query || {};
+  const exact = data.exact || {};
+  const monthly = data.monthly || {};
+  const timeBased = data.time_based || {};
+  const mlPred = data.ml_prediction;
+  const precautions = data.precautions || [];
+  const hasExactData = data.has_exact_data;
+  const analysisType = data.analysis_type || "unknown";
 
-  const el = document.getElementById("compareContent");
-  el.innerHTML = `
-        <div class="sys-info" style="margin-bottom:0.75rem">
-            <div class="sys-row">
-                <span>YOUR SCORE</span>
-                <em style="color:${data.risk_color}">${data.score} / 100</em>
-            </div>
-            <div class="sys-row">
-                <span>CITY AVERAGE</span>
-                <em>${comp.city_average || 58} / 100</em>
-            </div>
-            <div class="sys-row">
-                <span>DIFFERENCE</span>
-                <em style="color:${comp.above_average ? "#ff2d4e" : "#00e5a0"}">
-                    ${comp.difference > 0 ? "+" : ""}${comp.difference} vs CITY AVG
-                </em>
-            </div>
-            <div class="sys-row">
-                <span>TOTAL INCIDENTS</span>
-                <em>${data.total_accidents || 0} records</em>
-            </div>
-            <div class="sys-row">
-                <span>LOCATION</span>
-                <em>${query.location || "-"} (Ward ${query.ward || "-"})</em>
-            </div>
-        </div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:0.57rem;letter-spacing:1.5px;color:var(--muted2);line-height:2">
-            ${comp.comparison_text || ""}
-        </div>`;
+  // ── SUMMARY SECTION ──────────────────────────────────────
+  // Use exact data if available, otherwise use monthly
+  const dataToDisplay = hasExactData ? exact : monthly;
+
+  document.getElementById("summaryTotal").textContent =
+    dataToDisplay.total || 0;
+  document.getElementById("summaryHigh").textContent = dataToDisplay.high || 0;
+  document.getElementById("summaryLow").textContent = dataToDisplay.low || 0;
+
+  // ── DATA SOURCE BADGE ────────────────────────────────────
+  const sourceBadge = document.getElementById("sourceBadge");
+  const sourceText = document.getElementById("dataSourceText");
+
+  if (hasExactData && analysisType === "exact") {
+    sourceBadge.className = "source-badge exact";
+    sourceBadge.textContent = "✓ Exact Scenario";
+    sourceText.textContent = `(${query.month_name} • ${query.time_label} • Ward ${query.ward})`;
+  } else if (analysisType === "fallback") {
+    sourceBadge.className = "source-badge fallback";
+    sourceBadge.textContent = "⚠ Fallback Data";
+    sourceText.textContent = "No exact data found. Using broader analysis.";
+  } else {
+    sourceBadge.className = "source-badge fallback";
+    sourceBadge.textContent = "⚠ Insufficient Data";
+    sourceText.textContent = "Using ML predictions and historical patterns.";
+  }
+
+  // ── SCENARIO COVERAGE ────────────────────────────────────
+  // Calculate coverage percentage (exact as % of monthly)
+  let coveragePercent = 0;
+  if (monthly.total > 0) {
+    coveragePercent = Math.round((exact.total / monthly.total) * 100);
+  }
+
+  document.getElementById("coveragePercent").textContent = hasExactData
+    ? `${exact.high_pct}%`
+    : "—";
+
+  const coverageText = hasExactData
+    ? `${exact.high_pct}% of accidents in ${query.month_name} are HIGH severity`
+    : "No exact scenario data available";
+
+  document.getElementById("coverageText").textContent = coverageText;
+
+  // ── FALLBACK DATA SECTION ────────────────────────────────
+  const fallbackSection = document.getElementById("fallbackSection");
+  if (!hasExactData && (monthly.total > 0 || timeBased.total > 0)) {
+    fallbackSection.style.display = "block";
+
+    document.getElementById("monthlyTotal").textContent = monthly.total || 0;
+    document.getElementById("monthlyHigh").textContent = monthly.high || 0;
+    document.getElementById("monthlyLow").textContent = monthly.low || 0;
+
+    document.getElementById("timeTotal").textContent = timeBased.total || 0;
+    document.getElementById("timeHigh").textContent = timeBased.high || 0;
+    document.getElementById("timeLow").textContent = timeBased.low || 0;
+  } else {
+    fallbackSection.style.display = "none";
+  }
+
+  // ── ML PREDICTION SECTION ────────────────────────────────
+  const mlSection = document.getElementById("mlSection");
+  if (mlPred) {
+    mlSection.style.display = "block";
+
+    const predClass = mlPred.prediction === "HIGH" ? "high" : "low";
+    document.getElementById("mlPrediction").className =
+      `ml-metric-value ${predClass}`;
+    document.getElementById("mlPrediction").textContent = mlPred.prediction;
+
+    document.getElementById("mlProbHigh").textContent = mlPred.prob_high + "%";
+    document.getElementById("mlProbLow").textContent = mlPred.prob_low + "%";
+  } else {
+    mlSection.style.display = "none";
+  }
+
+  // ── PRECAUTIONS SECTION ──────────────────────────────────
+  const precautionsList = document.getElementById("precautionsList");
+  precautionsList.innerHTML = "";
+
+  if (precautions && precautions.length > 0) {
+    precautions.forEach((precaution) => {
+      const item = document.createElement("div");
+      item.className = "precaution-item";
+      item.innerHTML = `
+        <div class="precaution-icon">⚠️</div>
+        <div class="precaution-text">${precaution}</div>
+      `;
+      precautionsList.appendChild(item);
+    });
+  } else {
+    precautionsList.innerHTML = `
+      <div class="precaution-item">
+        <div class="precaution-icon">ℹ️</div>
+        <div class="precaution-text">Follow standard traffic safety practices and obey all traffic rules.</div>
+      </div>
+    `;
+  }
 }
 
 /**
@@ -272,17 +227,13 @@ async function initializeForm() {
     const response = await fetch(`${API_BASE_URL}/options`);
     if (response.ok) {
       const options = await response.json();
-
-      // Populate locations dropdown if available
-      // Note: The current form has location as a text input, so this is just for reference
-      console.log("Available locations:", options.locations);
-      console.log("Available wards:", options.wards);
+      console.log("✓ Available locations:", options.locations);
+      console.log("✓ Available wards:", options.wards);
     } else {
       console.warn("Could not load form options from backend");
     }
   } catch (error) {
     console.warn("Form initialization warning:", error.message);
-    // Continue anyway - form has hardcoded options
   }
 }
 
@@ -296,4 +247,5 @@ document.addEventListener("keydown", (e) => {
 // Initialize when DOM is ready
 document.addEventListener("DOMContentLoaded", initializeForm);
 
-console.log("✓ API Integration loaded. Backend API: " + API_BASE_URL);
+console.log("✓ API Integration loaded (Refactored for Severity Analysis)");
+console.log("✓ Backend API: " + API_BASE_URL);
