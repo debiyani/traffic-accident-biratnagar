@@ -153,6 +153,85 @@ def analyze_accident_rate():
         return jsonify({'error': str(e)}), 500
 
 
+def get_precautions_for_month(month):
+    """
+    Get safety precautions based on Nepali month
+    
+    Args:
+        month: int (1-12)
+    
+    Returns:
+        list of precaution strings
+    """
+    precautions = {
+        1: [  # Baishak (Apr-May)
+            "Summer begins - stay hydrated and take regular breaks",
+            "Avoid peak sun hours (11 AM - 3 PM) for travel if possible",
+            "Check vehicle cooling systems before travel"
+        ],
+        2: [  # Jestha (May-Jun)
+            "Pre-monsoon season - watch for sudden weather changes",
+            "Check wiper blades and tread on tires",
+            "Reduce speed during thunderstorms and heavy winds"
+        ],
+        3: [  # Ashar (Jun-Jul)
+            "Monsoon season - wet roads reduce traction significantly",
+            "Increase following distance from other vehicles",
+            "Avoid waterlogged areas and flooded roads"
+        ],
+        4: [  # Shrawan (Jul-Aug)
+            "Peak monsoon - poor visibility and slippery roads",
+            "Use headlights and hazard lights during heavy rain",
+            "Drive slowly and stay alert for landslides and flooding"
+        ],
+        5: [  # Bhadra (Aug-Sep)
+            "Late monsoon - continue rain precautions",
+            "Check brake systems regularly",
+            "Avoid night travel during heavy rainfall"
+        ],
+        6: [  # Ashwin (Sep-Oct)
+            "Transition to autumn - weather becomes clearer",
+            "Be cautious of festival traffic and congestion",
+            "Watch for increased pedestrian activity"
+        ],
+        7: [  # Kartik (Oct-Nov)
+            "Autumn season - good visibility",
+            "Continue standard safety practices",
+            "Be aware of reduced street visibility after sunset"
+        ],
+        8: [  # Mangshir (Nov-Dec)
+            "Early winter - possible morning fog and mist",
+            "Reduce speed in low-visibility conditions",
+            "Use fog lights when necessary"
+        ],
+        9: [  # Poush (Dec-Jan)
+            "Winter season - cold and possibly dry roads",
+            "Check vehicle batteries and engine oil",
+            "Allow extra time for visibility during early morning hours"
+        ],
+        10: [  # Magh (Jan-Feb)
+            "Winter cold continues - maintain vehicle heating",
+            "Watch for early morning frost or dew on roads",
+            "Keep emergency supplies in vehicle"
+        ],
+        11: [  # Falgun (Feb-Mar)
+            "Late winter transitioning to spring",
+            "Weather generally favorable but stay alert",
+            "Perform final winter vehicle maintenance"
+        ],
+        12: [  # Chaitra (Mar-Apr)
+            "Spring season - pleasant weather returns",
+            "Maintain standard safety practices",
+            "Watch for increased traffic during festivals"
+        ]
+    }
+    return precautions.get(month, [
+        "Follow standard traffic rules and safety practices",
+        "Maintain appropriate speed for conditions",
+        "Stay alert and avoid distractions while driving"
+    ])
+
+
 @app.route('/api/analyze-severity', methods=['POST'])
 def analyze_severity():
     """
@@ -164,16 +243,15 @@ def analyze_severity():
         "location": "rani",
         "month": 5,
         "time_range": "18:00-00:00",
-        "road_type": "highway",
-        "nepali_season": "Barkha"   (optional, used only for display)
+        "road_type": "highway"
     }
 
     Returns structured severity breakdown with:
     - exact-scenario data (ward + location + month + time + road_type)
-    - broader monthly data  (ward + location + month, any time)
-    - full location data    (ward + location, all months)
-    - ML model probability  (if available)
-    - conclusion / prediction
+    - broader monthly data (ward + location + month, any time)
+    - time-based data (ward + location + time_range, any month)
+    - ML model probability (if available)
+    - precautions based on month
     """
     try:
         data = request.get_json()
@@ -188,7 +266,6 @@ def analyze_severity():
         month = int(data['month'])
         time_range = str(data['time_range'])
         road_type = str(data['road_type']).strip().lower()
-        nepali_season = data.get('nepali_season', '')
 
         df = data_loader.df  # cleaned DataFrame
 
@@ -212,87 +289,78 @@ def analyze_severity():
             }
 
         # ── Filter subsets ────────────────────────────────────
+        # Exact: ward + location + month + time_range (ignore road_type for flexibility)
         mask_exact = (
             (df['Ward'] == ward) &
             (df['Location'].str.lower() == location) &
             (df['Month_Num'] == month) &
-            (df['Time_Range'] == time_range) &
-            (df['Road_Type'].str.lower() == road_type)
+            (df['Time_Range'] == time_range)
         )
+        
+        # Monthly: ward + location + month (any time)
         mask_month = (
             (df['Ward'] == ward) &
             (df['Location'].str.lower() == location) &
             (df['Month_Num'] == month)
         )
-        mask_location = (
+        
+        # Time-based: ward + location + time_range (any month)
+        mask_time = (
             (df['Ward'] == ward) &
-            (df['Location'].str.lower() == location)
+            (df['Location'].str.lower() == location) &
+            (df['Time_Range'] == time_range)
         )
 
         exact_df    = df[mask_exact]
         month_df    = df[mask_month]
-        location_df = df[mask_location]
+        time_df     = df[mask_time]
 
         exact_bd    = compute_breakdown(exact_df)
         month_bd    = compute_breakdown(month_df)
-        location_bd = compute_breakdown(location_df)
+        time_bd     = compute_breakdown(time_df)
 
         has_exact_data = exact_bd['total'] > 0
+        
+        # Determine analysis type
+        if has_exact_data:
+            analysis_type = 'exact'
+        elif month_bd['total'] > 0 or time_bd['total'] > 0:
+            analysis_type = 'fallback'
+        else:
+            analysis_type = 'insufficient'
 
         # ── ML prediction ─────────────────────────────────────
         ml_result = None
         if ml_predictor is not None:
-            # map time_range string → encoded int used by model
-            tr_map = ml_predictor.time_range_map
-            rt_map = ml_predictor.road_type_map
-            season_map = ml_predictor.nepali_season_map
+            try:
+                ml_raw = ml_predictor.predict_severity(
+                    time_range=time_range,
+                    ward=ward,
+                    location=location,
+                    month=month,
+                    road_type=road_type,
+                    n_vehicles=2
+                )
+                if 'success' in ml_raw and ml_raw['success']:
+                    ml_result = {
+                        'prob_high': round(ml_raw['probability_high'] * 100, 2),
+                        'prob_low':  round(ml_raw['probability_low']  * 100, 2),
+                        'risk_level': ml_raw['risk_level'],
+                        'prediction': 'HIGH' if ml_raw['prediction'] == 'high' else 'LOW'
+                    }
+            except Exception as e:
+                logger.warning(f"ML prediction failed: {str(e)}")
 
-            # get nepali season from month if not provided
-            encoded_season = ml_predictor._get_nepali_season(month)
-            season_code = season_map.get(encoded_season, 0)
-            time_code   = tr_map.get(time_range, 0)
-            road_code   = rt_map.get(road_type, 0)
-
-            ml_raw = ml_predictor.predict_severity(
-                time_range=time_range,
-                ward=ward,
-                location=location,
-                month=month,
-                road_type=road_type,
-                n_vehicles=2
-            )
-            if 'success' in ml_raw and ml_raw['success']:
-                ml_result = {
-                    'prob_high': round(ml_raw['probability_high'] * 100, 2),
-                    'prob_low':  round(ml_raw['probability_low']  * 100, 2),
-                    'risk_level': ml_raw['risk_level'],
-                    'prediction': ml_raw['prediction']
-                }
-
-        # ── Conclusion ────────────────────────────────────────
-        # Use month-level data for conclusion (most informative when exact is empty)
-        ref_bd = exact_bd if has_exact_data else month_bd
-        if ref_bd['total'] > 0:
-            if ref_bd['high_pct'] > 50:
-                conclusion_type = 'high'
-                conclusion_text = f"More HIGH severity accidents occur in {ward} {location}"
-            else:
-                conclusion_type = 'low'
-                conclusion_text = f"More LOW severity accidents occur in {ward} {location}"
-        else:
-            # fall back to ML
-            if ml_result:
-                conclusion_type = ml_result['prediction']
-                conclusion_text = f"Based on model prediction: {ml_result['risk_level']} severity likely"
-            else:
-                conclusion_type = 'unknown'
-                conclusion_text = "Insufficient data for conclusion"
+        # ── Precautions based on month ────────────────────────
+        precautions = get_precautions_for_month(month)
 
         month_name = NEPALI_MONTH_NAMES.get(month, str(month))
         time_label = TIME_RANGE_LABELS.get(time_range, time_range)
 
         response = {
             'success': True,
+            'analysis_type': analysis_type,
+            'has_exact_data': has_exact_data,
             'query': {
                 'ward': ward,
                 'location': location,
@@ -301,18 +369,13 @@ def analyze_severity():
                 'time_range': time_range,
                 'time_label': time_label,
                 'road_type': road_type,
-                'nepali_season': nepali_season,
                 'ward_location': f"{ward} {location}"
             },
-            'has_exact_data': has_exact_data,
             'exact': exact_bd,
             'monthly': month_bd,
-            'location': location_bd,
-            'ml': ml_result,
-            'conclusion': {
-                'type': conclusion_type,
-                'text': conclusion_text
-            }
+            'time_based': time_bd,
+            'ml_prediction': ml_result,
+            'precautions': precautions
         }
         return jsonify(response), 200
 
