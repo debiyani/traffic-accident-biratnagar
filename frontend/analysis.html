@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrafficSafe — Analysis</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:      #04070f;
+      --panel:   #0b1220;
+      --panel2:  #0f1929;
+      --border:  rgba(0,210,255,0.12);
+      --border2: rgba(0,210,255,0.25);
+      --cyan:    #00d2ff;
+      --red:     #ff2d4e;
+      --green:   #00e5a0;
+      --text:    #c8dff0;
+      --muted:   #3a5570;
+      --muted2:  #5a7a95;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Oxanium', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* BACKGROUND REPLICA */
+    .bg-layer { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+    .bg-grid {
+      position: absolute; inset: 0;
+      background-image: 
+        linear-gradient(rgba(0,210,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,210,255,0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+      animation: gridDrift 24s linear infinite;
+    }
+    @keyframes gridDrift { 0%{transform:translate(0,0)} 100%{transform:translate(48px,48px)} }
+    .scan-line {
+      position: absolute; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(0,210,255,0.35), transparent);
+      animation: scanDown 7s linear infinite;
+    }
+    @keyframes scanDown { 0%{top:-2px;opacity:0} 100%{top:100%;opacity:0} }
+
+    /* NAVBAR (EXACT REPLICA) */
+    nav {
+      position: sticky; top: 0; z-index: 200;
+      height: 76px;
+      background: rgba(4,7,15,0.94);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border2);
+      display: flex; align-items: center;
+      padding: 0 2.5rem;
+    }
+    nav::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+      opacity: 0.35;
+    }
+    .nav-left { display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
+    .nav-logo-box {
+      width: 48px; height: 48px;
+      border: 1px solid var(--border2);
+      background: var(--panel);
+      clip-path: polygon(10% 0%,90% 0%,100% 10%,100% 90%,90% 100%,10% 100%,0% 90%,0% 10%);
+    }
+    .nav-brand-wrap { display: flex; flex-direction: column; gap: 3px; }
+    .nav-brand-name {
+      font-size: 1.25rem; font-weight: 800; letter-spacing: 3px; color: #fff; line-height: 1;
+      text-shadow: 0 0 20px rgba(0,210,255,0.5);
+    }
+    .nav-brand-name em { font-style: normal; color: var(--cyan); }
+    .nav-brand-sub {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.52rem; letter-spacing: 3px; color: var(--muted2); text-transform: uppercase;
+    }
+    .nav-divider { flex: 1; height: 1px; background: linear-gradient(90deg, var(--border2), transparent); margin: 0 2rem; }
+    .nav-status { display: flex; align-items: center; gap: 8px; margin-right: 2rem; }
+    .status-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--green); box-shadow: 0 0 8px var(--green);
+      animation: blink 2s ease-in-out infinite;
+    }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+    .nav-links { display: flex; }
+    .nav-links a {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.93rem; letter-spacing: 2px; color: var(--muted2);
+      text-decoration: none; text-transform: uppercase; padding: 0 1.3rem; height: 76px;
+      display: flex; align-items: center; border-left: 1px solid var(--border); transition: 0.2s;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+      background: var(--cyan); transform: scaleX(0); transition: transform 0.25s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--cyan); background: rgba(0,210,255,0.04); }
+    .nav-links a.active::after { transform: scaleX(1); }
+
+    /* --- NAVBAR HOVER SYSTEM --- */
+
+.nav-links a {
+  /* Font and spacing */
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.93rem;
+  letter-spacing: 2px;
+  color: var(--muted2);
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0 1.3rem;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  
+  /* Structure for the bottom line */
+  border-left: 1px solid var(--border);
+  position: relative;
+  
+  /* Smooth transition for colors */
+  transition: color 0.2s, background 0.2s;
+}
+
+/* The cyan line that slides in from the center */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--cyan);
+  
+  /* Start hidden (scaled to 0) */
+  transform: scaleX(0);
+  transition: transform 0.25s;
+}
+
+/* Hover & Active States */
+.nav-links a:hover, 
+.nav-links a.active {
+  color: var(--cyan);
+  background: rgba(0,210,255,0.04);
+}
+
+/* Show the line on hover or when page is active */
+.nav-links a:hover::after, 
+.nav-links a.active::after {
+  transform: scaleX(1);
+}
+
+    /* MAIN CONTENT */
+    .wrapper { position: relative; z-index: 1; max-width: 1280px; margin: 0 auto; padding: 2.5rem 2rem; }
+    
+    .hero { margin-bottom: 2.5rem; animation: riseIn 0.6s cubic-bezier(0.2,0,0,1) both; }
+    @keyframes riseIn { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
+    
+    .hero-eyebrow {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; letter-spacing: 4px; color: var(--cyan);
+      text-transform: uppercase; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 10px;
+    }
+    .hero-eyebrow::before { content:''; width:32px; height:1px; background:var(--cyan); }
+    .hero-title { font-size: 2.8rem; font-weight: 800; color: #fff; line-height: 1.1; }
+    .hero-title .hl { color: var(--cyan); text-shadow: 0 0 30px rgba(0,210,255,0.4); }
+
+    /* ANALYSIS PANEL */
+    .analysis-panel {
+      background: var(--panel); border: 1px solid var(--border);
+      position: relative; min-height: 550px; display: flex; flex-direction: column;
+      animation: riseIn 0.8s cubic-bezier(0.2,0,0,1) 0.1s both;
+    }
+    .panel-header {
+      padding: 1rem 1.5rem; border-bottom: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .panel-title-wrap { display: flex; align-items: center; gap: 12px; }
+    .panel-icon { color: var(--cyan); font-size: 1.1rem; }
+    .panel-title-text { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; letter-spacing: 3px; color: var(--muted2); text-transform: uppercase; }
+    
+    .panel-body { flex: 1; padding: 2rem; display: flex; align-items: center; justify-content: center; }
+
+    /* CHART INSERTION POINT */
+    .chart-space {
+      width: 100%; height: 100%; border: 1px dashed var(--muted);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      color: var(--muted); font-family: 'JetBrains Mono', monospace; text-align: center;
+    }
+
+    .panel-corner { position: absolute; bottom: 0; right: 0; width: 18px; height: 18px; border-bottom: 1px solid var(--border2); border-right: 1px solid var(--border2); }
+    footer {
+  position: relative; z-index: 1;
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  margin-top: 1.5rem;
+}
+footer::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--cyan), transparent); opacity: 0.2;
+}
+.footer-left { font-family:'JetBrains Mono',monospace; font-size:0.55rem; letter-spacing:2px; color:var(--muted); }
+.footer-right { font-family:'JetBrains Mono',monospace; font-size:0.55rem; letter-spacing:2px; color:var(--muted); text-align:right; }
+.footer-right em { font-style:normal; color:var(--cyan); }
+  </style>
+</head>
+<body>
+
+  <div class="bg-layer">
+    <div class="bg-grid"></div>
+    <div class="scan-line"></div>
+  </div>
+
+  <nav>
+    <div class="nav-left">
+      <div class="nav-logo-box">
+         <img src="analysis_image.jpeg" style="width:100%;height:100%;object-fit:cover" alt="Logo">
+      </div>
+      <div class="nav-brand-wrap">
+        <div class="nav-brand-name">TRAFFIC<em>SAFE</em></div>
+        <div class="nav-brand-sub">Biratnagar</div>
+      </div>
+    </div>
+    <div class="nav-divider"></div>
+    <div class="nav-status">
+      <div class="status-dot"></div>
+    </div>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="seasonal.html">Seasonal chart</a>
+      <a href="analysis.html" class="active">Analysis</a>
+    </div>
+  </nav>
+
+  <div class="wrapper">
+    <header class="hero">
+      <div class="hero-eyebrow">BIRATNAGAR METROPOLITAN CITY</div>
+      <h1 class="hero-title">Incident  Analysis</h1>
+    </header>
+
+    <div class="analysis-panel">
+      <div class="panel-header">
+        <div class="panel-header-left">
+        
+      <img src="analysis.jpeg" width="1150" height="700"><br><br>
+     
+      </div>
+
+        <div class="panel-title-wrap">
+
+        </div>
+      </div>
+      
+      
+      <div class="panel-corner"></div>
+    </div>
+  </div>
+  <footer>
+  <div class="footer-left">TRAFFICSAFE BIRATNAGAR<br>© 2081 BS · BIRATNAGAR METROPOLITAN CITY</div>
+  <div class="footer-right">MODEL: <em>XGB v3.1</em> · DATA: <em>BIR TRAFFIC DEPT</em><br> · RECORDS: <em>900+</em></div>
+</footer>
+
+</body>
+</html>
