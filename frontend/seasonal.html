@@ -61,12 +61,8 @@
         animation: gridDrift 24s linear infinite;
       }
       @keyframes gridDrift {
-        0% {
-          transform: translate(0, 0);
-        }
-        100% {
-          transform: translate(48px, 48px);
-        }
+        0% { transform: translate(0, 0); }
+        100% { transform: translate(48px, 48px); }
       }
       .bg-glow1 {
         position: absolute;
@@ -74,11 +70,7 @@
         left: -10%;
         width: 70vw;
         height: 70vw;
-        background: radial-gradient(
-          circle,
-          rgba(0, 210, 255, 0.055) 0%,
-          transparent 65%
-        );
+        background: radial-gradient(circle, rgba(0, 210, 255, 0.055) 0%, transparent 65%);
         animation: floatA 12s ease-in-out infinite alternate;
       }
       .bg-glow2 {
@@ -87,60 +79,33 @@
         right: -10%;
         width: 60vw;
         height: 60vw;
-        background: radial-gradient(
-          circle,
-          rgba(255, 45, 78, 0.05) 0%,
-          transparent 65%
-        );
+        background: radial-gradient(circle, rgba(255, 45, 78, 0.05) 0%, transparent 65%);
         animation: floatB 15s ease-in-out infinite alternate;
       }
       @keyframes floatA {
-        from {
-          transform: translate(0, 0);
-        }
-        to {
-          transform: translate(3%, 4%);
-        }
+        from { transform: translate(0, 0); }
+        to { transform: translate(3%, 4%); }
       }
       @keyframes floatB {
-        from {
-          transform: translate(0, 0);
-        }
-        to {
-          transform: translate(-3%, -3%);
-        }
+        from { transform: translate(0, 0); }
+        to { transform: translate(-3%, -3%); }
       }
       .scan-line {
         position: absolute;
         left: 0;
         right: 0;
         height: 2px;
-        background: linear-gradient(
-          90deg,
-          transparent,
-          rgba(0, 210, 255, 0.35),
-          transparent
-        );
+        background: linear-gradient(90deg, transparent, rgba(0, 210, 255, 0.35), transparent);
         animation: scanDown 7s linear infinite;
       }
       @keyframes scanDown {
-        0% {
-          top: -2px;
-          opacity: 0;
-        }
-        5% {
-          opacity: 1;
-        }
-        95% {
-          opacity: 1;
-        }
-        100% {
-          top: 100%;
-          opacity: 0;
-        }
+        0% { top: -2px; opacity: 0; }
+        5% { opacity: 1; }
+        95% { opacity: 1; }
+        100% { top: 100%; opacity: 0; }
       }
 
-      /* NAV — exact copy from your index.html */
+      /* NAV */
       nav {
         position: sticky;
         top: 0;
@@ -160,12 +125,7 @@
         left: 0;
         right: 0;
         height: 1px;
-        background: linear-gradient(
-          90deg,
-          transparent,
-          var(--cyan),
-          transparent
-        );
+        background: linear-gradient(90deg, transparent, var(--cyan), transparent);
         opacity: 0.35;
       }
       .nav-left {
@@ -184,26 +144,13 @@
         justify-content: center;
         position: relative;
         overflow: hidden;
-        clip-path: polygon(
-          10% 0%,
-          90% 0%,
-          100% 10%,
-          100% 90%,
-          90% 100%,
-          10% 100%,
-          0% 90%,
-          0% 10%
-        );
+        clip-path: polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%);
       }
       .nav-logo-box::before {
         content: "";
         position: absolute;
         inset: 0;
-        background: linear-gradient(
-          135deg,
-          rgba(0, 210, 255, 0.18),
-          transparent
-        );
+        background: linear-gradient(135deg, rgba(0, 210, 255, 0.18), transparent);
       }
       .nav-logo-box span {
         font-size: 1.5rem;
@@ -259,13 +206,8 @@
         animation: blink 2s ease-in-out infinite;
       }
       @keyframes blink {
-        0%,
-        100% {
-          opacity: 1;
-        }
-        50% {
-          opacity: 0.3;
-        }
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.3; }
       }
       .nav-links {
         display: flex;
@@ -282,9 +224,7 @@
         display: flex;
         align-items: center;
         border-left: 1px solid var(--border);
-        transition:
-          color 0.2s,
-          background 0.2s;
+        transition: color 0.2s, background 0.2s;
         position: relative;
       }
       .nav-links a::after {
@@ -323,14 +263,8 @@
         animation: riseIn 0.6s cubic-bezier(0.2, 0, 0, 1) both;
       }
       @keyframes riseIn {
-        from {
-          opacity: 0;
-          transform: translateY(28px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
+        from { opacity: 0; transform: translateY(28px); }
+        to { opacity: 1; transform: translateY(0); }
       }
       .page-eyebrow {
         font-family: "JetBrains Mono", monospace;
@@ -388,6 +322,8 @@
         width: 2px;
         height: 100%;
         background: linear-gradient(180deg, var(--cyan), transparent);
+        z-index: 1;
+        pointer-events: none;
       }
       .panel::after {
         content: "";
@@ -398,6 +334,8 @@
         height: 1px;
         background: linear-gradient(90deg, var(--cyan), transparent);
         opacity: 0.5;
+        z-index: 1;
+        pointer-events: none;
       }
       .panel-corner {
         position: absolute;
@@ -407,37 +345,17 @@
         height: 18px;
         border-bottom: 1px solid var(--border2);
         border-right: 1px solid var(--border2);
-      }
-      .panel-header {
-        padding: 1rem 1.5rem 0.85rem;
-        border-bottom: 1px solid var(--border);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .panel-header-left {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-      .panel-icon {
-        width: 30px;
-        height: 30px;
-        background: rgba(0, 210, 255, 0.08);
-        border: 1px solid var(--border2);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 0.9rem;
-      }
-      .panel-title-text {
-        font-family: "JetBrains Mono", monospace;
-        font-size: 0.62rem;
-        letter-spacing: 3px;
-        color: var(--muted2);
-        text-transform: uppercase;
+        z-index: 1;
+        pointer-events: none;
       }
 
+      /* IMAGE DISPLAY — key fix */
+      .image-display {
+        width: 100%;
+        display: block;
+        height: auto;
+        /* removes all cropping: no fixed height, no object-fit, no background cover */
+      }
 
       /* FOOTER */
       footer {
@@ -457,12 +375,7 @@
         left: 0;
         right: 0;
         height: 1px;
-        background: linear-gradient(
-          90deg,
-          transparent,
-          var(--cyan),
-          transparent
-        );
+        background: linear-gradient(90deg, transparent, var(--cyan), transparent);
         opacity: 0.2;
       }
       .footer-left {
@@ -482,97 +395,7 @@
         font-style: normal;
         color: var(--cyan);
       }
-    </style>
-  </head>
-  <body>
-    <div class="bg-layer">
-      <div class="bg-grid"></div>
-      <div class="bg-glow1"></div>
-      <div class="bg-glow2"></div>
-      <div class="scan-line"></div>
-    </div>
 
-    <!-- NAVBAR — exact same as your index.html -->
-    <nav>
-      <div class="nav-left">
-        <div class="nav-logo-box">
-          <img
-            src="logo.jpeg"
-            style="width: 100%; height: 100%; object-fit: cover"
-          />
-        </div>
-        <div class="nav-brand-wrap">
-          <div class="nav-brand-name">TRAFFIC<em>SAFE</em></div>
-          <div class="nav-brand-sub">Biratnagar</div>
-        </div>
-      </div>
-      <div class="nav-divider"></div>
-      <div class="nav-status">
-        <div class="status-dot"></div>
-      </div>
-      <div class="nav-links">
-        <a href="home.html">Home</a>
-        <a href="seasonal.html" class="active">Seasonal Chart</a>
-        <a href="analysis.html">Analysis</a>
-      </div>
-    </nav>
-
-    <div class="wrapper">
-      <!-- PAGE TITLE -->
-      <div class="page-title">
-        <div class="page-eyebrow">
-          Biratnagar Metropolitan City · Historical Data
-        </div>
-        <h1 class="page-h1">
-          Seasonal Accident <span class="hl">Index</span>
-          <span class="hl2">Analysis</span>
-        </h1>
-        <div class="page-sub">
-          Monthly accident distribution · Nepali calendar year · All 19 wards
-        </div>
-      </div>
-
-      <!-- SEASONAL IMAGE DISPLAY -->
-      <div class="panel" id="seasonal">
-        <div
-          class="chart-area"
-          style="
-            padding: 0;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 600px;
-            background: url(&quot;seasonal_image.jpeg&quot;) center/cover
-              no-repeat;
-          "
-        >
-          <iframe
-            src="seasonal_image.html"
-            style="
-              position: absolute;
-              inset: 0;
-              width: 100%;
-              height: 100%;
-              border: none;
-              display: none;
-            "
-          ></iframe>
-        </div>
-      </div>
-    </div>
-
-    <footer>
-      <div class="footer-left">
-        TRAFFICSAFE BIRATNAGAR<br />© 2081 BS · BIRATNAGAR METROPOLITAN CITY
-      </div>
-      <div class="footer-right">
-        MODEL: <em>XGB v3.1</em> · DATA: <em>BIR TRAFFIC DEPT</em><br />
-        · RECORDS: <em>900+</em>
-      </div>
-    </footer>
-
-    <style>
       .sys-info {
         padding: 0.85rem 1rem;
         background: var(--panel2);
@@ -597,8 +420,69 @@
         color: var(--green);
       }
     </style>
+  </head>
+  <body>
+    <div class="bg-layer">
+      <div class="bg-grid"></div>
+      <div class="bg-glow1"></div>
+      <div class="bg-glow2"></div>
+      <div class="scan-line"></div>
+    </div>
 
-    <script>
+    <nav>
+      <div class="nav-left">
+        <div class="nav-logo-box">
+          <img src="logo.jpeg" style="width: 100%; height: 100%; object-fit: cover" />
+        </div>
+        <div class="nav-brand-wrap">
+          <div class="nav-brand-name">TRAFFIC<em>SAFE</em></div>
+          <div class="nav-brand-sub">Biratnagar</div>
+        </div>
+      </div>
+      <div class="nav-divider"></div>
+      <div class="nav-status">
+        <div class="status-dot"></div>
+      </div>
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="seasonal.html" class="active">Seasonal Chart</a>
+        <a href="analysis.html">Analysis</a>
+      </div>
+    </nav>
 
+    <div class="wrapper">
+      <div class="page-title">
+        <div class="page-eyebrow">
+          Biratnagar Metropolitan City · Historical Data
+        </div>
+        <h1 class="page-h1">
+          Seasonal Accident <span class="hl">Index</span>
+          <span class="hl2">Analysis</span>
+        </h1>
+        <div class="page-sub">
+          Monthly accident distribution · Nepali calendar year · All 19 wards
+        </div>
+      </div>
+
+      <!-- SEASONAL IMAGE — fully uncropped -->
+      <div class="panel" id="seasonal">
+        <div class="panel-corner"></div>
+        <img
+          src="seasonal_image.jpeg"
+          alt="Seasonal Accident Index Chart"
+          class="image-display"
+        />
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-left">
+        TRAFFICSAFE BIRATNAGAR<br />© 2081 BS · BIRATNAGAR METROPOLITAN CITY
+      </div>
+      <div class="footer-right">
+        MODEL: <em>XGB v3.1</em> · DATA: <em>BIR TRAFFIC DEPT</em><br />
+        · RECORDS: <em>900+</em>
+      </div>
+    </footer>
   </body>
 </html>
