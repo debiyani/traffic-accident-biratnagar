@@ -1,4 +1,4 @@
-# TrafficSafe(A Data Driven Traffic Accident Analysis System - Biratnagar)
+# TrafficSafe:A Data Driven Traffic Accident Analysis System for Biratnagar
 
 A comprehensive data science project for analyzing and predicting traffic accident severity in Biratnagar using machine learning and statistical analysis.
 
