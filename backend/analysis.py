@@ -233,8 +233,20 @@ class AccidentAnalysis:
                 )
             }
         
-        # Severity distribution
-        severity_dist = df_ward['Severity'].value_counts().to_dict()
+        # Severity distribution - merge medium+high into HIGH
+        def severity_merge(s):
+            return 'high' if s in ('high', 'medium') else 'low'
+        
+        merged_severity = df_ward['Severity'].apply(severity_merge)
+        high_count = int((merged_severity == 'high').sum())
+        low_count = int((merged_severity == 'low').sum())
+        
+        severity_dist = {
+            'high': high_count,
+            'low': low_count,
+            'high_pct': round(high_count / total_accidents * 100, 2) if total_accidents > 0 else 0,
+            'low_pct': round(low_count / total_accidents * 100, 2) if total_accidents > 0 else 0
+        }
         
         return {
             'ward': ward,
@@ -260,7 +272,7 @@ class AccidentAnalysis:
         Returns:
             dict with location statistics
         """
-        df_loc = self.df[self.df['Location'] == location]
+        df_loc = self.df[self.df['Location'].str.lower() == location.lower()]
         
         total_accidents = len(df_loc)
         if total_accidents == 0:
@@ -291,8 +303,20 @@ class AccidentAnalysis:
                 )
             }
         
-        # Severity distribution
-        severity_dist = df_loc['Severity'].value_counts().to_dict()
+        # Severity distribution - merge medium+high into HIGH
+        def severity_merge(s):
+            return 'high' if s in ('high', 'medium') else 'low'
+        
+        merged_severity = df_loc['Severity'].apply(severity_merge)
+        high_count = int((merged_severity == 'high').sum())
+        low_count = int((merged_severity == 'low').sum())
+        
+        severity_dist = {
+            'high': high_count,
+            'low': low_count,
+            'high_pct': round(high_count / total_accidents * 100, 2) if total_accidents > 0 else 0,
+            'low_pct': round(low_count / total_accidents * 100, 2) if total_accidents > 0 else 0
+        }
         
         return {
             'location': location,
