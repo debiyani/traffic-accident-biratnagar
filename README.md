@@ -492,9 +492,6 @@ For more troubleshooting, see [backend/QUICKSTART.md](backend/QUICKSTART.md)
 - Update documentation as needed
 - Run existing tests before submitting PR
 
-## 📝 License
-
-[Add your license information here - e.g., MIT, Apache 2.0, etc.]
 
 ## 👥 Team & Contact
 
